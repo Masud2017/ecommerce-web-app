@@ -21,11 +21,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/test',[AuthController::class,'test']);
-Route::post('login', [AuthController::class,'login']);
-Route::post('register', [AuthController::class,'register']);
-Route::post('me', [AuthController::class,'me']);
-Route::post('logout', [AuthController::class,'logout']);
+// Route::post('/test',[AuthController::class,'test']);
+// Route::post('login', [AuthController::class,'login']);
+// Route::post('register', [AuthController::class,'register']);
+
 
 
 Route::group([
@@ -35,7 +34,9 @@ Route::group([
     'prefix' => 'auth'
 
 ], function ($router) {
-
-
-
+    Route::post('login', [AuthController::class,'login']);
+    Route::post('register', [AuthController::class,'register']);
+    Route::post('me', [AuthController::class,'me']);
+    Route::post('logout', [AuthController::class,'logout']);
+    Route::post('refresh',[AuthController::class,'refresh']);
 });
