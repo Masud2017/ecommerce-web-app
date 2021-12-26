@@ -4,6 +4,9 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use Laravel\Socialite\Facades\Socialite;
+
+
 
 
 /*
@@ -27,6 +30,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
+
 Route::group([
 
     'middleware' => 'api',
@@ -39,4 +43,5 @@ Route::group([
     Route::post('me', [AuthController::class,'me']);
     Route::post('logout', [AuthController::class,'logout']);
     Route::post('refresh',[AuthController::class,'refresh']);
+
 });
