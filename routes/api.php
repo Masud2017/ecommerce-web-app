@@ -40,8 +40,8 @@ Route::group([
 ], function ($router) {
     Route::post('login', [AuthController::class,'login']);
     Route::post('register', [AuthController::class,'register']);
+    Route::post('admin/register',[AuthController::class,'register_admin']);
     Route::post('me', [AuthController::class,'me']);
     Route::post('logout', [AuthController::class,'logout']);
     Route::post('refresh',[AuthController::class,'refresh']);
-
 });

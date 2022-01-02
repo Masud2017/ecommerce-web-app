@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -15,14 +16,9 @@ class AuthController extends Controller
     function __construct()
     {
         $this->middleware('token_validator')->only('me');
-        $this->middleware('auth:api', ['except' => ['login', 'register','me']]);
+        $this->middleware('role_middleware');
+        $this->middleware('auth:api', ['except' => ['login', 'register','me','register_admin']]);
 
-    }
-    function test() {
-        $name = "Masud karim";
-        $age = 21;
-
-        return compact('name','age');
     }
 
     public function login(Request $req) {
@@ -39,6 +35,8 @@ class AuthController extends Controller
         $name = $req->input('name');
         $password = $req->input('password');
         $email = $req->input('email');
+        $role_name = $req->input('role');
+
 
         $user = new User();
         $user->name = $name;
@@ -46,12 +44,22 @@ class AuthController extends Controller
         $user->email = $email;
 
         $user->save();
+        $user->roles()->attach($this->get_permission($role_name));
+
 
         // $token = auth()->attempt(compact('email','password'));
         $token = auth()->login($user);
 
-        return response()->json(['token'=>$token]);
+        // return response()->json(['token'=>$token]);
+        return response()->json(['data'=>$this->respondWithToken($token)]);
 
+    }
+
+    public function register_admin(Request $req) {
+        $name = $req->input('name');
+        $password = $req->input('password');
+        $email = $req->input('email');
+        $role_name = $req->input('role');
     }
 
     public function me(Request $req) {
@@ -88,5 +96,16 @@ class AuthController extends Controller
             'token_type' => 'bearer',
             'expires_in' => auth()->factory()->getTTL() * 60
         ]);
+    }
+
+    /**
+     * @param permission_name $string - permission name can be in any case
+     */
+    protected function get_permission($permission_name) {
+        $permission_name = strtolower($permission_name);
+
+        $role_id = DB::table('roles')->where('role',$permission_name)->first();
+
+        return $role_id->id;
     }
 }
