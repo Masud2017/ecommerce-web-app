@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -44,4 +45,9 @@ Route::group([
     Route::post('me', [AuthController::class,'me']);
     Route::post('logout', [AuthController::class,'logout']);
     Route::post('refresh',[AuthController::class,'refresh']);
+
+    // route for product handling
+    Route::put('add_new_product',[ProductController::class,'add_new_product']);
+    Route::get('products',[ProductController::class,'get_product_list']);
+    Route::delete('product/{id}', [ProductController::class,'delete_product']);
 });

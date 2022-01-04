@@ -17,8 +17,8 @@ class AuthController extends Controller
     {
         $this->middleware('token_validator')->only('me');
         $this->middleware('role_middleware');
+        $this->middleware('user_existance_checker_middleware')->only(['register','register_admin']);
         $this->middleware('auth:api', ['except' => ['login', 'register','me','register_admin']]);
-
     }
 
     public function login(Request $req) {
@@ -27,8 +27,6 @@ class AuthController extends Controller
 
         // return response()->json(['token'=>$token]);
         return $this->respondWithToken($token);
-
-
     }
 
     public function register(Request $req) {
