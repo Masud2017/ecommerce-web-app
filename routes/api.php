@@ -47,7 +47,7 @@ Route::group([
     Route::post('refresh',[AuthController::class,'refresh']);
 
     // route for product handling
-    Route::put('add_new_product',[ProductController::class,'add_new_product']);
+    Route::put('addproduct',[ProductController::class,'addNewProduct']);
     Route::get('products',[ProductController::class,'get_product_list']);
     Route::delete('product/{id}', [ProductController::class,'delete_product']);
 });

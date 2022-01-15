@@ -20,7 +20,7 @@ class UserExistenceCheckerMiddleWare
         $email = $request->input('email');
 
         if (DB::table('users')->where('email',$email)->first()) {
-            return response()->json(['data'=>'user already exists']);
+            return response()->json(['data'=>'user already exists','status_code'=>302]);
         }
 
 

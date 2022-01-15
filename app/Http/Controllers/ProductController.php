@@ -9,31 +9,48 @@ use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
-    public function add_new_product(Request $req) {
-        $name = $req->input("name");
-        $price = $req->input("price");
-        $stock = $req->input("stock"); // the number of products that the vendor can provide
-        $description = $req->input("description");
-        $rating = $req->input("rating");
-        $images = $req->file("images");
+    public function __construct()
+    {
+        $this->middleware('token_validator');
+    }
+    public function addNewProduct(Request $req) {
+        $name = $req->input('name');
+        $price = $req->input('price');
+        $stock = $req->input('stock'); // the number of products that the vendor can provide
+        $description = $req->input('description');
+        $rating = $req->input('rating');
+        $images = $req->file('images');
 
-        // Taking each image from images array or json
-        foreach($images as $image) {
-            $random_number = rand(0,10000000); // this number will be saved at database for later image access
+        print($name);
 
+        $product_table = new Product();
 
+        try {
+            $product_table->name = $name;
+            $product_table->price = $price;
+            $product_table->stock = $stock;
+            $product_table->description = $description;
+            $product_table->rating = $rating;
+            $product_table->images = json_encode(['images'=>$images]);
+
+            $product_table->save();
+
+            return response()->json(['status_code'=>200]);
+
+        } catch(Exception $e) {
+            echo $e;
+
+            return response()->json(['status_code'=>409]);
         }
-
-
     }
 
-    public function get_product_list(Request $req) {
+    public function getProductList(Request $req) {
         $product_list = Product::all(); // get all records from the product table;
 
-        return response()->json($this->formated_product_response($product_list));
+        return response()->json($this->formatedProductResponse($product_list));
     }
 
-    public function delete_product(Request $req, $id) {
+    public function deleteProduct(Request $req, $id) {
         $code = 0;
 
         try {
@@ -48,7 +65,7 @@ class ProductController extends Controller
     }
 
 
-    protected function formated_product_response($product_list) {
+    protected function formatedProductResponse($product_list) {
         $response = [
             'data'=>$product_list
         ];

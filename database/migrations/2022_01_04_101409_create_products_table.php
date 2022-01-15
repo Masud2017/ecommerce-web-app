@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->string("description");
             $table->float("rating");
             $table->string("images");
+            $table->integer("discount")->nullable();
             $table->timestamps();
         });
     }

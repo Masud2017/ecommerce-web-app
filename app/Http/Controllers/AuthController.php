@@ -42,7 +42,7 @@ class AuthController extends Controller
         $user->email = $email;
 
         $user->save();
-        $user->roles()->attach($this->get_permission($role_name));
+        $user->roles()->attach([$this->get_permission($role_name)]);
 
 
         // $token = auth()->attempt(compact('email','password'));
@@ -53,7 +53,7 @@ class AuthController extends Controller
 
     }
 
-    public function register_admin(Request $req) {
+    public function registerAdmin(Request $req) {
         $name = $req->input('name');
         $password = $req->input('password');
         $email = $req->input('email');
