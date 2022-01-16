@@ -87,6 +87,9 @@ class AuthController extends Controller
         return $this->respondWithToken(auth()->refresh());
     }
 
+    /**
+     * @param token  string - jwt token
+    */
     protected function respondWithToken($token)
     {
         return response()->json([

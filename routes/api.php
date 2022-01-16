@@ -48,6 +48,7 @@ Route::group([
 
     // route for product handling
     Route::put('addproduct',[ProductController::class,'addNewProduct']);
-    Route::get('products',[ProductController::class,'get_product_list']);
-    Route::delete('product/{id}', [ProductController::class,'delete_product']);
+    Route::get('products',[ProductController::class,'getProductList']);
+    Route::delete('deleteproduct/{id}', [ProductController::class,'deleteProduct']);
+    Route::get('product/{id}',[ProductController::class,'getProduct']);
 });

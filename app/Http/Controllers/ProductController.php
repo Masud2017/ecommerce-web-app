@@ -11,8 +11,12 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('token_validator');
+        // $this->middleware('token_validator');
+        $this->middleware('auth:api');
+        $this->middleware('ProductCRUDPermissionMiddleWare');
     }
+
+
     public function addNewProduct(Request $req) {
         $name = $req->input('name');
         $price = $req->input('price');
@@ -20,8 +24,6 @@ class ProductController extends Controller
         $description = $req->input('description');
         $rating = $req->input('rating');
         $images = $req->file('images');
-
-        print($name);
 
         $product_table = new Product();
 
@@ -42,6 +44,7 @@ class ProductController extends Controller
 
             return response()->json(['status_code'=>409]);
         }
+        // return response()->json(['data'=>$name]);
     }
 
     public function getProductList(Request $req) {
@@ -50,11 +53,18 @@ class ProductController extends Controller
         return response()->json($this->formatedProductResponse($product_list));
     }
 
+    public function getProduct(Request $req, $id) {
+        $product = Product::find($id);
+
+        return response()->json(['data'=>$product]);
+    }
+
     public function deleteProduct(Request $req, $id) {
         $code = 0;
 
         try {
-            $product = DB::table('products')->where('id',$id)->first();
+            // $product = DB::table('products')->where('id',$id)->first();
+            $product = Product::find($id);
             $product->delete();
             $code = 200;
         } catch(Exception $e) {

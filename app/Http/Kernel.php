@@ -68,6 +68,7 @@ class Kernel extends HttpKernel
         'token_validator'=> \App\Http\Middleware\TokenValidator::class,
         'role_middleware'=> \App\Http\Middleware\RoleMiddleWare::class,
         'user_existance_checker_middleware'=> \App\Http\Middleware\UserExistenceCheckerMiddleWare::class,
+        'ProductCRUDPermissionMiddleWare' => \App\Http\Middleware\ProductCRUDPermissionMiddleWare::class,
 
     ];
 }
