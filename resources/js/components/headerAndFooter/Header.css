@@ -1,0 +1,42 @@
+
+
+.nav {
+    background-color:grey;
+    padding : 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 1px 6px 2px orange;
+
+}
+.nav-item {
+    list-style-type: none;
+    display: inline-block;
+    margin-left : auto;
+}
+.container  {
+    margin-left : 10px;
+    margin-right : 10px;
+}
+
+.search-bar[type=text] {
+    width : 800px;
+    height: 30px;
+    border-radius: 20px;
+    background: url("https://img.icons8.com/ios/15/000000/search--v5.png") no-repeat right;
+    background-color: white;
+    box-shadow: 2px 1px 6px 2px orange;
+
+}
+
+#logo {
+    position: relative;
+    float:left;
+}
+
+#login {
+    float:right;
+}
+#search-bar {
+    position: relative;
+    margin-left: auto;
+}

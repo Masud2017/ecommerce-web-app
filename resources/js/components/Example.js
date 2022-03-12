@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import Button from '@mui/material/Button';
 function Example() {
     return (
         <div className="container">
@@ -8,6 +8,11 @@ function Example() {
                 <div className="col-md-8">
                     <div className="card">
                         <div className="card-header">Example Component</div>
+
+
+                        <Button variant="text">Text</Button>
+            `            <Button variant="contained">Contained</Button>
+                        <Button variant="outlined">Outlined</Button>`
 
                         <div className="card-body">I'm an example component!</div>
                     </div>

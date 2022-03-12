@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\TestService;
 use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -11,14 +12,22 @@ use Illuminate\Support\Facades\Hash;
 
 use Tymon\JWTAuth\Facades\JWTAuth;
 
+use Exception;
+
 class AuthController extends Controller
 {
-    function __construct()
+    private $service;
+    function __construct(TestService $service)
     {
         $this->middleware('token_validator')->only('me');
         $this->middleware('role_middleware');
         $this->middleware('user_existance_checker_middleware')->only(['register','register_admin']);
         $this->middleware('auth:api', ['except' => ['login', 'register','me','register_admin']]);
+
+        try {$this->service = $service;
+        } catch (Exception $e) {
+
+        }
     }
 
     public function login(Request $req) {
@@ -49,8 +58,8 @@ class AuthController extends Controller
         $token = auth()->login($user);
 
         // return response()->json(['token'=>$token]);
-        return response()->json(['data'=>$this->respondWithToken($token)]);
 
+        return response()->json(['data'=>$this->respondWithToken($token)]);
     }
 
     public function registerAdmin(Request $req) {

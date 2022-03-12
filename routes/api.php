@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -51,4 +52,7 @@ Route::group([
     Route::get('products',[ProductController::class,'getProductList']);
     Route::delete('deleteproduct/{id}', [ProductController::class,'deleteProduct']);
     Route::get('product/{id}',[ProductController::class,'getProduct']);
+
+    // route for cart handling
+    Route::get('addcart/{id}',[CartController::class,'addProductToCart']);
 });
