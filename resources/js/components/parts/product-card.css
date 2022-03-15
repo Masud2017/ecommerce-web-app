@@ -1,6 +1,7 @@
 .product-card {
     transition: 0.3s;
-    width: 250px;
+    width: 188px;
+    height: 290px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     padding:10px;
     display: grid;;
@@ -8,6 +9,7 @@
     position: relative;
     text-align: center;
     margin-top : 15px;
+
 }
 
 .discount {
