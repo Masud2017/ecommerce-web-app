@@ -1,0 +1,51 @@
+.order-summary{
+    border:1px solid grey;
+    border-radius: 10px;
+    padding:10px;
+    position: relative;
+}
+
+.order-summary-voucher[type=text] {
+    border:1px solid grey;
+    padding:10px;
+}
+.order-summary-voucher-btn {
+    display: inline-block;
+    padding:11px;
+    background-color: red;
+    color :white;
+    margin-left:5px;
+}
+
+.cart-procceed-btn {
+    background-color: red;
+    color :white;
+    padding : 10px;
+    border-radius: 10px;
+    padding: 5px 25px;
+}
+
+.cart-product-heading {
+    background-color:#F8F8F8;
+    padding:10px;
+    border-radius: 10px;
+    width:100%;
+
+}
+.cart-product-list-parent-div {
+    border:1px solid grey;
+    border-radius: 10px;
+    width:100%;
+    flex: 1;
+    padding: 10px;
+}
+
+.cart-grid-parent {
+    display:grid;
+    grid-template-columns: auto 400px;
+    margin-left: 2%;
+    margin-right: 2%;
+    gap:10px;
+    margin-top :20px;
+
+}

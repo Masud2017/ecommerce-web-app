@@ -11,6 +11,8 @@ import Typography from '@mui/material/Typography';
 import { Container, Row, Col } from 'react-grid-system';
 
 
+import CartPage from "../parts/CartPage";
+
 import "./RegularBody.css";
 import CardCollectionBody from "./CardCollectionBody";
 
@@ -22,6 +24,7 @@ function RegularBody() {
 
     return(
         <div>
+            <CartPage/>
             <CardCollectionBody/>
 
         </div>

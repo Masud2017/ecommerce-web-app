@@ -1,0 +1,27 @@
+.cart-product-card-row {
+    display: grid;
+    grid-template-columns: 150px 200px 200px;
+    padding: 0px;
+    gap:10px;
+    margin-top:10px;
+}
+.cart-product-card-image img {
+    width : 100px;
+    height: 100px;
+    border:1px solid grey;
+    border-radius: 10px;
+}
+
+.cart-product-card-text-align {
+    display:grid;
+    grid-template-columns: 270px 200px;
+    gap:10px;
+    align-items: center;
+}
+
+.cart-product-card-text-align-2 {
+    display:grid;
+    grid-template-columns: 200px 200px;
+    gap:10px;
+    align-items: center;
+}
