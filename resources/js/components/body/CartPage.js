@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import "./CartPage.css";
 
-import CartProductCard from './CartProductCard';
+import CartProductCard from '../parts/CartProductCard';
 
 function CartPage() {
     const cartAttribute = {
@@ -21,6 +21,11 @@ function CartPage() {
                         Package 1 of 1
                         Delete
                     </div>
+                    <CartProductCard props = {cartAttribute}/>
+                    <CartProductCard props = {cartAttribute}/>
+                    <CartProductCard props = {cartAttribute}/>
+                    <CartProductCard props = {cartAttribute}/>
+                    <CartProductCard props = {cartAttribute}/>
                     <CartProductCard props = {cartAttribute}/>
                     <CartProductCard props = {cartAttribute}/>
                     <CartProductCard props = {cartAttribute}/>

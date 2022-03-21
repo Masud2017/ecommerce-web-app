@@ -5,6 +5,14 @@
     position: relative;
 }
 
+.order-summary h1 {
+    color : #727272;
+}
+.order-summary h3 {
+    color :#727272;
+    line-height: 5px;;
+}
+
 .order-summary-voucher[type=text] {
     border:1px solid grey;
     padding:10px;

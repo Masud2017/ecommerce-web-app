@@ -1,0 +1,18 @@
+.product-details-page-grid {
+    display:grid;
+    gap:10px;
+    grid-template-columns: auto 450px;
+}
+
+.product-details-address {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding:10px;
+    width:100%;
+}
+
+.product-details-parent {
+    margin-top : 20px;
+    margin-left:2%;
+    margin-right :2%;
+}

@@ -1,0 +1,35 @@
+.ProductDetailsImageGallary-parent-image {
+    display:block;
+    height:210px;
+    width:210px;
+    margin-bottom:7px;
+    border:1px solid grey;
+    border-radius: 10px;;
+    overflow: hidden;
+}
+
+.ProductDetialsImageGallary-child-img {
+    height : 35px;
+    width: 35px;
+    margin-right: 6px;
+    opacity: .5;
+}
+.ProductDetialsImageGallary-child-img:hover {
+    opacity:1;
+}
+
+.product-details-grid-parent {
+    display:grid;
+    gap:10px;
+    grid-template-columns: 210px auto ; /* from 250px to auto*/
+}
+
+.product-details-iamge-gallary-text {
+
+}
+
+.image-group {
+    display: inline-block;
+    text-align:center;
+
+}
