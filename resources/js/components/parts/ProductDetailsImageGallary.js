@@ -4,20 +4,23 @@ import React from 'react';
 import "./ProductDetailsImageGallary.css";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee,faStarHalf,faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar,faStarHalfStroke } from '@fortawesome/free-solid-svg-icons'
 
-const changeImage = (e)=>{
+/**
+ *
+ * @param {*} img - img content to be show in the parent div
+ * This method is responsible of changing the parent image as per the click on each child image
+ */
+const changeImage = (img)=>{
     var parentImageElement = document.getElementById("product-details-parent-image");
-    parentImageElement.src = e;
+    parentImageElement.src = img;
 }
-
 
 /**
  *
  * @param {*} props - Json of attibute for the Product details image gallary.
  * @returns ProductDetailsImageGallary - Component
  */
-
 function ProductDetailsImageGallary(props) {
     const imageArray = props.props.imgCollection;
     return (
@@ -36,9 +39,10 @@ function ProductDetailsImageGallary(props) {
                     <h3>{props.props.name}</h3>
                     <p style = {{"color":"#5F3AF8","line-height":"5px"}}><span style = {{"color": "grey"}}>Brand:</span> {props.props.brand}</p>
                     <FontAwesomeIcon icon={faStar} color = "red" />
-                    <FontAwesomeIcon icon={faStarHalf} color = "red" />
-
-
+                    <FontAwesomeIcon icon={faStar} color = "red" />
+                    <FontAwesomeIcon icon={faStar} color = "red" />
+                    <FontAwesomeIcon icon={faStar} color = "red" />
+                    <FontAwesomeIcon icon={faStarHalfStroke} color = "red"/>
                     <hr></hr>
                     <strong>Price : {props.props.price}</strong>
                     <p>Discount : {props.props.discount}</p>
