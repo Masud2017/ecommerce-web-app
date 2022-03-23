@@ -28601,7 +28601,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _ProductDetailsPage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductDetailsPage.css */ "./resources/js/components/body/ProductDetailsPage.css");
 /* harmony import */ var _parts_ProductDetailsImageGallary__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../parts/ProductDetailsImageGallary */ "./resources/js/components/parts/ProductDetailsImageGallary.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _parts_QuestionAndAnswer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../parts/QuestionAndAnswer */ "./resources/js/components/parts/QuestionAndAnswer.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -28615,22 +28617,23 @@ function ProductDetailsPage() {
     imgCollection: ["https://bakingtoolbox.com/wp-content/uploads/2021/08/Homemade-Chocolate-Bars.jpg", "http://prod-upp-image-read.ft.com/0c029740-677b-11e5-a57f-21b88f7d973f", "https://i.insider.com/5b5854de77bc281a008b4686?width=700"],
     discount: "30%",
     brand: "The Evergreen Brand",
-    reviewCount: "165",
-    review: 4.6
+    ratingCount: "165",
+    review: 4.6,
+    quantity: 1
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     className: "product-details-parent",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "product-details-page-grid",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_parts_ProductDetailsImageGallary__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_parts_ProductDetailsImageGallary__WEBPACK_IMPORTED_MODULE_2__["default"], {
           props: productDetailsImageInfo
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_parts_QuestionAndAnswer__WEBPACK_IMPORTED_MODULE_3__["default"], {})]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         className: "product-details-address",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
           children: "Delivary option"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h4", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h4", {
           children: "433 kollyanpur south paik para mirpur-1 dhaka -1216"
         })]
       })]
@@ -28973,6 +28976,19 @@ var changeImage = function changeImage(img) {
   var parentImageElement = document.getElementById("product-details-parent-image");
   parentImageElement.src = img;
 };
+
+var incrementCounter = function incrementCounter() {
+  var prevVal = parseInt(document.getElementById("product-qty").textContent);
+  document.getElementById("product-qty").innerHTML = prevVal + 1;
+};
+
+var decrementCounter = function decrementCounter() {
+  var prevVal = parseInt(document.getElementById("product-qty").textContent);
+
+  if (prevVal >= 1) {
+    document.getElementById("product-qty").innerHTML = prevVal - 1;
+  }
+};
 /**
  *
  * @param {*} props - Json of attibute for the Product details image gallary.
@@ -29041,16 +29057,76 @@ function ProductDetailsImageGallary(props) {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__.FontAwesomeIcon, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faStarHalfStroke,
         color: "red"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("strong", {
+      }), " ", props.props.ratingCount, " Ratings", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("strong", {
         children: ["Price : ", props.props.price]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
         children: ["Discount : ", props.props.discount]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+        children: ["Quantity ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+          className: "product-details-quantity-btn",
+          onClick: function onClick() {
+            return decrementCounter();
+          },
+          children: "-"
+        }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          style: {
+            "display": "inline"
+          },
+          id: "product-qty",
+          children: props.props.quantity
+        }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+          onClick: function onClick() {
+            return incrementCounter();
+          },
+          className: "product-details-quantity-btn",
+          children: "+"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        style: {
+          "text-align": "center"
+        },
+        className: "product-details-btn-group",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+          className: "product-details-btn",
+          children: "Add to Cart"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+          className: "product-details-btn right-btn-align",
+          children: "Buy"
+        })]
       })]
     })]
   });
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProductDetailsImageGallary);
+
+/***/ }),
+
+/***/ "./resources/js/components/parts/QuestionAndAnswer.js":
+/*!************************************************************!*\
+  !*** ./resources/js/components/parts/QuestionAndAnswer.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _QuestionAndAnswer_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./QuestionAndAnswer.css */ "./resources/js/components/parts/QuestionAndAnswer.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+function QuestionAndAnswer() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: "This is question and answer component"
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (QuestionAndAnswer);
 
 /***/ }),
 
@@ -34177,7 +34253,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".product-details-page-grid {\n    display:grid;\n    gap:10px;\n    grid-template-columns: auto 450px;\n}\n\n.product-details-address {\n    border: 1px solid grey;\n    border-radius: 10px;\n    padding:10px;\n    width:100%;\n}\n\n.product-details-parent {\n    margin-top : 20px;\n    margin-left:2%;\n    margin-right :2%;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".product-details-page-grid {\n    display:grid;\n    gap:10px;\n    grid-template-columns: auto 450px;\n}\n\n.product-details-address {\n    border: 1px solid grey;\n    border-radius: 10px;\n    padding:10px;\n    width:100%;\n}\n\n.product-details-parent {\n    margin-top : 20px;\n    margin-left:2%;\n    margin-right :2%;\n}\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -34297,7 +34373,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".ProductDetailsImageGallary-parent-image {\n    display:block;\n    height:210px;\n    width:210px;\n    margin-bottom:7px;\n    border:1px solid grey;\n    border-radius: 10px;;\n    overflow: hidden;\n}\n\n.ProductDetialsImageGallary-child-img {\n    height : 35px;\n    width: 35px;\n    margin-right: 6px;\n    opacity: .5;\n}\n.ProductDetialsImageGallary-child-img:hover {\n    opacity:1;\n}\n\n.product-details-grid-parent {\n    display:grid;\n    gap:10px;\n    grid-template-columns: 210px auto ; /* from 250px to auto*/\n}\n\n.product-details-iamge-gallary-text {\n\n}\n\n.image-group {\n    display: inline-block;\n    text-align:center;\n\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".ProductDetailsImageGallary-parent-image {\n    display:block;\n    height:210px;\n    width:210px;\n    margin-bottom:7px;\n    border:1px solid grey;\n    border-radius: 10px;;\n    overflow: hidden;\n}\n\n.ProductDetialsImageGallary-child-img {\n    height : 35px;\n    width: 35px;\n    margin-right: 6px;\n    opacity: .5;\n}\n.ProductDetialsImageGallary-child-img:hover {\n    opacity:1;\n}\n\n.product-details-grid-parent {\n    display:grid;\n    gap:10px;\n    grid-template-columns: 210px auto ; /* from 250px to auto*/\n}\n\n.product-details-iamge-gallary-text {\n\n}\n\n.image-group {\n    display: inline-block;\n    text-align:center;\n\n}\n\n\n.product-details-btn-group {\n    display: flex;\n    justify-content: center;\n    justify-content: space-around;\n}\n\n.product-details-btn {\n    display:inline-block;\n    background-color: red;\n    color:white;\n    outline: none;\n    border-radius: 5px;\n    transition: background-color .3s;\n    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n    padding:5px 10px;\n\n}\n.product-details-btn:hover  {\n    background-color: orange;\n}\n.product-details-btn:active {\n    background-color: black;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/parts/QuestionAndAnswer.css":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/parts/QuestionAndAnswer.css ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -86262,6 +86362,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_ProductDetailsImageGallary_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/parts/QuestionAndAnswer.css":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/parts/QuestionAndAnswer.css ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_QuestionAndAnswer_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./QuestionAndAnswer.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/parts/QuestionAndAnswer.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_QuestionAndAnswer_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_QuestionAndAnswer_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 

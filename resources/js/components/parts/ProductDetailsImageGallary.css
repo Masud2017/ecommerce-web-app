@@ -33,3 +33,28 @@
     text-align:center;
 
 }
+
+
+.product-details-btn-group {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.product-details-btn {
+    display:inline-block;
+    background-color: red;
+    color:white;
+    outline: none;
+    border-radius: 5px;
+    transition: background-color .3s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    padding:5px 10px;
+
+}
+.product-details-btn:hover  {
+    background-color: orange;
+}
+.product-details-btn:active {
+    background-color: black;
+}

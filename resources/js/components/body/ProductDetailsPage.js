@@ -4,6 +4,7 @@ import React from 'react';
 import "./ProductDetailsPage.css";
 
 import ProductDetailsImageGallary from '../parts/ProductDetailsImageGallary';
+import QuestionAndAnswer from '../parts/QuestionAndAnswer';
 
 function ProductDetailsPage () {
     const productDetailsImageInfo = {
@@ -16,8 +17,9 @@ function ProductDetailsPage () {
         ],
         discount: "30%",
         brand:"The Evergreen Brand",
-        reviewCount : "165",
-        review : 4.6
+        ratingCount : "165",
+        review : 4.6,
+        quantity:1
     };
 
     return (
@@ -25,6 +27,8 @@ function ProductDetailsPage () {
             <div className = "product-details-page-grid">
                 <div>
                     <ProductDetailsImageGallary props = {productDetailsImageInfo}/>
+
+                    <QuestionAndAnswer/>
                 </div>
                 <div className = "product-details-address">
                     <p>Delivary option</p>
