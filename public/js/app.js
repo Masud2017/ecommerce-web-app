@@ -28661,9 +28661,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _parts_QuestionAndAnswer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../parts/QuestionAndAnswer */ "./resources/js/components/parts/QuestionAndAnswer.js");
-/* harmony import */ var _asset_user_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../asset/user.png */ "./resources/js/components/asset/user.png");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _QuestionAnswerBody_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./QuestionAnswerBody.css */ "./resources/js/components/body/QuestionAnswerBody.css");
+/* harmony import */ var _parts_QuestionAndAnswer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../parts/QuestionAndAnswer */ "./resources/js/components/parts/QuestionAndAnswer.js");
+/* harmony import */ var _asset_user_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../asset/user.png */ "./resources/js/components/asset/user.png");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
 
 
 
@@ -28673,24 +28690,55 @@ __webpack_require__.r(__webpack_exports__);
 function QuestionAndAnswerBody() {
   var questionAndAnswerData = {
     "items": [{
-      "img": _asset_user_png__WEBPACK_IMPORTED_MODULE_2__["default"],
+      "img": _asset_user_png__WEBPACK_IMPORTED_MODULE_3__["default"],
       "name": "User bodohla",
       "date": "12/02/2022",
-      "body": "This is question body."
+      "body": "This is question body.This is question body.This is question body.This is question body.This is question body.This is question body."
     }, {
-      "img": _asset_user_png__WEBPACK_IMPORTED_MODULE_2__["default"],
+      "img": _asset_user_png__WEBPACK_IMPORTED_MODULE_3__["default"],
       "name": "User bodohla2",
       "date": "12/02/2021",
       "body": "This is question body22."
     }]
   };
   console.log(questionAndAnswerData["items"]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    children: [questionAndAnswerData["items"].map(function (item) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_parts_QuestionAndAnswer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      count = _useState2[0],
+      setCount = _useState2[1];
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("form", {
+      onSubmit: function onSubmit(event) {
+        return event.preventDefault();
+      },
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "text-area-container",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("textarea", {
+          rows: "5",
+          id: "question",
+          onChange: function onChange(e) {
+            return setCount(e.target.value.length);
+          }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+          className: "counter",
+          children: count
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+        type: "file",
+        id: "image"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("button", {
+        className: "question-body-add-btn",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong", {
+          children: "+"
+        }), " Add Question"]
+      })]
+    }), questionAndAnswerData["items"].map(function (item) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_parts_QuestionAndAnswer__WEBPACK_IMPORTED_MODULE_2__["default"], {
         props: item
       });
-    }), "Data"]
+    })]
   });
 }
 
@@ -29232,7 +29280,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _QuestionAndAnswer_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./QuestionAndAnswer.css */ "./resources/js/components/parts/QuestionAndAnswer.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _asset_recyclebin_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../asset/recyclebin.png */ "./resources/js/components/asset/recyclebin.png");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 /**
@@ -29245,19 +29295,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function QuestionAndAnswer(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "question-parent",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
       src: props.props.img,
       className: "question-user-logo"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
-      children: "Name"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+      children: props.props.name
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
       className: "question-date",
-      children: "Date: 12/02/2021"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+      children: ["Date: ", props.props.date]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
       className: "question-body",
-      children: "Questoin Body"
+      children: props.props.body
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "question-delete-btn",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h5", {
+        className: "question-delete-icon",
+        children: "X"
+      })
     })]
   });
 }
@@ -34396,6 +34452,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".product-details-page-grid {\n    disp
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/body/QuestionAnswerBody.css":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/body/QuestionAnswerBody.css ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".question-body-add-btn {\n    background-color: red;\n    color :white;\n    padding : 5px 15px;\n    border-radius: 5px;\n}\ntextarea {\n    box-sizing: border-box;\n    width : 100%;\n    border: 1px solid grey;\n    resize : none;\n    padding : 5px;\n\n}\n\n.counter {\n    position:absolute;\n    /* bottom : -15px; */\n    top:100%;\n    justify-self: end;\n    right : 5px;\n}\n.text-area-container {\n    position: relative;\n    display: grid;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/body/RegularBody.css":
 /*!****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/body/RegularBody.css ***!
@@ -34533,7 +34613,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".question-user-logo {\n    height : 70px;\n    width : 70px;\n    display:inline-block;\n    grid-area: img;\n    border-right : 7px solid red;\n}\n\n\n.question-parent {\n    display:grid;\n    grid-template-columns: 70px 1fr;\n    grid-template-rows:80px 1fr;\n    -moz-column-gap: 10px;\n         column-gap: 10px;\n    align-items:center;\n    grid-template-areas:\n        \"img header\"\n        \"body body\"\n    ;\n    border : 1px solid grey;\n    padding : 10px;\n}\n\n.question-parent h1 {\n    grid-area : header;\n    align-self : start;\n}\n.question-date {\n    grid-area : header;\n    align-self: end;\n}\n.question-body {\n    grid-area: body;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".question-user-logo {\n    height : 70px;\n    width : 70px;\n    display:inline-block;\n    grid-area: img;\n    box-shadow: inset 0 4px 8px 0 rgba(118, 4, 4, 0.2);\n    border-radius: 50%;\n    padding : 5px;\n}\n\n\n.question-parent {\n    display:grid;\n    grid-template-columns: 70px 1fr;\n    grid-template-rows:80px 1fr;\n    -moz-column-gap: 10px;\n         column-gap: 10px;\n    align-items:center;\n    grid-template-areas:\n        \"img header\"\n        \"body body\"\n    ;\n    border-radius: 12px;\n    margin-top:10px;\n    padding : 10px;\n    background-color: #F8F8F8;\n    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);\n}\n\n.question-parent h1 {\n    grid-area : header;\n    align-self : start;\n}\n.question-date {\n    grid-area : header;\n    align-self: end;\n    color : #727272;\n}\n.question-body {\n    grid-area: body;\n}\n\n.question-delete-btn {\n    background-color: red;\n    border-radius: 50%;\n    height : 30px;\n    width : 30px;\n    display:grid;\n    grid-area: header;\n    justify-self: end;\n    align-self: start;\n    transition: background-color .2s;\n    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);\n    cursor : pointer;\n}\n\n.question-delete-btn:hover {\n    background-color: darkred;\n}\n.question-delete-btn:active {\n    background-color: orangered;\n}\n.question-delete-icon {\n    margin : auto;\n    color : white;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -34715,6 +34795,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/lgoo.svg?1682a9e87b2024589a79ce01022d7c68");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/recyclebin.png":
+/*!******************************************************!*\
+  !*** ./resources/js/components/asset/recyclebin.png ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/recyclebin.png?8213d03909c532190f7a58f0c728b108");
 
 /***/ }),
 
@@ -86411,6 +86506,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_ProductDetailsPage_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/body/QuestionAnswerBody.css":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/body/QuestionAnswerBody.css ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_QuestionAnswerBody_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./QuestionAnswerBody.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/body/QuestionAnswerBody.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_QuestionAnswerBody_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_QuestionAnswerBody_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 

@@ -3,7 +3,9 @@
     width : 70px;
     display:inline-block;
     grid-area: img;
-    border-right : 7px solid red;
+    box-shadow: inset 0 4px 8px 0 rgba(118, 4, 4, 0.2);
+    border-radius: 50%;
+    padding : 5px;
 }
 
 
@@ -17,8 +19,11 @@
         "img header"
         "body body"
     ;
-    border : 1px solid grey;
+    border-radius: 12px;
+    margin-top:10px;
     padding : 10px;
+    background-color: #F8F8F8;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .question-parent h1 {
@@ -28,7 +33,33 @@
 .question-date {
     grid-area : header;
     align-self: end;
+    color : #727272;
 }
 .question-body {
     grid-area: body;
+}
+
+.question-delete-btn {
+    background-color: red;
+    border-radius: 50%;
+    height : 30px;
+    width : 30px;
+    display:grid;
+    grid-area: header;
+    justify-self: end;
+    align-self: start;
+    transition: background-color .2s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    cursor : pointer;
+}
+
+.question-delete-btn:hover {
+    background-color: darkred;
+}
+.question-delete-btn:active {
+    background-color: orangered;
+}
+.question-delete-icon {
+    margin : auto;
+    color : white;
 }
