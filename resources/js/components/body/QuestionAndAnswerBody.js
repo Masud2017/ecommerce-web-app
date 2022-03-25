@@ -29,15 +29,22 @@ function QuestionAndAnswerBody() {
     var arr = [];
 
 
+    const cleanUpImgStack = ()=> {
+        const destination = document.getElementById("img-stack");
+        destination.remove();
+    }
 
     const addNewImageToStack = (img)=> {
         const destination = document.getElementById("img-stack");
         const imgElement = document.createElement("img");
 
-        imgElement.setAttribute("id","img");
-        // imgElement.setAttribute("className","img-stack");
         imgElement.className = "img-stack"
         imgElement.setAttribute("src",URL.createObjectURL(img));
+
+        imgElement.addEventListener("click",()=> {
+            alert("Click is done");
+            imgElement.style.cssText = "display:none";
+        })
 
         destination.appendChild(imgElement);
     }
@@ -50,6 +57,7 @@ function QuestionAndAnswerBody() {
 
         addNewImageToStack(event.target.files[0]);
     }
+
 
 
     return (
@@ -68,7 +76,7 @@ function QuestionAndAnswerBody() {
                 </label>
                 <div name = "img-stack" id = "img-stack"></div>
 
-                <br></br><button className = "question-body-add-btn"><strong>+</strong> Add Question</button>
+                <br></br><button onClick={()=>cleanUpImgStack()} className = "question-body-add-btn"><strong>+</strong> Add Question</button>
             </form>
 
             {questionAndAnswerData["items"].map((item) => (<QuestionAndAnswer props = {item}/>))}

@@ -28711,13 +28711,20 @@ function QuestionAndAnswerBody() {
 
   var arr = [];
 
+  var cleanUpImgStack = function cleanUpImgStack() {
+    var destination = document.getElementById("img-stack");
+    destination.remove();
+  };
+
   var addNewImageToStack = function addNewImageToStack(img) {
     var destination = document.getElementById("img-stack");
     var imgElement = document.createElement("img");
-    imgElement.setAttribute("id", "img"); // imgElement.setAttribute("className","img-stack");
-
     imgElement.className = "img-stack";
     imgElement.setAttribute("src", URL.createObjectURL(img));
+    imgElement.addEventListener("click", function () {
+      alert("Click is done");
+      imgElement.style.cssText = "display:none";
+    });
     destination.appendChild(imgElement);
   };
 
@@ -28765,6 +28772,9 @@ function QuestionAndAnswerBody() {
         name: "img-stack",
         id: "img-stack"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
+        onClick: function onClick() {
+          return cleanUpImgStack();
+        },
         className: "question-body-add-btn",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("strong", {
           children: "+"
