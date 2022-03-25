@@ -29,11 +29,18 @@ function QuestionAndAnswerBody() {
     var arr = [];
 
 
+    /**
+     * Cleans all the child element from the div
+     */
     const cleanUpImgStack = ()=> {
         const destination = document.getElementById("img-stack");
-        destination.remove();
+        destination.innerHTML = "";
     }
 
+    /**
+     * Adds any new image to the img-stack
+     * @param {*} img - new image to be added
+     */
     const addNewImageToStack = (img)=> {
         const destination = document.getElementById("img-stack");
         const imgElement = document.createElement("img");
@@ -42,13 +49,16 @@ function QuestionAndAnswerBody() {
         imgElement.setAttribute("src",URL.createObjectURL(img));
 
         imgElement.addEventListener("click",()=> {
-            alert("Click is done");
             imgElement.style.cssText = "display:none";
         })
 
         destination.appendChild(imgElement);
     }
 
+    /**
+     *
+     * @param {*} event - event while upload a new image or file
+     */
     const changeTest = (event)=> {
         var data = URL.createObjectURL(event.target.files[0]);
         var name = event.target.name;

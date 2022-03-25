@@ -28710,11 +28710,19 @@ function QuestionAndAnswerBody() {
       setCount = _useState2[1];
 
   var arr = [];
+  /**
+   * Cleans all the child element from the div
+   */
 
   var cleanUpImgStack = function cleanUpImgStack() {
     var destination = document.getElementById("img-stack");
-    destination.remove();
+    destination.innerHTML = "";
   };
+  /**
+   * Adds any new image to the img-stack
+   * @param {*} img - new image to be added
+   */
+
 
   var addNewImageToStack = function addNewImageToStack(img) {
     var destination = document.getElementById("img-stack");
@@ -28722,11 +28730,15 @@ function QuestionAndAnswerBody() {
     imgElement.className = "img-stack";
     imgElement.setAttribute("src", URL.createObjectURL(img));
     imgElement.addEventListener("click", function () {
-      alert("Click is done");
       imgElement.style.cssText = "display:none";
     });
     destination.appendChild(imgElement);
   };
+  /**
+   *
+   * @param {*} event - event while upload a new image or file
+   */
+
 
   var changeTest = function changeTest(event) {
     var data = URL.createObjectURL(event.target.files[0]);
