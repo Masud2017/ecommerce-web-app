@@ -28730,7 +28730,8 @@ function QuestionAndAnswerBody() {
     imgElement.className = "img-stack";
     imgElement.setAttribute("src", URL.createObjectURL(img));
     imgElement.addEventListener("click", function () {
-      imgElement.style.cssText = "display:none";
+      // imgElement.style.cssText = "display:none";
+      imgElement.remove();
     });
     destination.appendChild(imgElement);
   };
