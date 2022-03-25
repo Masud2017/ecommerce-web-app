@@ -28666,7 +28666,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _asset_user_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../asset/user.png */ "./resources/js/components/asset/user.png");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _asset_attachment_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../asset/attachment.png */ "./resources/js/components/asset/attachment.png");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -28678,6 +28679,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -28701,41 +28703,68 @@ function QuestionAndAnswerBody() {
       "body": "This is question body22."
     }]
   };
-  console.log(questionAndAnswerData["items"]);
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
       count = _useState2[0],
       setCount = _useState2[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("form", {
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      file = _useState4[0],
+      setFile = _useState4[1];
+
+  var arr = [];
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    arr.push(file);
+    console.log(arr);
+    console.log(arr.length);
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("form", {
       onSubmit: function onSubmit(event) {
         return event.preventDefault();
       },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
         className: "text-area-container",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("textarea", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("textarea", {
           rows: "5",
           id: "question",
           onChange: function onChange(e) {
             return setCount(e.target.value.length);
           }
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
           className: "counter",
           children: count
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
-        type: "file",
-        id: "image"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("button", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("label", {
+        className: "question-file-upload",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+          type: "file",
+          id: "image",
+          style: {
+            "margin-bottom": "5px"
+          },
+          className: "question-file",
+          onChange: function onChange(event) {
+            return setFile(URL.createObjectURL(event.target.files[0]));
+          }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+          src: _asset_attachment_png__WEBPACK_IMPORTED_MODULE_5__["default"]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+        src: file,
+        style: {
+          "width": "100%"
+        }
+      }), console.log(file), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
         className: "question-body-add-btn",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("strong", {
           children: "+"
         }), " Add Question"]
       })]
     }), questionAndAnswerData["items"].map(function (item) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_parts_QuestionAndAnswer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_parts_QuestionAndAnswer__WEBPACK_IMPORTED_MODULE_2__["default"], {
         props: item
       });
     })]
@@ -34469,7 +34498,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".question-body-add-btn {\n    background-color: red;\n    color :white;\n    padding : 5px 15px;\n    border-radius: 5px;\n}\ntextarea {\n    box-sizing: border-box;\n    width : 100%;\n    border: 1px solid grey;\n    resize : none;\n    padding : 5px;\n\n}\n\n.counter {\n    position:absolute;\n    /* bottom : -15px; */\n    top:100%;\n    justify-self: end;\n    right : 5px;\n}\n.text-area-container {\n    position: relative;\n    display: grid;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".question-body-add-btn {\n    background-color: red;\n    color :white;\n    padding : 5px 15px;\n    border-radius: 5px;\n}\ntextarea {\n    box-sizing: border-box;\n    width : 100%;\n    border: 1px solid grey;\n    resize : none;\n    padding : 5px;\n    margin-top: 10px;\n    margin-bottom : 5px;\n\n}\n\n.counter {\n    position:absolute;\n    /* bottom : -15px; */\n    top:100%;\n    justify-self: end;\n    right : 5px;\n}\n.text-area-container {\n    position: relative;\n    display: grid;\n}\n.question-file[type = \"file\"] {\n    display:none;\n}\n.question-file-upload {\n    padding : 10px;\n    height : 40px;\n    width: 40px;\n    border:1px dashed grey;\n    display:grid;\n}\n.question-file-upload img {\n    height : 20px;\n    width : 20px;\n    margin : auto;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -34765,6 +34794,21 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/attachment.png":
+/*!******************************************************!*\
+  !*** ./resources/js/components/asset/attachment.png ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/attachment.png?93f5185617f64cd3849d333a1fb41f90");
 
 /***/ }),
 

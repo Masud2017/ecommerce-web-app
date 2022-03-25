@@ -1,10 +1,11 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 
 import "./QuestionAnswerBody.css";
 
 import QuestionAndAnswer from "../parts/QuestionAndAnswer";
 import userLogo from "../asset/user.png";
 import { countBy } from "lodash";
+import attachment from "../asset/attachment.png";
 
 function QuestionAndAnswerBody() {
 
@@ -24,8 +25,16 @@ function QuestionAndAnswerBody() {
                 },
             ]
     };
-    console.log(questionAndAnswerData["items"]);
     const [count,setCount] = useState(0);
+    const [file,setFile] = useState(null);
+    var arr = [];
+
+
+    useEffect(()=> {
+        arr.push(file);
+        console.log(arr);
+        console.log(arr.length);
+    })
 
     return (
         <div>
@@ -34,7 +43,14 @@ function QuestionAndAnswerBody() {
                     <textarea rows = "5" id = "question" onChange={e => setCount(e.target.value.length)}/>
                     <p className = "counter">{count}</p>
                 </div>
-                <input type = "file" id = "image"/>
+                <label className = "question-file-upload">
+
+                    <input type = "file" id = "image" style = {{"margin-bottom":"5px"}} className = "question-file" onChange = {event=>setFile(URL.createObjectURL(event.target.files[0]))} />
+                    <img src = {attachment}></img>
+                </label>
+
+                <img src = {file} style = {{"width": "100%"}}></img>
+                {console.log(file)}
                 <br></br><button className = "question-body-add-btn"><strong>+</strong> Add Question</button>
             </form>
 
