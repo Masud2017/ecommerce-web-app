@@ -28709,17 +28709,26 @@ function QuestionAndAnswerBody() {
       count = _useState2[0],
       setCount = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      file = _useState4[0],
-      setFile = _useState4[1];
-
   var arr = [];
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    arr.push(file);
+
+  var addNewImageToStack = function addNewImageToStack(img) {
+    var destination = document.getElementById("img-stack");
+    var imgElement = document.createElement("img");
+    imgElement.setAttribute("id", "img"); // imgElement.setAttribute("className","img-stack");
+
+    imgElement.className = "img-stack";
+    imgElement.setAttribute("src", URL.createObjectURL(img));
+    destination.appendChild(imgElement);
+  };
+
+  var changeTest = function changeTest(event) {
+    var data = URL.createObjectURL(event.target.files[0]);
+    var name = event.target.name;
+    arr.push(data);
     console.log(arr);
-    console.log(arr.length);
-  });
+    addNewImageToStack(event.target.files[0]);
+  };
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("form", {
       onSubmit: function onSubmit(event) {
@@ -28746,18 +28755,16 @@ function QuestionAndAnswerBody() {
             "margin-bottom": "5px"
           },
           className: "question-file",
-          onChange: function onChange(event) {
-            return setFile(URL.createObjectURL(event.target.files[0]));
+          onChange: function onChange() {
+            return changeTest(event);
           }
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
           src: _asset_attachment_png__WEBPACK_IMPORTED_MODULE_5__["default"]
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
-        src: file,
-        style: {
-          "width": "100%"
-        }
-      }), console.log(file), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        name: "img-stack",
+        id: "img-stack"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
         className: "question-body-add-btn",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("strong", {
           children: "+"
@@ -34498,7 +34505,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".question-body-add-btn {\n    background-color: red;\n    color :white;\n    padding : 5px 15px;\n    border-radius: 5px;\n}\ntextarea {\n    box-sizing: border-box;\n    width : 100%;\n    border: 1px solid grey;\n    resize : none;\n    padding : 5px;\n    margin-top: 10px;\n    margin-bottom : 5px;\n\n}\n\n.counter {\n    position:absolute;\n    /* bottom : -15px; */\n    top:100%;\n    justify-self: end;\n    right : 5px;\n}\n.text-area-container {\n    position: relative;\n    display: grid;\n}\n.question-file[type = \"file\"] {\n    display:none;\n}\n.question-file-upload {\n    padding : 10px;\n    height : 40px;\n    width: 40px;\n    border:1px dashed grey;\n    display:grid;\n}\n.question-file-upload img {\n    height : 20px;\n    width : 20px;\n    margin : auto;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".question-body-add-btn {\n    background-color: red;\n    color :white;\n    padding : 5px 15px;\n    border-radius: 5px;\n}\ntextarea {\n    box-sizing: border-box;\n    width : 100%;\n    border: 1px solid grey;\n    resize : none;\n    padding : 5px;\n    margin-top: 10px;\n    margin-bottom : 5px;\n\n}\n\n.counter {\n    position:absolute;\n    /* bottom : -15px; */\n    top:100%;\n    justify-self: end;\n    right : 5px;\n}\n.text-area-container {\n    position: relative;\n    display: grid;\n}\n.question-file[type = \"file\"] {\n    display:none;\n}\n.question-file-upload {\n    padding : 10px;\n    height : 40px;\n    width: 40px;\n    border:1px dashed grey;\n    display:grid;\n}\n.question-file-upload img {\n    height : 20px;\n    width : 20px;\n    margin : auto;\n}\n\n.img-stack {\n    height : 50px;\n    width: 50px;\n    margin-right : 5px;\n    opacity: .5;\n    transition: opacity .3s;\n}\n.img-stack:hover {\n    opacity: 1;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
