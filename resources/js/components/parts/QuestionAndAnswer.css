@@ -1,0 +1,34 @@
+.question-user-logo {
+    height : 70px;
+    width : 70px;
+    display:inline-block;
+    grid-area: img;
+    border-right : 7px solid red;
+}
+
+
+.question-parent {
+    display:grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows:80px 1fr;
+    column-gap: 10px;
+    align-items:center;
+    grid-template-areas:
+        "img header"
+        "body body"
+    ;
+    border : 1px solid grey;
+    padding : 10px;
+}
+
+.question-parent h1 {
+    grid-area : header;
+    align-self : start;
+}
+.question-date {
+    grid-area : header;
+    align-self: end;
+}
+.question-body {
+    grid-area: body;
+}

@@ -4,7 +4,9 @@ import React from 'react';
 import "./ProductDetailsPage.css";
 
 import ProductDetailsImageGallary from '../parts/ProductDetailsImageGallary';
-import QuestionAndAnswer from '../parts/QuestionAndAnswer';
+import QuestionAndAnswerBody from './QuestionAndAnswerBody';
+import ProductReview from '../parts/ProductReview';
+import ProductDetailsDescription from "../parts/ProductDetailsDescription";
 
 function ProductDetailsPage () {
     const productDetailsImageInfo = {
@@ -27,8 +29,9 @@ function ProductDetailsPage () {
             <div className = "product-details-page-grid">
                 <div>
                     <ProductDetailsImageGallary props = {productDetailsImageInfo}/>
-
-                    <QuestionAndAnswer/>
+                    <QuestionAndAnswerBody/>
+                    <ProductDetailsDescription/>
+                    <ProductReview/>
                 </div>
                 <div className = "product-details-address">
                     <p>Delivary option</p>
