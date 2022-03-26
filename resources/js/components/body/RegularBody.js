@@ -16,6 +16,7 @@ import ProductDetailsPage from './ProductDetailsPage';
 
 import "./RegularBody.css";
 import CardCollectionBody from "./CardCollectionBody";
+import AccountBody from './AccountBody';
 
 
 function RegularBody() {
@@ -25,7 +26,8 @@ function RegularBody() {
 
     return(
         <div>
-            <ProductDetailsPage/>
+            <AccountBody/>
+            {/* <ProductDetailsPage/> */}
             {/* <CardCollectionBody/> */}
 
         </div>

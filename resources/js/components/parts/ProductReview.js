@@ -9,7 +9,9 @@ import "./product-review.css"
  */
 function ProductReview(props) {
     return (
-        <div></div>
+        <div className = "product-review-parent">
+            Product review part
+        </div>
     );
 }
 

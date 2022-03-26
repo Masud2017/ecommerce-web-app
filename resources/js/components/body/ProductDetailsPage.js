@@ -24,14 +24,20 @@ function ProductDetailsPage () {
         quantity:1
     };
 
+
+    const descriptionAttribute = {
+        "description":"Hello world this is the product description. And this is the final thing .. lol I am so smart.",
+        "specList":["One","two","leamon","orange"]
+    };
+
     return (
         <div className = "product-details-parent">
             <div className = "product-details-page-grid">
                 <div>
                     <ProductDetailsImageGallary props = {productDetailsImageInfo}/>
-                    <QuestionAndAnswerBody/>
-                    <ProductDetailsDescription/>
+                    <ProductDetailsDescription props = {descriptionAttribute}/>
                     <ProductReview/>
+                    <QuestionAndAnswerBody/>
                 </div>
                 <div className = "product-details-address">
                     <p>Delivary option</p>

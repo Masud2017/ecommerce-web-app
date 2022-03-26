@@ -3,7 +3,16 @@
     color :white;
     padding : 5px 15px;
     border-radius: 5px;
+    transition: background-color .3s;
 }
+
+.question-body-add-btn:hover {
+    background-color: darkred;
+}
+.question-body-add-btn:active {
+    background-color: orange;
+}
+
 textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
