@@ -46,7 +46,7 @@
     <body>
         {{-- <div id = "example"></div> --}}
         <div id = "header"></div>
-        <div id = "regularbody"></div>
+        {{-- <div id = "regularbody"></div> --}}
         <div id = "footer"></div>
 
     </body>

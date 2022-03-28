@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import ReactDOM from 'react-dom';
 import "./Header.css"
 
@@ -15,13 +15,25 @@ import MenuIcon from '@mui/icons-material/Menu';
 import logo from "../asset/lgoo.svg";
 import cart from "../asset/cart.svg";
 
+import RegularBody from "../body/RegularBody";
+import Login from "../parts/Login";
+import Signup from "../parts/Login";
 
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect
+  } from "react-router-dom";
+
+// Testing the api
 
 function Header() {
-
     return (
         <div name = "Header">
-
+            <Router>
             <ul className ="nav">
                 <img alt = "Something went wrong" src = {logo} style = {{"width":"30px"}} className = "nav-item" id = "logo"></img>
                 <div className = "nav-item" id = "search-bar">
@@ -33,13 +45,24 @@ function Header() {
                 <div id = "login" className = "nav-item">
                     <img src = {cart} className = "header-cart" ></img>
                     <p className = "cart-counter">1</p>
-                    <li  className = "nav-item" >Login</li>
+                    <li  className = "nav-item" ><Link to="/login">Login</Link></li>
                     /
-                    <li  className = "nav-item">Home</li>
+                    <li  className = "nav-item"><Link to = "/signup">Signup</Link></li>
                 </div>
             </ul>
 
-
+            <Switch>
+                <Route exact path = '/'>
+                    <RegularBody/>
+                </Route>
+                <Route path = "/login">
+                    <Login/>
+                </Route>
+                <Route path = "/signup">
+                    <Signup/>
+                </Route>
+            </Switch>
+            </Router>
         </div>
     //     <div>
     //         <Box sx={{ flexGrow: 1 }} >

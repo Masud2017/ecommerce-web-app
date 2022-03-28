@@ -21,19 +21,16 @@ import AccountBody from './AccountBody';
 
 function RegularBody() {
 
-
-
-
     return(
         <div>
-            <AccountBody/>
+            {/* <AccountBody/> */}
             {/* <ProductDetailsPage/> */}
-            {/* <CardCollectionBody/> */}
+            <CardCollectionBody/>
 
         </div>
     );
 }
 
 export default RegularBody;
-ReactDOM.render(<RegularBody />, document.getElementById('regularbody'));
+// ReactDOM.render(<RegularBody />, document.getElementById('regularbody'));
 

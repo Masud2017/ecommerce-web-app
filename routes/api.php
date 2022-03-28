@@ -55,4 +55,14 @@ Route::group([
 
     // route for cart handling
     Route::get('addcart/{id}',[CartController::class,'addProductToCart']);
+
+    Route::get('/google/redirect', function () {
+        return response()->json(['url'=>Socialite::driver('google')->stateless()->redirect()->getTargetUrl()]);
+    });
+
+    Route::get('/google/callback', function () {
+        $user = Socialite::driver('google')->stateless()->user();
+
+        return response()->json(["data"=> $user]);
+    });
 });
