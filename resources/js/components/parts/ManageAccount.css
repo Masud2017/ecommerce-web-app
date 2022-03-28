@@ -1,4 +1,28 @@
+.MyAccount-grid {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    gap:50px;
+}
 .address-box {
     border :1px solid grey;
-    padding : 10px;
+    padding : 5px;
+}
+.address-box p {
+    line-height: 15px;
+}
+
+.address-box h5 {
+    display: inline;
+    margin-right : 5px;
+}
+
+.with-inner-grid {
+    display:grid;
+    grid-template-columns: 1fr 5px 1fr;
+    gap: 10px;
+}
+.vertical-line {
+    height:100%;
+    width:100%;
+    background-color: pink;
 }

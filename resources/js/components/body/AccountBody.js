@@ -17,6 +17,11 @@ import MyReviews from "../parts/MyReviews";
 import MyReturns from "../parts/MyReturns";
 import MyCancellation from "../parts/MyCancellation";
 
+
+/**
+ * Component for the account body
+ * @param props - contain all the info according the accound body.
+ */
 function AccountBody() {
     return (
         <div>
@@ -24,7 +29,7 @@ function AccountBody() {
                 <div className = "account-parent" style = {{"margin-top":"15px"}}>
                         <div>
                             <h5 style = {{"color":"#727272"}}>Hello, User</h5>
-                                <h3 style = {{"margin-top":"70px"}}><Link to ="/" >My Account</Link></h3>
+                                <h3 style = {{"margin-top":"70px"}}><Link index to ="/myaccount" >My Account</Link></h3>
                                 <h3><Link to = "/myorders">My Orders</Link></h3>
                                 <div style = {{"margin-left":"20px"}}>
                                     <h4><Link to = "/myreturns">My Returns</Link></h4>
@@ -35,7 +40,7 @@ function AccountBody() {
 
                         <div>
                             <Switch>
-                                <Route exact path="/">
+                                <Route exact path="/myaccount">
                                     <ManageAccount/>
                                 </Route>
 

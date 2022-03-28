@@ -22,11 +22,3 @@ function ProductDetailsDescription(props) {
 }
 
 export default ProductDetailsDescription;
-
-
-//Todo :
-/*
- There would be two section in this component :
-    1. Descriptoin
-    2. Specification
-*/

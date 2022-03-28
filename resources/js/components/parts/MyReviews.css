@@ -1,0 +1,13 @@
+.review-tab {
+    background-color: #F8F8F8;
+    padding : 10px 10px 5px 10px;
+    overflow: hidden;
+}
+.tab-item{
+    border-bottom: 5px solid red;
+    margin-bottom: 0px;
+}
+.tab-item-btn {
+    display:inline;
+    margin-right : 70px;
+}
