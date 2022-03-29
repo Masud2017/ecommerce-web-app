@@ -15,14 +15,20 @@ class OAuthController extends Controller
     {
         $this->middleware('token_validator')->only('me');
         $this->middleware('role_middleware');
-        $this->middleware('user_existance_checker_middleware')->only(['register','register_admin']);
+        // $this->middleware('user_existance_checker_middleware')->only(['getGoogleCallback']);
         $this->middleware('auth:api', ['except' => ['getGoogleRedirect','getGoogleCallback']]);
     }
 
+    /**
+     * @return redirectTargetUrl - A json response which contains redirectTargetUrl for getting user consent
+     */
     public function getGoogleRedirect() {
         return response()->json(['url'=>Socialite::driver('google')->stateless()->redirect()->getTargetUrl()]);
     }
 
+    /**
+     * @return token - Jwt token for get user authneticated.
+     */
     public function getGoogleCallback() {
         $user = Socialite::driver('google')->stateless()->user();
 
@@ -41,10 +47,13 @@ class OAuthController extends Controller
             $token = auth()->login($new_user);
         }
 
-        // return response()->json(["data"=> $user]);
         return $this->respondWithToken($token);
     }
 
+    /**
+     * @param permission_name - a string which contains a case insensitive permission name
+     * @return permission_code - a permission code based on the permission_name which mapped in database.
+     */
     protected function get_permission($permission_name) {
         $permission_name = strtolower($permission_name);
 
@@ -53,6 +62,10 @@ class OAuthController extends Controller
         return $role_id->id;
     }
 
+    /**
+     * @param token - a stirng which contains jwt token
+     * @return token_info - a json response contains jwt token , it's authorization type and expire time.
+     */
     protected function respondWithToken($token)
     {
         return response()->json([
