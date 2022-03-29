@@ -16,7 +16,7 @@ function Login() {
                 return data.json();
             }
             // throw new Error('Something went wrong!');
-        }).then(data=>setGoogleConsentUrl(data.url)).catch(e=>console.log(e));
+        }).then(data=>setGoogleConsentUrl(data.url)).catch(e=>console.log("another error "+e));
         alert(googleConsentUrl);
     });
     return(
@@ -31,7 +31,7 @@ function Login() {
                 <input className = "login-btn" type = "submit" value = "Login"></input>
                 <div className = "qauth-logo">
                     <a href = "#" target="_blank"><img src = {facebook} alt = "Something went wrong" ></img></a>
-                    {googleConsentUrl && <a href = {googleConsentUrl} target = "_blank" rel="noopener noreferrer"><img src = {google} alt = "Something went wrong" ></img></a>}
+                    {googleConsentUrl && <a href = {googleConsentUrl} target = "_blank" ><img src = {google} alt = "Something went wrong" ></img></a>}
                 </div>
                 <a href= "#">Forgot password?</a><br></br>
                 <a href= "#">Don't have any account?</a>

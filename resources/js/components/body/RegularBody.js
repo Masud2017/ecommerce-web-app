@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 import Card from '@mui/material/Card';
@@ -19,7 +19,16 @@ import CardCollectionBody from "./CardCollectionBody";
 import AccountBody from './AccountBody';
 
 
-function RegularBody() {
+function RegularBody(props) {
+
+    useEffect(async ()=> {
+        await fetch(`http://localhost:8000/api/auth/google/callback${props.location.search}`).then(data=> {
+            if (data.ok) {
+                return data.json();
+            }
+            throw new Error ("something went wrong");
+        }).then(res=>alert(res.data.user.name));
+    });
 
     return(
         <div>
@@ -32,5 +41,4 @@ function RegularBody() {
 }
 
 export default RegularBody;
-// ReactDOM.render(<RegularBody />, document.getElementById('regularbody'));
 
