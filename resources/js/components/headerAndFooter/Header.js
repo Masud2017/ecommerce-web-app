@@ -19,7 +19,6 @@ import RegularBody from "../body/RegularBody";
 import Login from "../parts/Login";
 import Signup from "../parts/Login";
 
-
 import {
     BrowserRouter as Router,
     Switch,
@@ -29,6 +28,7 @@ import {
   } from "react-router-dom";
 import { set } from 'lodash';
 import { Component } from 'react';
+import CartPage from '../body/CartPage';
 
 // Testing the api
 
@@ -43,7 +43,7 @@ class Header extends React.Component {
             <div name = "Header">
                 <Router>
                 <ul className ="nav">
-                    <img alt = "Something went wrong" src = {logo} style = {{"width":"30px"}} className = "nav-item" id = "logo"></img>
+                    <Link to = "/"><img alt = "Something went wrong" src = {logo} style = {{"width":"30px"}} className = "nav-item" id = "logo"></img></Link>
                     <div className = "nav-item" id = "search-bar">
                         <form className = "nav-item search-bar" id ="search-bar">
                             <input type = "text" className = "search-bar" placeholder='Search your product'></input>
@@ -51,7 +51,7 @@ class Header extends React.Component {
                         </form>
                     </div>
                     <div id = "login" className = "nav-item">
-                        <img src = {cart} className = "header-cart" ></img>
+                        <Link to = "/cart"><img src = {cart} className = "header-cart" ></img></Link>
                         <p className = "cart-counter">1</p>
                         <li  className = "nav-item" ><Link to="/login">Login</Link></li>
                         /
@@ -69,7 +69,9 @@ class Header extends React.Component {
                     <Route path = "/signup">
                         <Signup/>
                     </Route>
+                    <Route path = "/cart"><CartPage/></Route>
                     <Route path = "/" component={RegularBody}/>
+
 
                 </Switch>
                 </Router>

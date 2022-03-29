@@ -15,9 +15,9 @@ function Login() {
             if (data.ok) {
                 return data.json();
             }
-            // throw new Error('Something went wrong!');
+            throw new Error('Something went wrong!');
         }).then(data=>setGoogleConsentUrl(data.url)).catch(e=>console.log("another error "+e));
-        alert(googleConsentUrl);
+        // alert(googleConsentUrl);
     });
     return(
         <div className = "login">

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OAuthController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -56,13 +57,7 @@ Route::group([
     // route for cart handling
     Route::get('addcart/{id}',[CartController::class,'addProductToCart']);
 
-    Route::get('/google/redirect', function () {
-        return response()->json(['url'=>Socialite::driver('google')->stateless()->redirect()->getTargetUrl()]);
-    });
+    Route::get('/google/redirect', [OAuthController::class,'getGoogleRedirect']);
 
-    Route::get('/google/callback', function () {
-        $user = Socialite::driver('google')->stateless()->user();
-
-        return response()->json(["data"=> $user]);
-    });
+    Route::get('/google/callback', [OAuthController::class,'getGoogleCallback']);
 });

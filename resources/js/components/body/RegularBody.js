@@ -27,7 +27,11 @@ function RegularBody(props) {
                 return data.json();
             }
             throw new Error ("something went wrong");
-        }).then(res=>alert(res.data.user.name));
+        }).then(res=>{
+            alert(res.access_token);
+            // localStorage.setItem("token",res.access_token);
+            sessionStorage.setItem("token",res.access_token);
+        }).catch(e=>console.log("This is catch "+e));
     });
 
     return(

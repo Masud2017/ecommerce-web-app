@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Models;
+// namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Factories\HasFactory;
+// use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
-{
-    use HasFactory;
+// class Product extends Model
+// {
+//     use HasFactory;
 
-    protected $fillable = ["name","price","stock","description","rating","images","discount"];
+//     protected $fillable = ["name","price","stock","description","rating","images","discount"];
 
-    public function cart() {
-        return $this->belongsToMany(Cart::class,'products_cart');
-    }
-}
+//     public function cart() {
+//         return $this->belongsToMany(Cart::class,'products_cart');
+//     }
+// }
