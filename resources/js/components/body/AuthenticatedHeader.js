@@ -53,7 +53,7 @@ class AuthenticatedHeader extends React.Component {
                     <div id = "login" className = "nav-item">
                         <Link to = "/cart"><img src = {cart} className = "header-cart" ></img></Link>
                         <p className = "cart-counter">1</p>
-                        <p className = "nav-item">User  name</p>
+                        <li className = "nav-item">User  name</li>
                     </div>
                 </ul>
 

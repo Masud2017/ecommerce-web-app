@@ -3,10 +3,10 @@ import AuthenticatedHeader from "../body/AuthenticatedHeader";
 import NonAuthenticatedHeader from "../body/NonAuthenticatedHeader";
 
 function AuthOrNotHeader(props) {
-    if (!props.token) {
-        return <NonAuthenticatedHeader/>
-    } else {
+    if (props.token) {
         return <AuthenticatedHeader/>
+    } else {
+        return <NonAuthenticatedHeader/>
     }
 }
 export default AuthOrNotHeader;
