@@ -75,6 +75,10 @@ class ProductController extends Controller
     }
 
 
+    /**
+ *  @param product_list - json file that contains list of products
+ *  @return response - a json containing formated productInfo
+ * */
     protected function formatedProductResponse($product_list) {
         $response = [
             'data'=>$product_list
