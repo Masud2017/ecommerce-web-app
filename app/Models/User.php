@@ -70,6 +70,6 @@ class User extends Authenticatable implements JWTSubject
     }
 
     public function cart() {
-        return $this->belongsTo(Cart::class);
+        return $this->hasOne(Cart::class);
     }
 }
