@@ -14,21 +14,17 @@ class CreateProductCatagoryTable extends Migration
     public function up()
     {
         Schema::create('product_catagory', function (Blueprint $table) {
-            // $table->id();
-            // $table->timestamps();
+            $table->engine = 'MyISAM';
+            $table->bigIncrements('id');
+            $table->integer('category_id')->unsigned();
             $table->integer('product_id')->unsigned();
-            $table->integer('catagory_id')->unsigned();
 
-            $table->foreign('product_id')->references('id')->on('products')
-
-                ->onDelete('cascade');
-
-            $table->foreign('catagory_id')->references('id')->on('catagories')
-
-                ->onDelete('cascade');
-
-
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('product_id')->references('id')->on('products');
         });
+
+
+
     }
 
     /**

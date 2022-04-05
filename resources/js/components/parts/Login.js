@@ -30,8 +30,8 @@ function Login() {
                 <input className = "input-controll" type = "password" name = "password" placeholder='Enter your password'></input><br></br>
                 <input className = "login-btn" type = "submit" value = "Login"></input>
                 <div className = "qauth-logo">
-                    <a href = "#" target="_blank"><img src = {facebook} alt = "Something went wrong" ></img></a>
-                    {googleConsentUrl && <a href = {googleConsentUrl} target = "_blank" ><img src = {google} alt = "Something went wrong" ></img></a>}
+                    <a href = "#"><img src = {facebook} alt = "Something went wrong" ></img></a>
+                    {googleConsentUrl && <a href = {googleConsentUrl} ><img src = {google} alt = "Something went wrong" ></img></a>}
                 </div>
                 <a href= "#">Forgot password?</a><br></br>
                 <a href= "#">Don't have any account?</a>
