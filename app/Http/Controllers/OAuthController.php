@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Util\FormatterUtil;
 use Illuminate\Http\Request;
 use App\Models\Role;
 use Laravel\Socialite\Facades\Socialite;
@@ -42,37 +43,13 @@ class OAuthController extends Controller
             $new_user->email = $user->email;
             $new_user->google_id = $user->id;
             $new_user->save();
-            $user->roles()->attach([$this->get_permission("user")]);
+            // $user->roles()->attach([$this->get_permission("user")]);
+            $user->roles()->attach([FormatterUtil::get_permission("user")]);
 
             $token = auth()->login($new_user);
         }
 
-        return $this->respondWithToken($token);
-    }
-
-    /**
-     * @param permission_name - a string which contains a case insensitive permission name
-     * @return permission_code - a permission code based on the permission_name which mapped in database.
-     */
-    protected function get_permission($permission_name) {
-        $permission_name = strtolower($permission_name);
-
-        $role_id = DB::table('roles')->where('role',$permission_name)->first();
-
-        return $role_id->id;
-    }
-
-    /**
-     * @param token - a stirng which contains jwt token
-     * @return token_info - a json response contains jwt token , it's authorization type and expire time.
-     */
-    protected function respondWithToken($token)
-    {
-        return response()->json([
-            'access_token' => $token,
-            'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60
-        ]);
+        return FormatterUtil::respondWithToken($token);
     }
 
 }

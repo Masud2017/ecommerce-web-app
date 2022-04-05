@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
 use Exception;
+use App\Http\Util\FormatterUtil;
 
 class AuthController extends Controller
 {
@@ -35,7 +36,8 @@ class AuthController extends Controller
         $token = auth()->attempt($cred);
 
         // return response()->json(['token'=>$token]);
-        return $this->respondWithToken($token);
+        // return $this->respondWithToken($token);
+        return FormatterUtil::respondWithToken($token);
     }
 
     public function register(Request $req) {
@@ -51,7 +53,9 @@ class AuthController extends Controller
         $user->email = $email;
 
         $user->save();
-        $user->roles()->attach([$this->get_permission($role_name)]);
+        // $user->roles()->attach([$this->get_permission($role_name)]);
+        $user->roles()->attach([FormatterUtil::get_permission($role_name)]);
+
 
 
         // $token = auth()->attempt(compact('email','password'));
@@ -59,7 +63,9 @@ class AuthController extends Controller
 
         // return response()->json(['token'=>$token]);
 
-        return response()->json(['data'=>$this->respondWithToken($token)]);
+        // return response()->json(['data'=>$this->respondWithToken($token)]);
+        return response()->json(['data'=>FormatterUtil::respondWithToken($token)]);
+
     }
 
     public function registerAdmin(Request $req) {
@@ -93,29 +99,8 @@ class AuthController extends Controller
 
     public function refresh()
     {
-        return $this->respondWithToken(auth()->refresh());
-    }
+        // return $this->respondWithToken(auth()->refresh());
+        return FormatterUtil::respondWithToken(auth()->refresh());
 
-    /**
-     * @param token  string - jwt token
-    */
-    protected function respondWithToken($token)
-    {
-        return response()->json([
-            'access_token' => $token,
-            'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60
-        ]);
-    }
-
-    /**
-     * @param permission_name $string - permission name can be in any case
-     */
-    protected function get_permission($permission_name) {
-        $permission_name = strtolower($permission_name);
-
-        $role_id = DB::table('roles')->where('role',$permission_name)->first();
-
-        return $role_id->id;
     }
 }

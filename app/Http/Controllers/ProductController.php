@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Util\FormatterUtil;
 use App\Models\Product;
 use Exception;
 use Illuminate\Http\Request;
@@ -50,7 +51,9 @@ class ProductController extends Controller
     public function getProductList(Request $req) {
         $product_list = Product::all(); // get all records from the product table;
 
-        return response()->json($this->formatedProductResponse($product_list));
+        // return response()->json($this->formatedProductResponse($product_list));
+        return response()->json(FormatterUtil::formatedProductResponse($product_list));
+
     }
 
     public function getProduct(Request $req, $id) {
@@ -72,18 +75,5 @@ class ProductController extends Controller
         }
 
         return response()->json(['status_code'=>$code]);
-    }
-
-
-    /**
- *  @param product_list - json file that contains list of products
- *  @return response - a json containing formated productInfo
- * */
-    protected function formatedProductResponse($product_list) {
-        $response = [
-            'data'=>$product_list
-        ];
-
-        return $response;
     }
 }
