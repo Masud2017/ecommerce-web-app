@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Util\FormatterUtil;
 use App\Models\Product;
 use Exception;
 use Illuminate\Http\Request;
@@ -37,7 +38,24 @@ class CartController extends Controller
 
     }
 
-    public function checkoutFromCart(Request $req) {
+    public function getCartQuantity(Request $req) {
+        $user = JWTAuth::user();
+
+        if ($user->cart->quantity == 0) {
+            return response()->json(["status_code"=>"404"]);
+        } else {
+            return response()->json(["cart_quantity"=> $user->cart->quantity]);
+        }
+    }
+
+    public function getAllCartProduct(Request $req) {
+        $user = JWTAuth::user();
+        $product = new Product();
+
 
     }
+
+    // public function checkoutFromCart(Request $req) {
+
+    // }
 }

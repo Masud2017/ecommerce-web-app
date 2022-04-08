@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\Role;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
+use Carbon\Carbon;
+use DateTime;
+use DateTimeZone;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 
 
@@ -42,6 +46,7 @@ class OAuthController extends Controller
             $new_user->name = $user->name;
             $new_user->email = $user->email;
             $new_user->google_id = $user->id;
+            $new_user->email_verified_at = Carbon::now()->toDateTimeString();
             $new_user->save();
             // $user->roles()->attach([$this->get_permission("user")]);
             $user->roles()->attach([FormatterUtil::get_permission("user")]);
