@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import ReactDOM from 'react-dom';
 import "../headerAndFooter/Header.css"
 
@@ -29,15 +29,27 @@ import {
 import { set } from 'lodash';
 import { Component } from 'react';
 import CartPage from '../body/CartPage';
+import AccountBody from './AccountBody';
 
+
+import "./AuthenticatedHeader.css";
 // Testing the api
 
-class AuthenticatedHeader extends React.Component {
-    constructor(props) {
-        super(props);
-      }
 
-    render() {
+import {AppContext} from "../../Context";
+
+function logoutHandler() {
+    const contextApp = useContext(AppContext);
+    alert("Logout");
+
+    sessionStorage.removeItem("token");
+    if (!sessionStorage.getItem("token")) {
+        contextApp.dispatch({type:'logout'});
+    }
+}
+
+function AuthenticatedHeader () {
+
 
         return (
             <div name = "Header">
@@ -53,7 +65,15 @@ class AuthenticatedHeader extends React.Component {
                     <div id = "login" className = "nav-item">
                         <Link to = "/cart"><img src = {cart} className = "header-cart" ></img></Link>
                         <p className = "cart-counter">1</p>
-                        <li className = "nav-item">User  name</li>
+                        <li className = "nav-item drop-down">
+                            <img className = "profile-pic" src=  "https://avatars.githubusercontent.com/u/33942219?v=4" alt = "somthing went wrong"/>
+                            <div class = "profile-option">
+                                <Link to = "account">Manage Account</Link>
+                                <hr style = {{"margin":"0px"}}></hr>
+                                <a href = "#" onClick={()=>logoutHandler()} >Logout</a>
+
+                            </div>
+                        </li>
                     </div>
                 </ul>
 
@@ -68,6 +88,8 @@ class AuthenticatedHeader extends React.Component {
                         <Signup/>
                     </Route>
                     <Route path = "/cart"><CartPage/></Route>
+                    <Route path = "/account"><AccountBody/></Route>
+
                     <Route path = "/" component={RegularBody}/>
 
 
@@ -79,7 +101,7 @@ class AuthenticatedHeader extends React.Component {
 
 
         );
-    }
+
 }
 
 export default AuthenticatedHeader;

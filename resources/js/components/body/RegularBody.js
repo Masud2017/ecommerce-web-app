@@ -35,16 +35,14 @@ function RegularBody(props) {
             throw new Error ("something went wrong");
         }).then(res=>{
             alert(res.access_token);
-            // localStorage.setItem("token",res.access_token);
             sessionStorage.setItem("token",res.access_token);
-            // if (sessionStorage.getItem("token")) {
-            //     contextApp.dispatch({type:'isAuth'});
-            // }
+
 
         }).catch(e=>console.log("This is catch "+e));
         if (sessionStorage.getItem('token')) {
             contextApp.dispatch({type:'grantAuth'});
-
+        } else {
+            contextApp.dispatch({type:'logout'});
         }
     },[]);
 

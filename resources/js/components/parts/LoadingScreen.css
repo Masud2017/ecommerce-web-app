@@ -3,8 +3,8 @@
     border-radius: 50%;
     border-top: 16px solid blue;
     height : 120px;
-    width : 120;
-    animation-name : spin 2s linear infinite;
+    width : 120px;
+    animation : spin 2s linear infinite;
 
 }
 

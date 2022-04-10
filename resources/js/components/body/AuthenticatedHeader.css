@@ -1,0 +1,51 @@
+.profile-pic {
+    border-radius: 50%;
+    height : 37px;
+    width : 37px;
+    font-size: 16px;
+    border: none;
+}
+
+/* .drop-down:hover  .profile-option{
+    display: block;
+} */
+
+.profile-option {
+    /* position:absolute;
+    display:none; */
+
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    right : 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.profile-option a {
+    /* position:absolute;
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none; */
+
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+.drop-down {
+    position: relative;
+    display: inline-block;
+}
+
+
+.profile-option a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.drop-down:hover .profile-option {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.drop-down:hover .profile-pic {opacity: 0.7;}

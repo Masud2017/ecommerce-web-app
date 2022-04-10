@@ -3,7 +3,7 @@ import "./LoadingScreen.css";
 
 function LoadingScreen() {
     return (
-        <div></div>
+        <div className = "loading"></div>
     );
 }
 
