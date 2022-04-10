@@ -20,6 +20,8 @@ import AccountBody from './AccountBody';
 
 import {AppContext} from "../../Context";
 
+import LoadingScreen from '../parts/LoadingScreen';
+
 
 
 function RegularBody(props) {
@@ -35,19 +37,26 @@ function RegularBody(props) {
             alert(res.access_token);
             // localStorage.setItem("token",res.access_token);
             sessionStorage.setItem("token",res.access_token);
-            if (sessionStorage.getItem("token")) {
-                contextApp.dispatch({type:'isAuth'});
-            }
+            // if (sessionStorage.getItem("token")) {
+            //     contextApp.dispatch({type:'isAuth'});
+            // }
+
         }).catch(e=>console.log("This is catch "+e));
-    });
+        if (sessionStorage.getItem('token')) {
+            contextApp.dispatch({type:'grantAuth'});
+
+        }
+    },[]);
+
 
     return(
         <div>
             {/* <AccountBody/> */}
             {/* <ProductDetailsPage/> */}
             <CardCollectionBody/>
-
+            <LoadingScreen/>
         </div>
+
     );
 }
 

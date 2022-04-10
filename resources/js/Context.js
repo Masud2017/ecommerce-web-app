@@ -14,8 +14,10 @@ const globalReducer = (state, action)=> {
     switch(action.type) {
         case 'toggle':
             return {darkMode : !state.darkMode};
-        case 'isAuth':
-            return {isAuth:!state.isAuth};
+        case 'grantAuth':
+            return {isAuth:true};
+        case 'logout':
+            return {isAuth:false}
         default:
             return state;
     }
