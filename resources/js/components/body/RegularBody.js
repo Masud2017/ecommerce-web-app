@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import ReactDOM from 'react-dom';
 
 import Card from '@mui/material/Card';
@@ -18,8 +18,13 @@ import "./RegularBody.css";
 import CardCollectionBody from "./CardCollectionBody";
 import AccountBody from './AccountBody';
 
+import {AppContext} from "../../Context";
+
+
 
 function RegularBody(props) {
+    const contextApp = useContext(AppContext);
+
     useEffect(async ()=> {
         await fetch(`http://localhost:8000/api/auth/google/callback${props.location.search}`).then(data=> {
             if (data.ok) {
@@ -30,6 +35,9 @@ function RegularBody(props) {
             alert(res.access_token);
             // localStorage.setItem("token",res.access_token);
             sessionStorage.setItem("token",res.access_token);
+            if (sessionStorage.getItem("token")) {
+                contextApp.dispatch({type:'isAuth'});
+            }
         }).catch(e=>console.log("This is catch "+e));
     });
 

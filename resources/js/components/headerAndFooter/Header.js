@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,useContext } from 'react';
 import ReactDOM from 'react-dom';
 import "./Header.css"
 
@@ -33,10 +33,19 @@ import NonAuthenticatedHeader from '../body/NonAuthenticatedHeader';
 import AuthenticatedHeader from '../body/AuthenticatedHeader';
 import AuthOrNotHeader from './AuthOrNotHeader';
 
+import {AppContext} from "../../Context";
+
+
 
 // Testing the api
 
 function Header() {
+    const contextApp = useContext(AppContext);
+    const isAuth = contextApp.state.isAuth;
+
+
+
+    alert(isAuth);
 
     var token = sessionStorage.getItem("token");
 
@@ -45,5 +54,5 @@ function Header() {
 
 export default Header;
 
-ReactDOM.render(<Header />, document.getElementById('header'));
+// ReactDOM.render(<Header />, document.getElementById('header'));
 
