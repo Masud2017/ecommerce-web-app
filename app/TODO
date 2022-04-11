@@ -3,3 +3,5 @@
 - fix the login issue in front end
 - add dark theme in front end
 - design the database
+- figure out the better way of handling the jwt token
+- figure out the best way of using loading screen
