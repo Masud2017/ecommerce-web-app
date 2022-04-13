@@ -20437,7 +20437,7 @@ function AuthenticatedHeader() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("a", {
                 href: "#",
                 onClick: function onClick() {
-                  return logoutHandler();
+                  return logoutHandler;
                 },
                 children: "Logout"
               })]
@@ -21077,7 +21077,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-
 function RegularBody(props) {
   var contextApp = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_Context__WEBPACK_IMPORTED_MODULE_9__.AppContext);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -21117,8 +21116,8 @@ function RegularBody(props) {
       }
     }, _callee);
   })), []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_CardCollectionBody__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_parts_LoadingScreen__WEBPACK_IMPORTED_MODULE_10__["default"], {})]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_parts_LoadingScreen__WEBPACK_IMPORTED_MODULE_10__["default"], {})
   });
 }
 
@@ -21307,7 +21306,10 @@ __webpack_require__.r(__webpack_exports__);
 
 function LoadingScreen() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "loading"
+    className: "loading-container",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "loading"
+    })
   });
 }
 
@@ -27252,7 +27254,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".loading {\n    border: 16px solid grey;\n    border-radius: 50%;\n    border-top: 16px solid blue;\n    height : 120px;\n    width : 120px;\n    -webkit-animation : spin 2s linear infinite;\n            animation : spin 2s linear infinite;\n\n}\n\n@-webkit-keyframes spin {\n    0% {transform: rotate(0deg);}\n    100% {transform: rotate(360deg);}\n\n\n}\n\n@keyframes spin {\n    0% {transform: rotate(0deg);}\n    100% {transform: rotate(360deg);}\n\n\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".loading {\n    border: 5px solid grey;\n    border-radius: 50%;\n    border-top: 5px solid blue;\n    height : 50px;\n    width : 50px;\n    -webkit-animation : spin 2s linear infinite;\n            animation : spin 2s linear infinite;\n\n}\n\n@-webkit-keyframes spin {\n    0% {transform: rotate(0deg);}\n    100% {transform: rotate(360deg);}\n\n\n}\n\n@keyframes spin {\n    0% {transform: rotate(0deg);}\n    100% {transform: rotate(360deg);}\n\n\n}\n\n.loading-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    min-height: 100vh;\n    background-color: #e1e2e3;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

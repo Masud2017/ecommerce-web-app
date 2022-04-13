@@ -70,7 +70,7 @@ function AuthenticatedHeader () {
                             <div class = "profile-option">
                                 <Link to = "account">Manage Account</Link>
                                 <hr style = {{"margin":"0px"}}></hr>
-                                <a href = "#" onClick={()=>logoutHandler()} >Logout</a>
+                                <a href= "#" onClick={()=>logoutHandler}>Logout</a>
 
                             </div>
                         </li>
