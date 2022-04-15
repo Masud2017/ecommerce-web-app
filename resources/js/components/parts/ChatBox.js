@@ -8,41 +8,55 @@ function ChatBox () {
     const attribute =
         [
             {
+                id : 1,
                 img : "https://avatars.githubusercontent.com/u/33942219?v=4",
                 name : "Masud karim",
                 hint  : "Hey bro can bro are you ther ? ",
                 time : "12:45pm"
             },
             {
+                id : 2,
                 img : "https://avatars.githubusercontent.com/u/33942219?v=4",
                 name : "Masud karim",
                 hint  : "Hey bro can bro are you ther ? ",
                 time : "12:45pm"
             },
             {
+                id : 3,
                 img : "https://avatars.githubusercontent.com/u/33942219?v=4",
                 name : "Masud karim",
                 hint  : "Hey bro can bro are you ther ? ",
                 time : "12:45pm"
             },
             {
+                id : 4,
                 img : "https://avatars.githubusercontent.com/u/33942219?v=4",
                 name : "Masud karim",
                 hint  : "Hey bro can bro are you ther ? ",
                 time : "12:45pm"
             },
             {
+                id : 5,
                 img : "https://avatars.githubusercontent.com/u/33942219?v=4",
                 name : "Masud karim",
                 hint  : "Hey bro can bro are you ther ? ",
                 time : "12:45pm"
             },
             {
+                id : 6,
                 img : "https://avatars.githubusercontent.com/u/33942219?v=4",
                 name : "Masud karim",
                 hint  : "Hey bro can bro are you ther ? ",
                 time : "12:45pm"
-            }
+            },
+            {
+                id : 7,
+                img : "https://avatars.githubusercontent.com/u/33942219?v=4",
+                name : "Masud karim",
+                hint  : "Hey bro can bro are you ther ? ",
+                time : "12:45pm"
+            },
+
         ];
 
     return (

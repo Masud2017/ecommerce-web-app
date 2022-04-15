@@ -21,7 +21,12 @@
 
 .chat-card-container:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(255, 224, 224);
 
+}
+
+.chat-card-container:active {
+    background-color: rgb(239, 239, 239);
 }
 
 .chat-card-img {

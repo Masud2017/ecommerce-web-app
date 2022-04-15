@@ -21311,31 +21311,43 @@ __webpack_require__.r(__webpack_exports__);
 
 function ChatBox() {
   var attribute = [{
+    id: 1,
     img: "https://avatars.githubusercontent.com/u/33942219?v=4",
     name: "Masud karim",
     hint: "Hey bro can bro are you ther ? ",
     time: "12:45pm"
   }, {
+    id: 2,
     img: "https://avatars.githubusercontent.com/u/33942219?v=4",
     name: "Masud karim",
     hint: "Hey bro can bro are you ther ? ",
     time: "12:45pm"
   }, {
+    id: 3,
     img: "https://avatars.githubusercontent.com/u/33942219?v=4",
     name: "Masud karim",
     hint: "Hey bro can bro are you ther ? ",
     time: "12:45pm"
   }, {
+    id: 4,
     img: "https://avatars.githubusercontent.com/u/33942219?v=4",
     name: "Masud karim",
     hint: "Hey bro can bro are you ther ? ",
     time: "12:45pm"
   }, {
+    id: 5,
     img: "https://avatars.githubusercontent.com/u/33942219?v=4",
     name: "Masud karim",
     hint: "Hey bro can bro are you ther ? ",
     time: "12:45pm"
   }, {
+    id: 6,
+    img: "https://avatars.githubusercontent.com/u/33942219?v=4",
+    name: "Masud karim",
+    hint: "Hey bro can bro are you ther ? ",
+    time: "12:45pm"
+  }, {
+    id: 7,
     img: "https://avatars.githubusercontent.com/u/33942219?v=4",
     name: "Masud karim",
     hint: "Hey bro can bro are you ther ? ",
@@ -27395,7 +27407,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".chat-box-container {\n    position: fixed;\n    top:90%;\n    left: 80%;\n    background-color: white;\n    min-width: 250px;\n    padding: 10px;\n\n    transition:  .5s;\n\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n}\n\n.chat-body {\n    display: none;\n}\n\n.chat-box-container:hover {\n    min-width: 350px;\n    height: 450px;\n    top: 20%;\n    left : 71%;\n    margin-right : 0px;\n}\n\n.chat-box-container:hover  .chat-body{\n    display: block;\n    overflow: scroll;\n    height: 100%;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".chat-box-container {\n    position: fixed;\n    top:90%;\n    left: 80%;\n    background-color: white;\n    min-width: 250px;\n    padding: 10px;\n\n    transition:  .5s;\n\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    overflow: hidden;\n}\n\n.chat-body {\n    display: none;\n}\n\n.chat-box-container:hover {\n    min-width: 350px;\n    height: 450px;\n    top: 20%;\n    left : 71%;\n    margin-right : 0px;\n}\n\n.chat-box-container:hover  .chat-body{\n    display: block;\n    overflow-y: scroll;\n    overflow-x: hidden;\n    height: 100%;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27419,7 +27431,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.chat-card-container {\n    display: grid;\n\n    grid-template-columns: 50px 1fr 1fr;\n\n    grid-template-areas:\n        \"img name time\"\n        \"img name time\"\n    ;\n    row-gap : 10px;\n    -moz-column-gap: 10px;\n         column-gap: 10px;\n    margin-top: 5px;\n    background-color: white;\n    padding: 10px;\n    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n    transition: box-shadow .3s;\n    margin-bottom : 5px;\n    cursor: pointer;\n}\n\n.chat-card-container:hover {\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n\n}\n\n.chat-card-img {\n    width: 50px;\n    height : 50p;\n    border-radius: 50%;\n    grid-area :img;\n}\n\n.chat-card-name {\n    grid-area : name;\n    display: grid;\n    align-items: center;\n    justify-content: center;\n    line-height: 0.5em;\n\n}\n\n.chat-card-name p {\n    line-height: 1em;\n    color :#363333;\n}\n\n\n\n\n\n.chat-card-hint {\n    grid-area: hint;\n    margin:0px\n}\n\n.chat-card-time {\n    grid-area : time;\n    display:flex;\n    align-self: center;\n    justify-self: end;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.chat-card-container {\n    display: grid;\n\n    grid-template-columns: 50px 1fr 1fr;\n\n    grid-template-areas:\n        \"img name time\"\n        \"img name time\"\n    ;\n    row-gap : 10px;\n    -moz-column-gap: 10px;\n         column-gap: 10px;\n    margin-top: 5px;\n    background-color: white;\n    padding: 10px;\n    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n    transition: box-shadow .3s;\n    margin-bottom : 5px;\n    cursor: pointer;\n}\n\n.chat-card-container:hover {\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    background-color: rgb(255, 224, 224);\n\n}\n\n.chat-card-container:active {\n    background-color: rgb(239, 239, 239);\n}\n\n.chat-card-img {\n    width: 50px;\n    height : 50p;\n    border-radius: 50%;\n    grid-area :img;\n}\n\n.chat-card-name {\n    grid-area : name;\n    display: grid;\n    align-items: center;\n    justify-content: center;\n    line-height: 0.5em;\n\n}\n\n.chat-card-name p {\n    line-height: 1em;\n    color :#363333;\n}\n\n\n\n\n\n.chat-card-hint {\n    grid-area: hint;\n    margin:0px\n}\n\n.chat-card-time {\n    grid-area : time;\n    display:flex;\n    align-self: center;\n    justify-self: end;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
