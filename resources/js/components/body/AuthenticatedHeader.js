@@ -31,6 +31,8 @@ import { Component } from 'react';
 import CartPage from '../body/CartPage';
 import AccountBody from './AccountBody';
 
+import ChatBox from '../parts/ChatBox';
+
 
 import "./AuthenticatedHeader.css";
 // Testing the api
@@ -53,6 +55,7 @@ function AuthenticatedHeader () {
 
         return (
             <div name = "Header">
+                <ChatBox/>
                 <Router>
                 <ul className ="nav">
                     <Link to = "/"><img alt = "Something went wrong" src = {logo} style = {{"width":"30px"}} className = "nav-item" id = "logo"></img></Link>

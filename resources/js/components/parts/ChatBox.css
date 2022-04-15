@@ -1,0 +1,26 @@
+.chat-box-container {
+    position: fixed;
+    top:90%;
+    left: 80%;
+    background-color: white;
+    min-width: 250px;
+    padding: 10px;
+
+    transition:  .5s;
+}
+
+.chat-body {
+    display: none;
+}
+
+.chat-box-container:hover {
+    min-width: 350px;
+    height: 450px;
+    top: 20%;
+    left : 71%;
+    margin-right : 0px;
+}
+
+.chat-box-container:hover  .chat-body{
+    display: block;
+}
