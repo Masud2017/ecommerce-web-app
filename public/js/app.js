@@ -21310,16 +21310,54 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function ChatBox() {
+  var attribute = [{
+    img: "https://avatars.githubusercontent.com/u/33942219?v=4",
+    name: "Masud karim",
+    hint: "Hey bro can bro are you ther ? ",
+    time: "12:45pm"
+  }, {
+    img: "https://avatars.githubusercontent.com/u/33942219?v=4",
+    name: "Masud karim",
+    hint: "Hey bro can bro are you ther ? ",
+    time: "12:45pm"
+  }, {
+    img: "https://avatars.githubusercontent.com/u/33942219?v=4",
+    name: "Masud karim",
+    hint: "Hey bro can bro are you ther ? ",
+    time: "12:45pm"
+  }, {
+    img: "https://avatars.githubusercontent.com/u/33942219?v=4",
+    name: "Masud karim",
+    hint: "Hey bro can bro are you ther ? ",
+    time: "12:45pm"
+  }, {
+    img: "https://avatars.githubusercontent.com/u/33942219?v=4",
+    name: "Masud karim",
+    hint: "Hey bro can bro are you ther ? ",
+    time: "12:45pm"
+  }, {
+    img: "https://avatars.githubusercontent.com/u/33942219?v=4",
+    name: "Masud karim",
+    hint: "Hey bro can bro are you ther ? ",
+    time: "12:45pm"
+  }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "chat-box-container",
-    children: ["Message Box", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "chat-msg-box-heading",
+      children: "Message Box"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {
       style: {
         "margin": "0px"
       },
       className: "msg-underline"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "chat-body",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ChatCard__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+      children: attribute.map(function (item) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ChatCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          props: item
+        });
+      })
     })]
   });
 }
@@ -21347,20 +21385,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ChatCard() {
+function trimString(text) {
+  // word count : 19
+  var trimmedString = text;
+  count = text.length;
+
+  if (count > 19) {
+    trimmedString = text.substring(0, 19);
+  }
+
+  console.log("Running this portion : " + trimmedString);
+  return trimmedString;
+}
+
+function ChatCard(props) {
+  // useEffect(
+  //     ()=> {
+  //     trimString("Hesdfsdfsdfsdfsdfsd");
+  //     }
+  // );
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "chat-card-container",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-      src: "https://avatars.githubusercontent.com/u/33942219?v=4",
+      src: props.props.img,
       className: "chat-card-img"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h6", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "chat-card-name",
-      children: "Name"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-      className: "chat-card-hint",
-      children: "This is hint msg"
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
+        children: props.props.name
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+        children: props.props.hint
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
       className: "chat-card-time",
-      children: "12:57am"
+      children: props.props.time
     })]
   });
 }
@@ -27337,7 +27395,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".chat-box-container {\n    position: fixed;\n    top:90%;\n    left: 80%;\n    background-color: white;\n    min-width: 250px;\n    padding: 10px;\n\n    transition:  .5s;\n}\n\n.chat-body {\n    display: none;\n}\n\n.chat-box-container:hover {\n    min-width: 350px;\n    height: 450px;\n    top: 20%;\n    left : 71%;\n    margin-right : 0px;\n}\n\n.chat-box-container:hover  .chat-body{\n    display: block;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".chat-box-container {\n    position: fixed;\n    top:90%;\n    left: 80%;\n    background-color: white;\n    min-width: 250px;\n    padding: 10px;\n\n    transition:  .5s;\n\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n}\n\n.chat-body {\n    display: none;\n}\n\n.chat-box-container:hover {\n    min-width: 350px;\n    height: 450px;\n    top: 20%;\n    left : 71%;\n    margin-right : 0px;\n}\n\n.chat-box-container:hover  .chat-body{\n    display: block;\n    overflow: scroll;\n    height: 100%;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27361,7 +27419,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.chat-card-container {\n    display: grid;\n\n    grid-template-columns: 50px 1fr 1fr;\n    grid-template-rows: 1fr;\n\n    grid-template-areas:\n        \"img name time\"\n        \"img hint time\"\n    ;\n}\n\n.chat-card-img {\n    width: 50px;\n    height : 50p;\n    border-radius: 50%;\n    grid-area :img;\n}\n\n.chat-card-name {\n    grid-area : name;\n}\n.chat-card-hint {\n    grid-area: hint;\n}\n\n.chat-card-time {\n    grid-area : time;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.chat-card-container {\n    display: grid;\n\n    grid-template-columns: 50px 1fr 1fr;\n\n    grid-template-areas:\n        \"img name time\"\n        \"img name time\"\n    ;\n    row-gap : 10px;\n    -moz-column-gap: 10px;\n         column-gap: 10px;\n    margin-top: 5px;\n    background-color: white;\n    padding: 10px;\n    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n    transition: box-shadow .3s;\n    margin-bottom : 5px;\n    cursor: pointer;\n}\n\n.chat-card-container:hover {\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n\n}\n\n.chat-card-img {\n    width: 50px;\n    height : 50p;\n    border-radius: 50%;\n    grid-area :img;\n}\n\n.chat-card-name {\n    grid-area : name;\n    display: grid;\n    align-items: center;\n    justify-content: center;\n    line-height: 0.5em;\n\n}\n\n.chat-card-name p {\n    line-height: 1em;\n    color :#363333;\n}\n\n\n\n\n\n.chat-card-hint {\n    grid-area: hint;\n    margin:0px\n}\n\n.chat-card-time {\n    grid-area : time;\n    display:flex;\n    align-self: center;\n    justify-self: end;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

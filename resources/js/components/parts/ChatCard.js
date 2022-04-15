@@ -1,14 +1,34 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 import "./ChatCard.css";
 
-function ChatCard () {
+
+function trimString (text) {
+    // word count : 19
+    var trimmedString = text;
+    count = text.length
+    if (count > 19) {
+        trimmedString = text.substring(0,19);
+    }
+    console.log("Running this portion : "+trimmedString);
+    return trimmedString;
+}
+
+function ChatCard (props) {
+    // useEffect(
+    //     ()=> {
+    //     trimString("Hesdfsdfsdfsdfsdfsd");
+
+    //     }
+    // );
     return (
-        <div>
-            <img src = "https://avatars.githubusercontent.com/u/33942219?v=4"  className = "chat-card-img"></img>
-            <h6 className = "chat-card-name">Name</h6>
-            <p className="chat-card-hint">This is hint msg</p>
-            <p className = "chat-card-time">12:57am</p>
+        <div className = "chat-card-container">
+            <img src = {props.props.img}  className = "chat-card-img"></img>
+            <div className= "chat-card-name">
+                <h5>{props.props.name}</h5>
+                <p>{props.props.hint}</p>
+            </div>
+            <p className = "chat-card-time">{props.props.time}</p>
         </div>
     );
 }

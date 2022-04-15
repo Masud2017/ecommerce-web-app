@@ -7,6 +7,8 @@
     padding: 10px;
 
     transition:  .5s;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .chat-body {
@@ -23,4 +25,6 @@
 
 .chat-box-container:hover  .chat-body{
     display: block;
+    overflow: scroll;
+    height: 100%;
 }
