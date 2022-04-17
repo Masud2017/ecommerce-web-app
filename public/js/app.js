@@ -21119,7 +21119,7 @@ function RegularBody(props) {
     }, _callee);
   })), []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_parts_LoadingScreen__WEBPACK_IMPORTED_MODULE_10__["default"], {})
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_CardCollectionBody__WEBPACK_IMPORTED_MODULE_7__["default"], {})
   });
 }
 
@@ -21302,7 +21302,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _ChatBox_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChatBox.css */ "./resources/js/components/parts/ChatBox.css");
 /* harmony import */ var _ChatCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChatCard */ "./resources/js/components/parts/ChatCard.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _MsgBody__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MsgBody */ "./resources/js/components/parts/MsgBody.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
  // import {chatBoxOpen} from "../../_util/ChatBoxUtil";
@@ -21354,22 +21357,22 @@ function ChatBox() {
     hint: "Hey bro can bro are you ther ? ",
     time: "12:45pm"
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: "chat-box-container",
     id: "msgElement",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: "chat-msg-box-heading",
       children: "Message Box"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("hr", {
       style: {
         "margin": "0px"
       },
       className: "msg-underline"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: "chat-body",
       id: "chatBody",
       children: attribute.map(function (item) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ChatCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ChatCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
           props: item
         });
       })
@@ -21683,6 +21686,32 @@ function ManageAccount(props) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ManageAccount);
+
+/***/ }),
+
+/***/ "./resources/js/components/parts/MsgBody.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/parts/MsgBody.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function MsgBody() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: "Hello world this is msg body"
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MsgBody);
 
 /***/ }),
 
@@ -27411,7 +27440,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".chat-box-container {\n    position: fixed;\n    right : 1px;\n    background-color: white;\n    min-width: 350px;\n    padding: 10px;\n\n    transition:  .5s;\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    overflow: hidden;\n    bottom : 7px;\n}\n\n.chat-body {\n    display: none;\n}\n\n.chat-box-container:hover {\n    min-width: 350px;\n    height: 450px;\n    right : 1px;\n    margin-right : 0px;\n\n}\n\n.chat-box-container:hover  .chat-body{\n    display: block;\n    overflow-y: auto;\n    overflow-x: hidden;\n    height: 100%;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".chat-box-container {\n    position: fixed;\n    right : 1px;\n    background-color: white;\n    min-width: 350px;\n    padding: 10px;\n\n    transition:  .5s;\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    overflow: hidden;\n    bottom : 7px;\n    z-index: 1;\n}\n\n.chat-body {\n    display: none;\n}\n\n/* .chat-box-container:hover {\n    min-width: 350px;\n    height: 450px;\n    right : 1px;\n    margin-right : 0px;\n\n} */\n\n.chat-box-container:hover  .chat-body{\n    display: block;\n    overflow-y: auto;\n    overflow-x: hidden;\n\n\n    /* min-width: 350px; */\n    height: 450px;\n    right : 1px;\n    margin-right : 0px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

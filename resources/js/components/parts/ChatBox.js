@@ -1,8 +1,18 @@
 import React from "react";
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect
+  } from "react-router-dom";
+
+
 import "./ChatBox.css";
 
 import ChatCard from "./ChatCard";
+import MsgBody from "./MsgBody";
 
 // import {chatBoxOpen} from "../../_util/ChatBoxUtil";
 
@@ -67,7 +77,7 @@ function ChatBox () {
             <hr style={{"margin":"0px"}} className = "msg-underline"></hr>
 
             <div className = "chat-body" id = "chatBody">
-                {attribute.map(item=> (<ChatCard props = {item}/>))}
+                    {attribute.map(item=> (<ChatCard props = {item}/> ))}
             </div>
 
         </div>

@@ -51,8 +51,8 @@ function RegularBody(props) {
         <div>
             {/* <AccountBody/> */}
             {/* <ProductDetailsPage/> */}
-            {/* <CardCollectionBody/> */}
-            <LoadingScreen/>
+            <CardCollectionBody/>
+            {/* <LoadingScreen/> */}
         </div>
 
     );

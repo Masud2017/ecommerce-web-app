@@ -9,23 +9,29 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     overflow: hidden;
     bottom : 7px;
+    z-index: 1;
 }
 
 .chat-body {
     display: none;
 }
 
-.chat-box-container:hover {
+/* .chat-box-container:hover {
     min-width: 350px;
     height: 450px;
     right : 1px;
     margin-right : 0px;
 
-}
+} */
 
 .chat-box-container:hover  .chat-body{
     display: block;
     overflow-y: auto;
     overflow-x: hidden;
-    height: 100%;
+
+
+    /* min-width: 350px; */
+    height: 450px;
+    right : 1px;
+    margin-right : 0px;
 }
