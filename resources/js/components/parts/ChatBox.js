@@ -4,6 +4,8 @@ import "./ChatBox.css";
 
 import ChatCard from "./ChatCard";
 
+// import {chatBoxOpen} from "../../_util/ChatBoxUtil";
+
 function ChatBox () {
     const attribute =
         [
@@ -60,11 +62,11 @@ function ChatBox () {
         ];
 
     return (
-        <div className = "chat-box-container">
+        <div className = "chat-box-container" id ="msgElement">
             <div className = "chat-msg-box-heading">Message Box</div>
             <hr style={{"margin":"0px"}} className = "msg-underline"></hr>
 
-            <div className = "chat-body">
+            <div className = "chat-body" id = "chatBody">
                 {attribute.map(item=> (<ChatCard props = {item}/>))}
             </div>
 

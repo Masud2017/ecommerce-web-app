@@ -1,15 +1,14 @@
 .chat-box-container {
     position: fixed;
-    top:90%;
-    left: 80%;
+    right : 1px;
     background-color: white;
-    min-width: 250px;
+    min-width: 350px;
     padding: 10px;
 
     transition:  .5s;
-
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     overflow: hidden;
+    bottom : 7px;
 }
 
 .chat-body {
@@ -19,14 +18,14 @@
 .chat-box-container:hover {
     min-width: 350px;
     height: 450px;
-    top: 20%;
-    left : 71%;
+    right : 1px;
     margin-right : 0px;
+
 }
 
 .chat-box-container:hover  .chat-body{
     display: block;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
 }

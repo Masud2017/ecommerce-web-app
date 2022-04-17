@@ -24,7 +24,7 @@ function ChatCard (props) {
     return (
         <div className = "chat-card-container">
             <img src = {props.props.img}  className = "chat-card-img"></img>
-            <div className= "chat-card-name">
+            <div className= "chat-card-name" id ="chatBody">
                 <h5>{props.props.name}</h5>
                 <p>{props.props.hint}</p>
             </div>

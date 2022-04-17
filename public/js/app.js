@@ -21305,6 +21305,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
+ // import {chatBoxOpen} from "../../_util/ChatBoxUtil";
 
 
 
@@ -21355,6 +21356,7 @@ function ChatBox() {
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "chat-box-container",
+    id: "msgElement",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "chat-msg-box-heading",
       children: "Message Box"
@@ -21365,6 +21367,7 @@ function ChatBox() {
       className: "msg-underline"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "chat-body",
+      id: "chatBody",
       children: attribute.map(function (item) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_ChatCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
           props: item
@@ -21423,6 +21426,7 @@ function ChatCard(props) {
       className: "chat-card-img"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "chat-card-name",
+      id: "chatBody",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
         children: props.props.name
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
@@ -27407,7 +27411,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".chat-box-container {\n    position: fixed;\n    top:90%;\n    left: 80%;\n    background-color: white;\n    min-width: 250px;\n    padding: 10px;\n\n    transition:  .5s;\n\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    overflow: hidden;\n}\n\n.chat-body {\n    display: none;\n}\n\n.chat-box-container:hover {\n    min-width: 350px;\n    height: 450px;\n    top: 20%;\n    left : 71%;\n    margin-right : 0px;\n}\n\n.chat-box-container:hover  .chat-body{\n    display: block;\n    overflow-y: scroll;\n    overflow-x: hidden;\n    height: 100%;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".chat-box-container {\n    position: fixed;\n    right : 1px;\n    background-color: white;\n    min-width: 350px;\n    padding: 10px;\n\n    transition:  .5s;\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    overflow: hidden;\n    bottom : 7px;\n}\n\n.chat-body {\n    display: none;\n}\n\n.chat-box-container:hover {\n    min-width: 350px;\n    height: 450px;\n    right : 1px;\n    margin-right : 0px;\n\n}\n\n.chat-box-container:hover  .chat-body{\n    display: block;\n    overflow-y: auto;\n    overflow-x: hidden;\n    height: 100%;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
