@@ -16,4 +16,12 @@ class product extends Model
     public function catagories() {
         return $this->belongsToMany(catagory::class,"product_catagory");
     }
+
+    public function productInventor() {
+        return $this->hasOne(ProductInventor::class);
+    }
+
+    public function discount () {
+        return $this->belongsTo(Discount::class);
+    }
 }
