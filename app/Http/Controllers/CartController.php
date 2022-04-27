@@ -26,7 +26,6 @@ class CartController extends Controller
             echo $e;
         }
 
-
     }
 
     public function deleteProductFromCart(Request $req, $id) {
