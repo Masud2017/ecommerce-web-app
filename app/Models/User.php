@@ -77,4 +77,8 @@ class User extends Authenticatable implements JWTSubject
 
         return $this->hasOne(UserAddress::class);
     }
+
+    public function paymentInfo() {
+        return $this->hasOne(PaymentInfo::class);
+    }
 }
