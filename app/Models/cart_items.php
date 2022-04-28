@@ -12,4 +12,8 @@ class cart_items extends Model
     public function shoppingSession() {
         return $this->belongsTo(shopping_session::class);
     }
+
+    public function products() {
+        return $this->hasMany(product::class);
+    }
 }
