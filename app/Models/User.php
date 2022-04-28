@@ -81,4 +81,8 @@ class User extends Authenticatable implements JWTSubject
     public function paymentInfo() {
         return $this->hasOne(PaymentInfo::class);
     }
+
+    public function shoppingSession() {
+        return $this->hasOne(shopping_session::class);
+    }
 }
