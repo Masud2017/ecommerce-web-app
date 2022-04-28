@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class cart_items extends Model
 {
     use HasFactory;
+
+    public function shoppingSession() {
+        return $this->belongsTo(shopping_session::class);
+    }
 }
