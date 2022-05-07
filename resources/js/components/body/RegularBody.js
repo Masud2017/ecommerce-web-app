@@ -22,6 +22,9 @@ import {AppContext} from "../../Context";
 
 import LoadingScreen from '../parts/LoadingScreen';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
 
 
 function RegularBody(props) {
@@ -49,6 +52,43 @@ function RegularBody(props) {
 
     return(
         <div>
+             <div className = "cata-and-caro">
+             <div>
+                 <ul type = "circle" className = "cata-list">
+                     <li>Computer accessories <span className = "cata-product-count">10</span></li>
+                     <li>Gaming stuff <span className = "cata-product-count">1</span> </li>
+                     <li>Gents stuff <span className = "cata-product-count">11</span> </li>
+                     <li>Groscories <span className = "cata-product-count">4</span> </li>
+                     <li>Vege <span className = "cata-product-count">50</span> </li>
+                     <li>Gift card <span className = "cata-product-count">30</span> </li>
+
+                 </ul>
+             </div>
+
+
+
+                <Carousel autoPlay= {true} infiniteLoop={true} interval={4000} showThumbs = {false}>
+                    <div style = {{"height":"100%","width":"100%"}}>
+                        <img src="https://gcp-img.slatic.net/lazada/63eb1851-5523-4bf8-ac1d-90c55caeb03e_BD-1920-300.jpg"  style = {{height : "100%"}}/>
+                    </div>
+                    <div>
+                        <img src="https://icms-image.slatic.net/images/ims-web/47936a6d-425f-4a91-a8b3-ff3e5bdf54ff.jpg" />
+                    </div>
+                    <div>
+                        <img src="https://icms-image.slatic.net/images/ims-web/9f071684-2f65-4df2-bb93-d24878835e04.jpg" />
+                    </div>
+                </Carousel>
+
+             </div>
+             <div name = "offer-tab" className = "offer-tab">
+                <Carousel centerMode = {true} centerSlidePercentage={10}>
+                <div><button className = "offer-tab-item">Special offer</button></div>
+                <div><button className = "offer-tab-item">Special offer</button></div>
+                <div><button className = "offer-tab-item">Special offer</button></div>
+                <div><button className = "offer-tab-item">Special offer</button></div>
+
+                </Carousel>
+             </div>
             {/* <AccountBody/> */}
             {/* <ProductDetailsPage/> */}
             <CardCollectionBody/>
