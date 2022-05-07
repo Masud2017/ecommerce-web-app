@@ -30,6 +30,8 @@ import { set } from 'lodash';
 import { Component } from 'react';
 import CartPage from '../body/CartPage';
 
+import Footer from "../headerAndFooter/Footer";
+
 // Testing the api
 
 class NonAuthenticatedHeader extends React.Component {
@@ -75,6 +77,8 @@ class NonAuthenticatedHeader extends React.Component {
 
                 </Switch>
                 </Router>
+
+                <Footer/>
             </div>
 
 

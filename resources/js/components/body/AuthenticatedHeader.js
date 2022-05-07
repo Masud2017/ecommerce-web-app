@@ -37,6 +37,9 @@ import ChatBox from '../parts/ChatBox';
 import "./AuthenticatedHeader.css";
 // Testing the api
 
+import Footer from "../headerAndFooter/Footer";
+
+
 
 import {AppContext} from "../../Context";
 
@@ -98,6 +101,8 @@ function AuthenticatedHeader () {
 
                 </Switch>
                 </Router>
+
+                <Footer/>
             </div>
 
 

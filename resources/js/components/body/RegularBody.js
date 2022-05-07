@@ -80,17 +80,13 @@ function RegularBody(props) {
                 </Carousel>
 
              </div>
-             <div name = "offer-tab" className = "offer-tab">
-                <Carousel centerMode = {true} centerSlidePercentage={10}>
-                <div><button className = "offer-tab-item">Special offer</button></div>
-                <div><button className = "offer-tab-item">Special offer</button></div>
-                <div><button className = "offer-tab-item">Special offer</button></div>
-                <div><button className = "offer-tab-item">Special offer</button></div>
 
-                </Carousel>
-             </div>
             {/* <AccountBody/> */}
             {/* <ProductDetailsPage/> */}
+            <CardCollectionBody/>
+            <CardCollectionBody/>
+            <CardCollectionBody/>
+            <CardCollectionBody/>
             <CardCollectionBody/>
             {/* <LoadingScreen/> */}
         </div>

@@ -84,3 +84,10 @@
 .offer-tab-item:active {
     background-color: rgb(42, 21, 21);
 }
+
+.load-more {
+    background-color : grey;
+    color :white;
+    display: flex;
+    justify-content: center;
+}
