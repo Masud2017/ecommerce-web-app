@@ -20423,6 +20423,11 @@ var Members = function Members() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
         children: "Member list"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_parts_MemberListPart__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "member-info",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+        children: "Member info"
+      })
     })]
   });
 };
@@ -20444,14 +20449,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _MemberListPart_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MemberListPart.css */ "./resources/js/components/admin-components/parts/MemberListPart.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _asset_svg_dropdown_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../asset/svg/dropdown-svgrepo-com.svg */ "./resources/js/components/asset/svg/dropdown-svgrepo-com.svg");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
 
 var MemberListPart = function MemberListPart() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: "1;"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    className: "member-list-part-container",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+      src: "https://yt3.ggpht.com/ytc/AKedOLQPPlIgfH6M5b4ptOkqAXu0oSLFuxy8fLLmcKEK=s800-c-k-c0x00ffffff-no-rj",
+      name: "profile",
+      className: "member-user-profile-image"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "member-name",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h4", {
+        children: "Md Masud karim"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+        children: "Admin"
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+      src: _asset_svg_dropdown_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
+      className: "member-dropdown"
+    })]
   });
 };
 
@@ -27854,7 +27877,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".members-heading {\n    color : #CE2C2C;\n    font-size: 25px;\n    font-weight: bold;\n    border-bottom : 5px solid #CE2c2c;\n    display: inline-block;\n    width:auto;\n}\n\n.members-body {\n    padding : 5px;\n}\n\n.member-button {\n    display: block;\n    background-color : #CE2C2C;\n    color : white;\n    padding : 7px;\n    border-radius: 12px;\n}\n.button-center {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    margin-top: 5px;\n}\n\n.member-list {\n    position: fixed;\n    bottom : 0;\n    height: 500px;\n    width: 280px;\n    background-color: white;\n\n    box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    border: none;\n    overflow-y: auto;\n    z-index: 1;\n}\n\n.member-list p {\n    background-color : #505050;\n    color : white;\n    font-weight: bold;\n    text-align: center;\n    padding :5px;\n    font-size: 20px;\n}\n.member-info {}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".members-heading {\n    color : #CE2C2C;\n    font-size: 25px;\n    font-weight: bold;\n    border-bottom : 5px solid #CE2c2c;\n    display: inline-block;\n    width:auto;\n}\n\n.members-body {\n    padding : 5px;\n}\n\n.member-button {\n    display: block;\n    background-color : #CE2C2C;\n    color : white;\n    padding : 7px;\n    border-radius: 12px;\n}\n.button-center {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    margin-top: 5px;\n}\n\n.member-list {\n    position: fixed;\n    bottom : 0;\n    height: 500px;\n    width: 280px;\n    background-color: white;\n\n    box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    border: none;\n    overflow-y: auto;\n    z-index: 1;\n}\n\n.member-list p {\n    background-color : #505050;\n    color : white;\n    font-weight: bold;\n    text-align: center;\n    padding :5px;\n    font-size: 20px;\n}\n\n.member-info {\n    position: fixed;\n    bottom : 0;\n    height: 500px;\n    width: 780px;\n    background-color: white;\n    left : 550px;\n\n    box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    border: none;\n    overflow-y: auto;\n    z-index: 1;\n}\n\n.member-info p {\n    background-color : #505050;\n    color : white;\n    font-weight: bold;\n    text-align: center;\n    padding :5px;\n    font-size: 20px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27878,7 +27901,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".member-user-profile-image {\n    height : 45px;\n    width : 45px;\n    border-radius: 50%;\n    grid-area: img;\n}\n.member-list-part-container {\n    display: grid;\n    grid-template-columns: 45px 180px 5px;\n    grid-template-rows: 1fr;\n    grid-template-areas: \"img name dropdown\";\n    gap: 5px;\n}\n\n.member-name {\n    grid-area: name;\n    line-height: 3px;\n}\n\n.member-dropdown {\n    grid-area: dropdown;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28600,6 +28623,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/recyclebin.png?8213d03909c532190f7a58f0c728b108");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/svg/dropdown-svgrepo-com.svg":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/asset/svg/dropdown-svgrepo-com.svg ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/dropdown-svgrepo-com.svg?8a3a4f2ba9f9f2a6999b3df865311b94");
 
 /***/ }),
 

@@ -1,0 +1,22 @@
+.member-user-profile-image {
+    height : 45px;
+    width : 45px;
+    border-radius: 50%;
+    grid-area: img;
+}
+.member-list-part-container {
+    display: grid;
+    grid-template-columns: 45px 180px 5px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img name dropdown";
+    gap: 5px;
+}
+
+.member-name {
+    grid-area: name;
+    line-height: 3px;
+}
+
+.member-dropdown {
+    grid-area: dropdown;
+}

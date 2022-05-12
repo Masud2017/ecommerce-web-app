@@ -16,6 +16,10 @@ const Members = ()=> {
                 <p>Member list</p>
                 <MemberListPart/>
             </div>
+
+            <div className = "member-info">
+                <p>Member info</p>
+            </div>
         </div>
     );
 }

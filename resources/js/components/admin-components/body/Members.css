@@ -48,4 +48,28 @@
     padding :5px;
     font-size: 20px;
 }
-.member-info {}
+
+.member-info {
+    position: fixed;
+    bottom : 0;
+    height: 500px;
+    width: 780px;
+    background-color: white;
+    left : 550px;
+
+    box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);
+    -webkit-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);
+    -moz-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);
+    border: none;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.member-info p {
+    background-color : #505050;
+    color : white;
+    font-weight: bold;
+    text-align: center;
+    padding :5px;
+    font-size: 20px;
+}
