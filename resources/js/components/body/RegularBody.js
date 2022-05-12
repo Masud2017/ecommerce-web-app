@@ -26,6 +26,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 
+import ProceedToCheckoutPage from "./ProceedToCheckoutPage";
+
+
+import AdminRegularBody from '../admin-components/body/AdminRegularBody';
 
 function RegularBody(props) {
     const contextApp = useContext(AppContext);
@@ -37,7 +41,7 @@ function RegularBody(props) {
             }
             throw new Error ("something went wrong");
         }).then(res=>{
-            alert(res.access_token);
+            // alert(res.access_token);
             sessionStorage.setItem("token",res.access_token);
 
 
@@ -52,7 +56,7 @@ function RegularBody(props) {
 
     return(
         <div>
-             <div className = "cata-and-caro">
+             {/* <div className = "cata-and-caro">
              <div>
                  <ul type = "circle" className = "cata-list">
                      <li>Computer accessories <span className = "cata-product-count">10</span></li>
@@ -79,16 +83,18 @@ function RegularBody(props) {
                     </div>
                 </Carousel>
 
-             </div>
+             </div> */}
 
             {/* <AccountBody/> */}
             {/* <ProductDetailsPage/> */}
+            {/* <CardCollectionBody/>
             <CardCollectionBody/>
             <CardCollectionBody/>
             <CardCollectionBody/>
-            <CardCollectionBody/>
-            <CardCollectionBody/>
+            <CardCollectionBody/> */}
+            {/* <ProceedToCheckoutPage/> */}
             {/* <LoadingScreen/> */}
+            <AdminRegularBody/>
         </div>
 
     );

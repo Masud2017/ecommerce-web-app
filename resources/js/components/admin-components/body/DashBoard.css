@@ -1,0 +1,12 @@
+.dash-board-heading {
+    color : red;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom : 5px solid red;
+    display: inline-block;
+    width:auto;
+}
+
+.admin-body {
+    padding :5px;
+}

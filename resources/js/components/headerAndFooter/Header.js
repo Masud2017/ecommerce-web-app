@@ -45,7 +45,7 @@ function Header() {
 
 
 
-    alert(isAuth);
+    // alert(isAuth);
 
     var token = sessionStorage.getItem("token");
 

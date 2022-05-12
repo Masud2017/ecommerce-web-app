@@ -20197,6 +20197,122 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/components/admin-components/body/AdminRegularBody.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/admin-components/body/AdminRegularBody.js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _AdminRegularBody_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AdminRegularBody.css */ "./resources/js/components/admin-components/body/AdminRegularBody.css");
+/* harmony import */ var _DashBoard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DashBoard */ "./resources/js/components/admin-components/body/DashBoard.js");
+/* harmony import */ var _asset_svg_power_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../asset/svg/power.svg */ "./resources/js/components/asset/svg/power.svg");
+/* harmony import */ var _asset_svg_setting_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../asset/svg/setting.svg */ "./resources/js/components/asset/svg/setting.svg");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+var AdminRegularBody = function AdminRegularBody() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    name: "container",
+    className: "admin-regular-body-container",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      name: "header-navigation",
+      className: "admin-nav",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        style: {
+          "text-align": "center"
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+          src: "https://yt3.ggpht.com/ytc/AKedOLQPPlIgfH6M5b4ptOkqAXu0oSLFuxy8fLLmcKEK=s800-c-k-c0x00ffffff-no-rj",
+          name: "profile",
+          className: "admin-profile"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h4", {
+            children: "Md Masud karim"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h6", {
+          children: "Admin"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "admin-nav-link",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          children: "DashBoard"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          children: "Media"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          children: "Post"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          children: "Order/Cancellation"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          children: "Messages"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          children: "Members"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          children: "Earnings"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          className: "admin-bottom-button-container",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+            src: _asset_svg_setting_svg__WEBPACK_IMPORTED_MODULE_4__["default"],
+            className: "admin-nav-bottom-button"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+            src: _asset_svg_power_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+            className: "admin-nav-bottom-button admin-grid-right"
+          })]
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_DashBoard__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdminRegularBody);
+
+/***/ }),
+
+/***/ "./resources/js/components/admin-components/body/DashBoard.js":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/admin-components/body/DashBoard.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _DashBoard_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DashBoard.css */ "./resources/js/components/admin-components/body/DashBoard.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var DashBoard = function DashBoard() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "admin-body",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "dash-board-heading",
+      children: "DashBoard"
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DashBoard);
+
+/***/ }),
+
 /***/ "./resources/js/components/body/AccountBody.js":
 /*!*****************************************************!*\
   !*** ./resources/js/components/body/AccountBody.js ***!
@@ -20498,12 +20614,79 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function CardCollectionBody() {
-  var productCardAttr = {
+  var productCardAttr = [{
+    id: 1,
     img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
     name: "Dark Chocolate",
     price: "1700 BDT",
     discount: "20"
-  };
+  }, {
+    id: 2,
+    img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
+    name: "Dark Chocolate",
+    price: "1700 BDT",
+    discount: "20"
+  }, {
+    id: 3,
+    img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
+    name: "Dark Chocolate",
+    price: "1700 BDT",
+    discount: "20"
+  }, {
+    id: 3,
+    img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
+    name: "Dark Chocolate",
+    price: "1700 BDT",
+    discount: "20"
+  }, {
+    id: 3,
+    img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
+    name: "Dark Chocolate",
+    price: "1700 BDT",
+    discount: "20"
+  }, {
+    id: 3,
+    img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
+    name: "Dark Chocolate",
+    price: "1700 BDT",
+    discount: "20"
+  }, {
+    id: 3,
+    img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
+    name: "Dark Chocolate",
+    price: "1700 BDT",
+    discount: "20"
+  }, {
+    id: 3,
+    img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
+    name: "Dark Chocolate",
+    price: "1700 BDT",
+    discount: "20"
+  }, {
+    id: 3,
+    img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
+    name: "Dark Chocolate",
+    price: "1700 BDT",
+    discount: "20"
+  }, {
+    id: 3,
+    img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
+    name: "Dark Chocolate",
+    price: "1700 BDT",
+    discount: "20"
+  }, {
+    id: 3,
+    img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
+    name: "Dark Chocolate",
+    price: "1700 BDT",
+    discount: "20"
+  }, {
+    id: 3,
+    img: "https://www.verywellfit.com/thmb/ewjRLDcjXY4FmMdrWDuOV9XtT6g=/1072x1072/smart/filters:no_upscale()/Chocolate_Cropped-5c6b6f45c9e77c00014764d6.jpg",
+    name: "Dark Chocolate",
+    price: "1700 BDT",
+    discount: "20"
+  }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     className: "site-body",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
@@ -20511,32 +20694,32 @@ function CardCollectionBody() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "product-column",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_parts_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          props: productCardAttr
+          props: productCardAttr[0]
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "product-column",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_parts_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          props: productCardAttr
+          props: productCardAttr[0]
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "product-column",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_parts_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          props: productCardAttr
+          props: productCardAttr[0]
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "product-column",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_parts_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          props: productCardAttr
+          props: productCardAttr[0]
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "product-column",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_parts_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          props: productCardAttr
+          props: productCardAttr[0]
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "product-column",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_parts_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          props: productCardAttr
+          props: productCardAttr[0]
         })
       })]
     })
@@ -20811,6 +20994,93 @@ var NonAuthenticatedHeader = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
+/***/ "./resources/js/components/body/ProceedToCheckoutPage.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/body/ProceedToCheckoutPage.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _CartPage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CartPage.css */ "./resources/js/components/body/CartPage.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function ProcceedToCheckoutPage() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "cart-grid-parent",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      name: "left-section",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "cart-product-list-parent-div",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "cart-product-heading",
+          children: "Package 1 of 1 Delete"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(CartProductCard, {
+          props: cartAttribute
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(CartProductCard, {
+          props: cartAttribute
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(CartProductCard, {
+          props: cartAttribute
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(CartProductCard, {
+          props: cartAttribute
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(CartProductCard, {
+          props: cartAttribute
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(CartProductCard, {
+          props: cartAttribute
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(CartProductCard, {
+          props: cartAttribute
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(CartProductCard, {
+          props: cartAttribute
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      name: "right-section",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "order-summary",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+          children: "Order Summary"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+          children: "Subtotal"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+          children: "Shipping charge"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+            type: "text",
+            placeholder: "Enter your voucher code",
+            className: "order-summary-voucher"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+            type: "submit",
+            className: "order-summary-voucher-btn",
+            value: "APPLY"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+          children: "Total"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          style: {
+            "text-align": "center"
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+            className: "cart-procceed-btn",
+            children: "Procceed to Payment"
+          })
+        })]
+      })
+    })]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProcceedToCheckoutPage);
+
+/***/ }),
+
 /***/ "./resources/js/components/body/ProductDetailsPage.js":
 /*!************************************************************!*\
   !*** ./resources/js/components/body/ProductDetailsPage.js ***!
@@ -21060,12 +21330,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _parts_LoadingScreen__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../parts/LoadingScreen */ "./resources/js/components/parts/LoadingScreen.js");
 /* harmony import */ var react_responsive_carousel_lib_styles_carousel_min_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-responsive-carousel/lib/styles/carousel.min.css */ "./node_modules/react-responsive-carousel/lib/styles/carousel.min.css");
 /* harmony import */ var react_responsive_carousel__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-responsive-carousel */ "./node_modules/react-responsive-carousel/lib/js/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _ProceedToCheckoutPage__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./ProceedToCheckoutPage */ "./resources/js/components/body/ProceedToCheckoutPage.js");
+/* harmony import */ var _admin_components_body_AdminRegularBody__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../admin-components/body/AdminRegularBody */ "./resources/js/components/admin-components/body/AdminRegularBody.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
 
 
@@ -21103,7 +21376,7 @@ function RegularBody(props) {
 
               throw new Error("something went wrong");
             }).then(function (res) {
-              alert(res.access_token);
+              // alert(res.access_token);
               sessionStorage.setItem("token", res.access_token);
             })["catch"](function (e) {
               return console.log("This is catch " + e);
@@ -21127,72 +21400,8 @@ function RegularBody(props) {
       }
     }, _callee);
   })), []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
-      className: "cata-and-caro",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("ul", {
-          type: "circle",
-          className: "cata-list",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("li", {
-            children: ["Computer accessories ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("span", {
-              className: "cata-product-count",
-              children: "10"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("li", {
-            children: ["Gaming stuff ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("span", {
-              className: "cata-product-count",
-              children: "1"
-            }), " "]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("li", {
-            children: ["Gents stuff ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("span", {
-              className: "cata-product-count",
-              children: "11"
-            }), " "]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("li", {
-            children: ["Groscories ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("span", {
-              className: "cata-product-count",
-              children: "4"
-            }), " "]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("li", {
-            children: ["Vege ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("span", {
-              className: "cata-product-count",
-              children: "50"
-            }), " "]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("li", {
-            children: ["Gift card ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("span", {
-              className: "cata-product-count",
-              children: "30"
-            }), " "]
-          })]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(react_responsive_carousel__WEBPACK_IMPORTED_MODULE_12__.Carousel, {
-        autoPlay: true,
-        infiniteLoop: true,
-        interval: 4000,
-        showThumbs: false,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
-          style: {
-            "height": "100%",
-            "width": "100%"
-          },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("img", {
-            src: "https://gcp-img.slatic.net/lazada/63eb1851-5523-4bf8-ac1d-90c55caeb03e_BD-1920-300.jpg",
-            style: {
-              height: "100%"
-            }
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("img", {
-            src: "https://icms-image.slatic.net/images/ims-web/47936a6d-425f-4a91-a8b3-ff3e5bdf54ff.jpg"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("img", {
-            src: "https://icms-image.slatic.net/images/ims-web/9f071684-2f65-4df2-bb93-d24878835e04.jpg"
-          })
-        })]
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_CardCollectionBody__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_CardCollectionBody__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_CardCollectionBody__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_CardCollectionBody__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_CardCollectionBody__WEBPACK_IMPORTED_MODULE_7__["default"], {})]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_admin_components_body_AdminRegularBody__WEBPACK_IMPORTED_MODULE_14__["default"], {})
   });
 }
 
@@ -21329,8 +21538,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function Header() {
   var contextApp = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_Context__WEBPACK_IMPORTED_MODULE_12__.AppContext);
-  var isAuth = contextApp.state.isAuth;
-  alert(isAuth);
+  var isAuth = contextApp.state.isAuth; // alert(isAuth);
+
   var token = sessionStorage.getItem("token");
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_AuthOrNotHeader__WEBPACK_IMPORTED_MODULE_11__["default"], {
     token: token
@@ -27434,6 +27643,54 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".carousel .control-arrow,.carousel.car
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/admin-components/body/AdminRegularBody.css":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/admin-components/body/AdminRegularBody.css ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".admin-regular-body-container {\n    display: grid;\n    grid-template-columns: 250px auto;\n}\n\n.admin-nav {\n    background-color: rgb(177, 177, 177);\n    height: 100vh;\n    padding : 5px;\n    display: grid;\n    grid-template-rows: 150px 1fr 1fr;\n}\n\n.admin-profile {\n    height: 80px;\n    width : 80px;\n    border-radius: 50%;\n    border: 4px solid #FF1818;\n}\n\n.admin-nav-link a {\n    display : block;\n    font-size: 25px;\n    background-color : #EC4242;\n    margin-bottom : 5px;\n    padding : 5px;\n}\n\n.admin-nav-bottom-button {\n    width : 25px;\n    height : 25px;\n    align-self: end;\n}\n.admin-bottom-button-container {\n    display: grid;\n    grid-template-columns: auto auto;\n    background-color: red;;\n}\n\n.admin-grid-right {\n    display: flex;\n    justify-self: flex-end;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/admin-components/body/DashBoard.css":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/admin-components/body/DashBoard.css ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".dash-board-heading {\n    color : red;\n    font-size: 25px;\n    font-weight: bold;\n    border-bottom : 5px solid red;\n    display: inline-block;\n    width:auto;\n}\n\n.admin-body {\n    padding :5px;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/body/AccountBody.css":
 /*!****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/body/AccountBody.css ***!
@@ -28149,6 +28406,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/recyclebin.png?8213d03909c532190f7a58f0c728b108");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/svg/power.svg":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/asset/svg/power.svg ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/power.svg?dca07d433213bdb67bb11e6d1a7f191c");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/svg/setting.svg":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/asset/svg/setting.svg ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/setting.svg?14f8078420d06674220d3ea68dfeea94");
 
 /***/ }),
 
@@ -85203,6 +85490,66 @@ var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMP
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_carousel_min_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/admin-components/body/AdminRegularBody.css":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/admin-components/body/AdminRegularBody.css ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_AdminRegularBody_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./AdminRegularBody.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/admin-components/body/AdminRegularBody.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_AdminRegularBody_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_AdminRegularBody_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/admin-components/body/DashBoard.css":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/admin-components/body/DashBoard.css ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_DashBoard_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./DashBoard.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/admin-components/body/DashBoard.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_DashBoard_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_DashBoard_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
