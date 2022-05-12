@@ -8,6 +8,11 @@
     height: 100vh;
     padding : 5px;
     position: relative;
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top:0;
+    z-index: 1;
 }
 
 .admin-profile {
