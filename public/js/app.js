@@ -20399,34 +20399,57 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Members_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Members.css */ "./resources/js/components/admin-components/body/Members.css");
 /* harmony import */ var _parts_MemberListPart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../parts/MemberListPart */ "./resources/js/components/admin-components/parts/MemberListPart.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _asset_svg_cancel_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../asset/svg/cancel.svg */ "./resources/js/components/asset/svg/cancel.svg");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
 
+
+
+var mber = function mber() {
+  document.getElementById("mber-info").style.display = "inline-block";
+};
+
+var close_mber = function close_mber() {
+  document.getElementById("mber-info").style.display = "none";
+};
 
 var Members = function Members() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: "members-body",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: "members-heading",
       children: "Members"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: "button-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
         className: "member-button",
         children: "Add New Member"
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "member-list",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
         children: "Member list"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_parts_MemberListPart__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+        onClick: function onClick() {
+          return mber();
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_parts_MemberListPart__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: "member-info",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-        children: "Member info"
+      id: "mber-info",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: "member-info-heading",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+          children: "Member info"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+          src: _asset_svg_cancel_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+          className: "close-member-button",
+          onClick: close_mber
+        })]
       })
     })]
   });
@@ -27877,7 +27900,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".members-heading {\n    color : #CE2C2C;\n    font-size: 25px;\n    font-weight: bold;\n    border-bottom : 5px solid #CE2c2c;\n    display: inline-block;\n    width:auto;\n}\n\n.members-body {\n    padding : 5px;\n}\n\n.member-button {\n    display: block;\n    background-color : #CE2C2C;\n    color : white;\n    padding : 7px;\n    border-radius: 12px;\n}\n.button-center {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    margin-top: 5px;\n}\n\n.member-list {\n    position: fixed;\n    bottom : 0;\n    height: 500px;\n    width: 280px;\n    background-color: white;\n\n    box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    border: none;\n    overflow-y: auto;\n    z-index: 1;\n}\n\n.member-list p {\n    background-color : #505050;\n    color : white;\n    font-weight: bold;\n    text-align: center;\n    padding :5px;\n    font-size: 20px;\n}\n\n.member-info {\n    position: fixed;\n    bottom : 0;\n    height: 500px;\n    width: 780px;\n    background-color: white;\n    left : 550px;\n\n    box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    border: none;\n    overflow-y: auto;\n    z-index: 1;\n}\n\n.member-info p {\n    background-color : #505050;\n    color : white;\n    font-weight: bold;\n    text-align: center;\n    padding :5px;\n    font-size: 20px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".members-heading {\n    color : #CE2C2C;\n    font-size: 25px;\n    font-weight: bold;\n    border-bottom : 5px solid #CE2c2c;\n    display: inline-block;\n    width:auto;\n}\n\n.members-body {\n    padding : 5px;\n}\n\n.member-button {\n    display: block;\n    background-color : #CE2C2C;\n    color : white;\n    padding : 7px;\n    border-radius: 12px;\n}\n.button-center {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    margin-top: 5px;\n}\n\n.member-list {\n    position: fixed;\n    bottom : 0;\n    height: 500px;\n    width: 330px; /*old value was 280px*/\n    background-color: white;\n\n    box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    border: none;\n    overflow-y: auto;\n    z-index: 1;\n}\n\n.member-list p {\n    background-color : #505050;\n    color : white;\n    font-weight: bold;\n    text-align: center;\n    padding :5px;\n    font-size: 20px;\n}\n\n.member-info {\n    display: none;\n\n    position: fixed;\n    bottom : 0;\n    height: 500px;\n    width: 750px;\n    background-color: white;\n    /* left : 550px; */\n    right : 0px;\n\n    box-shadow: -1px -1px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: -1px -1px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: -1px -1px 4px -1px rgba(69,69,69,0.79);\n    border: none;\n    overflow-y: auto;\n    z-index: 1;\n}\n\n.member-info p {\n\n}\n\n.close-member-button {\n    height: 28px;\n    width: 28px;\n    display: inline-block;\n    cursor: pointer;\n\n    position: absolute;\n    right : 5px;\n    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(35deg) brightness(104%) contrast(102%) drop-shadow(0px -2px 4px #D63030);\n    transition: filter .2s;\n}\n\n.close-member-button:hover {\n    filter: invert(85%) sepia(87%) saturate(642%) hue-rotate(95deg) brightness(95%) contrast(94%);\n}\n\n.member-info-heading {\n    background-color : #505050;\n    color : white;\n    font-weight: bold;\n    text-align: center;\n    padding :5px;\n    font-size: 20px;\n    position: relative;\n}\n.member-info-heading p {\n    display: inline-block;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27901,7 +27924,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".member-user-profile-image {\n    height : 45px;\n    width : 45px;\n    border-radius: 50%;\n    grid-area: img;\n}\n.member-list-part-container {\n    display: grid;\n    grid-template-columns: 45px 180px 5px;\n    grid-template-rows: 1fr;\n    grid-template-areas: \"img name dropdown\";\n    gap: 5px;\n}\n\n.member-name {\n    grid-area: name;\n    line-height: 3px;\n}\n\n.member-dropdown {\n    grid-area: dropdown;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".member-user-profile-image {\n    height : 45px;\n    width : 45px;\n    border-radius: 50%;\n    grid-area: img;\n}\n.member-list-part-container {\n    display: grid;\n    grid-template-columns: 45px 180px 5px;\n    grid-template-rows: 1fr;\n    grid-template-areas: \"img name dropdown\";\n    gap: 5px;\n    margin-bottom : 5px;\n    padding : 5px;\n    background-color: rgb(234, 231, 231);\n}\n\n.member-name {\n    grid-area: name;\n    line-height: 3px;\n}\n\n.member-dropdown {\n    grid-area: dropdown;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28623,6 +28646,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/recyclebin.png?8213d03909c532190f7a58f0c728b108");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/svg/cancel.svg":
+/*!******************************************************!*\
+  !*** ./resources/js/components/asset/svg/cancel.svg ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/cancel.svg?06faabdd76ce8a7e2d34f4815aa82a27");
 
 /***/ }),
 

@@ -10,6 +10,9 @@
     grid-template-rows: 1fr;
     grid-template-areas: "img name dropdown";
     gap: 5px;
+    margin-bottom : 5px;
+    padding : 5px;
+    background-color: rgb(234, 231, 231);
 }
 
 .member-name {

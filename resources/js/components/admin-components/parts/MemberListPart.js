@@ -13,7 +13,6 @@ const MemberListPart = ()=> {
                 <span>Admin</span>
             </div>
             <img src = {iconDropDown} className = "member-dropdown"/>
-
         </div>
     );
 }
