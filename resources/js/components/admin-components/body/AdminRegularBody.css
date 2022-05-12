@@ -7,8 +7,7 @@
     background-color: rgb(177, 177, 177);
     height: 100vh;
     padding : 5px;
-    display: grid;
-    grid-template-rows: 150px 1fr 1fr;
+    position: relative;
 }
 
 .admin-profile {
@@ -21,23 +20,16 @@
 .admin-nav-link a {
     display : block;
     font-size: 25px;
-    background-color : #EC4242;
     margin-bottom : 5px;
-    padding : 5px;
 }
 
 .admin-nav-bottom-button {
     width : 25px;
     height : 25px;
-    align-self: end;
-}
-.admin-bottom-button-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    background-color: red;;
 }
 
-.admin-grid-right {
+.admin-bottom-button-container {
     display: flex;
-    justify-self: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
 }

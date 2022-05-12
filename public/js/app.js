@@ -20294,18 +20294,88 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _DashBoard_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DashBoard.css */ "./resources/js/components/admin-components/body/DashBoard.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _asset_svg_msg_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../asset/svg/msg.svg */ "./resources/js/components/asset/svg/msg.svg");
+/* harmony import */ var _asset_svg_earning_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../asset/svg/earning.svg */ "./resources/js/components/asset/svg/earning.svg");
+/* harmony import */ var _asset_svg_member_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../asset/svg/member.svg */ "./resources/js/components/asset/svg/member.svg");
+/* harmony import */ var _asset_svg_order_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../asset/svg/order.svg */ "./resources/js/components/asset/svg/order.svg");
+/* harmony import */ var _asset_svg_post_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../asset/svg/post.svg */ "./resources/js/components/asset/svg/post.svg");
+/* harmony import */ var _asset_svg_media_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../asset/svg/media.svg */ "./resources/js/components/asset/svg/media.svg");
+/* harmony import */ var _body_CardCollectionBody__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../body/CardCollectionBody */ "./resources/js/components/body/CardCollectionBody.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
 
 
 
 
 var DashBoard = function DashBoard() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
     className: "admin-body",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "dash-board-heading",
-      children: "DashBoard"
-    })
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      name: "first-portion",
+      className: "dashboard-first-portion",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        className: "dash-board-heading",
+        children: "DashBoard"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "icon-row",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          className: "icon-container",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+            src: _asset_svg_msg_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
+            className: "row-icon-design"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            children: "Messages"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          className: "icon-container",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+            src: _asset_svg_earning_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+            className: "row-icon-design"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            children: "Earnings"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          className: "icon-container",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+            src: _asset_svg_member_svg__WEBPACK_IMPORTED_MODULE_4__["default"],
+            className: "row-icon-design"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            children: "Members"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          className: "icon-container",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+            src: _asset_svg_order_svg__WEBPACK_IMPORTED_MODULE_5__["default"],
+            className: "row-icon-design"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            children: "Orders"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          className: "icon-container",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+            src: _asset_svg_post_svg__WEBPACK_IMPORTED_MODULE_6__["default"],
+            className: "row-icon-design"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            children: "Posts"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          className: "icon-container",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+            src: _asset_svg_media_svg__WEBPACK_IMPORTED_MODULE_7__["default"],
+            className: "row-icon-design"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            children: "Media"
+          })]
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_body_CardCollectionBody__WEBPACK_IMPORTED_MODULE_8__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_body_CardCollectionBody__WEBPACK_IMPORTED_MODULE_8__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_body_CardCollectionBody__WEBPACK_IMPORTED_MODULE_8__["default"], {})]
   });
 };
 
@@ -27660,7 +27730,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".admin-regular-body-container {\n    display: grid;\n    grid-template-columns: 250px auto;\n}\n\n.admin-nav {\n    background-color: rgb(177, 177, 177);\n    height: 100vh;\n    padding : 5px;\n    display: grid;\n    grid-template-rows: 150px 1fr 1fr;\n}\n\n.admin-profile {\n    height: 80px;\n    width : 80px;\n    border-radius: 50%;\n    border: 4px solid #FF1818;\n}\n\n.admin-nav-link a {\n    display : block;\n    font-size: 25px;\n    background-color : #EC4242;\n    margin-bottom : 5px;\n    padding : 5px;\n}\n\n.admin-nav-bottom-button {\n    width : 25px;\n    height : 25px;\n    align-self: end;\n}\n.admin-bottom-button-container {\n    display: grid;\n    grid-template-columns: auto auto;\n    background-color: red;;\n}\n\n.admin-grid-right {\n    display: flex;\n    justify-self: flex-end;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".admin-regular-body-container {\n    display: grid;\n    grid-template-columns: 250px auto;\n}\n\n.admin-nav {\n    background-color: rgb(177, 177, 177);\n    height: 100vh;\n    padding : 5px;\n    position: relative;\n}\n\n.admin-profile {\n    height: 80px;\n    width : 80px;\n    border-radius: 50%;\n    border: 4px solid #FF1818;\n}\n\n.admin-nav-link a {\n    display : block;\n    font-size: 25px;\n    margin-bottom : 5px;\n}\n\n.admin-nav-bottom-button {\n    width : 25px;\n    height : 25px;\n}\n\n.admin-bottom-button-container {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27684,7 +27754,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".dash-board-heading {\n    color : red;\n    font-size: 25px;\n    font-weight: bold;\n    border-bottom : 5px solid red;\n    display: inline-block;\n    width:auto;\n}\n\n.admin-body {\n    padding :5px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".dash-board-heading {\n    color : #FF1818;\n    font-size: 25px;\n    font-weight: bold;\n    border-bottom : 5px solid #FF1818;\n    display: inline-block;\n    width:auto;\n}\n\n.admin-body {\n}\n.dashboard-first-portion {\n    padding : 5px;\n    background-color: rgb(254, 254, 254);\n    box-shadow: 0px 4px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: 0px 4px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: 0px 4px 4px -1px rgba(69,69,69,0.79);\n    position: -webkit-sticky; /* Safari */\n    position: sticky;\n    top:0;\n    z-index: 1;\n}\n\n.icon-row {\n    display: flex;\n    flex-direction : row;\n    gap : 70px;\n    justify-content: center;\n}\n\n.row-icon-design {\n    height : 45px;\n    width : 45px;\n    filter: invert(16%) sepia(69%) saturate(6982%) hue-rotate(355deg) brightness(114%) contrast(100%);\n}\n.icon-container p {\n    color : #FF1818;\n}\n\n.icon-container {\n    padding-top: 25px;\n    padding-bottom: 25px;;\n    text-align: center;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28406,6 +28476,96 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/recyclebin.png?8213d03909c532190f7a58f0c728b108");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/svg/earning.svg":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/asset/svg/earning.svg ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/earning.svg?3e6136ef2b0513b895d09066d684c68f");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/svg/media.svg":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/asset/svg/media.svg ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/media.svg?209eb7201cfff0b42a6eaa61751bea4d");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/svg/member.svg":
+/*!******************************************************!*\
+  !*** ./resources/js/components/asset/svg/member.svg ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/member.svg?e8eb0fbdd875adb4843414e2adb4c5aa");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/svg/msg.svg":
+/*!***************************************************!*\
+  !*** ./resources/js/components/asset/svg/msg.svg ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/msg.svg?0602982da925d36e2b28698509cb00d5");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/svg/order.svg":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/asset/svg/order.svg ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/order.svg?3939dd2ea7f652e53a6b9b3a8cacbd38");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/svg/post.svg":
+/*!****************************************************!*\
+  !*** ./resources/js/components/asset/svg/post.svg ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/post.svg?7dca17c59179f793d87f39559d42d23f");
 
 /***/ }),
 
