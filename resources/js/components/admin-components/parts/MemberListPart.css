@@ -12,7 +12,9 @@
     gap: 5px;
     margin-bottom : 5px;
     padding : 5px;
-    background-color: rgb(234, 231, 231);
+    /* background-color: rgb(234, 231, 231); */
+
+    cursor : pointer;
 }
 
 .member-name {
@@ -23,3 +25,4 @@
 .member-dropdown {
     grid-area: dropdown;
 }
+

@@ -20438,10 +20438,10 @@ var Members = function Members() {
         },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_parts_MemberListPart__WEBPACK_IMPORTED_MODULE_2__["default"], {})
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "member-info",
       id: "mber-info",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         className: "member-info-heading",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
           children: "Member info"
@@ -20450,7 +20450,39 @@ var Members = function Members() {
           className: "close-member-button",
           onClick: close_mber
         })]
-      })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: "member-info-button-group",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: "member-info-body",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "member-info-image-group",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+              src: "https://yt3.ggpht.com/ytc/AKedOLQPPlIgfH6M5b4ptOkqAXu0oSLFuxy8fLLmcKEK=s800-c-k-c0x00ffffff-no-rj",
+              name: "profile",
+              className: "member-info-profile-image"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "member-info-name",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h4", {
+                children: "Md Masud karim"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                style: {
+                  lineHeight: "5px"
+                },
+                children: "Admin"
+              })]
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+          className: "member-info-ban-btn",
+          children: "Ban"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+          className: "member-info-promote-btn",
+          children: "Promote"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+          className: "member-info-demote-btn",
+          children: "Demote"
+        })]
+      })]
     })]
   });
 };
@@ -27900,7 +27932,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".members-heading {\n    color : #CE2C2C;\n    font-size: 25px;\n    font-weight: bold;\n    border-bottom : 5px solid #CE2c2c;\n    display: inline-block;\n    width:auto;\n}\n\n.members-body {\n    padding : 5px;\n}\n\n.member-button {\n    display: block;\n    background-color : #CE2C2C;\n    color : white;\n    padding : 7px;\n    border-radius: 12px;\n}\n.button-center {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    margin-top: 5px;\n}\n\n.member-list {\n    position: fixed;\n    bottom : 0;\n    height: 500px;\n    width: 330px; /*old value was 280px*/\n    background-color: white;\n\n    box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    border: none;\n    overflow-y: auto;\n    z-index: 1;\n}\n\n.member-list p {\n    background-color : #505050;\n    color : white;\n    font-weight: bold;\n    text-align: center;\n    padding :5px;\n    font-size: 20px;\n}\n\n.member-info {\n    display: none;\n\n    position: fixed;\n    bottom : 0;\n    height: 500px;\n    width: 750px;\n    background-color: white;\n    /* left : 550px; */\n    right : 0px;\n\n    box-shadow: -1px -1px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: -1px -1px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: -1px -1px 4px -1px rgba(69,69,69,0.79);\n    border: none;\n    overflow-y: auto;\n    z-index: 1;\n}\n\n.member-info p {\n\n}\n\n.close-member-button {\n    height: 28px;\n    width: 28px;\n    display: inline-block;\n    cursor: pointer;\n\n    position: absolute;\n    right : 5px;\n    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(35deg) brightness(104%) contrast(102%) drop-shadow(0px -2px 4px #D63030);\n    transition: filter .2s;\n}\n\n.close-member-button:hover {\n    filter: invert(85%) sepia(87%) saturate(642%) hue-rotate(95deg) brightness(95%) contrast(94%);\n}\n\n.member-info-heading {\n    background-color : #505050;\n    color : white;\n    font-weight: bold;\n    text-align: center;\n    padding :5px;\n    font-size: 20px;\n    position: relative;\n}\n.member-info-heading p {\n    display: inline-block;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".members-heading {\n    color : #CE2C2C;\n    font-size: 25px;\n    font-weight: bold;\n    border-bottom : 5px solid #CE2c2c;\n    display: inline-block;\n    width:auto;\n}\n\n.members-body {\n    padding : 5px;\n}\n\n.member-button {\n    display: block;\n    background-color : #CE2C2C;\n    color : white;\n    padding : 7px;\n    border-radius: 12px;\n}\n.button-center {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    margin-top: 5px;\n}\n\n.member-list {\n    position: fixed;\n    bottom : 0;\n    height: 500px;\n    width: 330px; /*old value was 280px*/\n    background-color: white;\n\n    box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);\n    border: none;\n    overflow-y: auto;\n    z-index: 1;\n}\n\n.member-list p {\n    background-color : #505050;\n    color : white;\n    font-weight: bold;\n    text-align: center;\n    padding :5px;\n    font-size: 20px;\n}\n\n.member-info {\n    display: none;\n\n    position: fixed;\n    bottom : 0;\n    height: 500px;\n    width: 750px;\n    background-color: white;\n    /* left : 550px; */\n    right : 0px;\n\n    box-shadow: -1px -1px 4px -1px rgba(69,69,69,0.79);\n    -webkit-box-shadow: -1px -1px 4px -1px rgba(69,69,69,0.79);\n    -moz-box-shadow: -1px -1px 4px -1px rgba(69,69,69,0.79);\n    border: none;\n    overflow-y: auto;\n    z-index: 1;\n}\n\n.member-info p {\n\n}\n\n.close-member-button {\n    height: 28px;\n    width: 28px;\n    display: inline-block;\n    cursor: pointer;\n\n    position: absolute;\n    right : 5px;\n    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(35deg) brightness(104%) contrast(102%) drop-shadow(0px -2px 4px #D63030);\n    transition: filter .2s;\n}\n\n.close-member-button:hover {\n    filter: invert(85%) sepia(87%) saturate(642%) hue-rotate(95deg) brightness(95%) contrast(94%);\n}\n\n.member-info-heading {\n    background-color : #505050;\n    color : white;\n    font-weight: bold;\n    text-align: center;\n    padding :5px;\n    font-size: 20px;\n    position: relative;\n}\n.member-info-heading p {\n    display: inline-block;\n}\n.member-info-body {\n    padding : 5px;\n}\n\n\n.member-info-profile-image {\n    height : 55px;\n    width : 55px;\n    border-radius: 50%;\n    grid-area: img;\n}\n\n.member-info-name {\n    grid-area : name;\n}\n\n.member-info-image-group {\n    display: grid;\n    grid-template-columns: 75px 1fr;\n    grid-template-areas: \"img name\";\n    grid-area : info;\n}\n\n.member-info-button-group {\n    display: grid;\n    grid-template-columns: auto auto;\n    grid-template-rows: auto auto;\n\n    grid-template-areas: \"info ban\"\n                        \"promote demote\";\n}\n\n.member-info-ban-btn {\n\n}\n.member-info-promote-btn {\n    background-color: #1DDF23;\n    color : white;\n    padding : 5px;\n}\n.member-info-demote-btn {\n\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27924,7 +27956,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".member-user-profile-image {\n    height : 45px;\n    width : 45px;\n    border-radius: 50%;\n    grid-area: img;\n}\n.member-list-part-container {\n    display: grid;\n    grid-template-columns: 45px 180px 5px;\n    grid-template-rows: 1fr;\n    grid-template-areas: \"img name dropdown\";\n    gap: 5px;\n    margin-bottom : 5px;\n    padding : 5px;\n    background-color: rgb(234, 231, 231);\n}\n\n.member-name {\n    grid-area: name;\n    line-height: 3px;\n}\n\n.member-dropdown {\n    grid-area: dropdown;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".member-user-profile-image {\n    height : 45px;\n    width : 45px;\n    border-radius: 50%;\n    grid-area: img;\n}\n.member-list-part-container {\n    display: grid;\n    grid-template-columns: 45px 180px 5px;\n    grid-template-rows: 1fr;\n    grid-template-areas: \"img name dropdown\";\n    gap: 5px;\n    margin-bottom : 5px;\n    padding : 5px;\n    /* background-color: rgb(234, 231, 231); */\n\n    cursor : pointer;\n}\n\n.member-name {\n    grid-area: name;\n    line-height: 3px;\n}\n\n.member-dropdown {\n    grid-area: dropdown;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

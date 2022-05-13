@@ -34,6 +34,23 @@ const Members = ()=> {
                     <img src = {iconClose} className = "close-member-button" onClick = {close_mber}/>
                 </div>
 
+                <div className = "member-info-button-group">
+                    <div className = "member-info-body">
+                        <div className = "member-info-image-group">
+                            <img src = "https://yt3.ggpht.com/ytc/AKedOLQPPlIgfH6M5b4ptOkqAXu0oSLFuxy8fLLmcKEK=s800-c-k-c0x00ffffff-no-rj" name = "profile" className = "member-info-profile-image"></img>
+                            <div className = "member-info-name">
+                                <h4>Md Masud karim</h4>
+                                <p style = {{lineHeight:"5px"}}>Admin</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button className = "member-info-ban-btn">Ban</button>
+                    <button className = "member-info-promote-btn">Promote</button>
+                    <button className = "member-info-demote-btn">Demote</button>
+
+                </div>
+
+
             </div>
         </div>
     );

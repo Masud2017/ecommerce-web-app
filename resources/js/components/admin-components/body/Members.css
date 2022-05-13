@@ -100,3 +100,46 @@
 .member-info-heading p {
     display: inline-block;
 }
+.member-info-body {
+    padding : 5px;
+}
+
+
+.member-info-profile-image {
+    height : 55px;
+    width : 55px;
+    border-radius: 50%;
+    grid-area: img;
+}
+
+.member-info-name {
+    grid-area : name;
+}
+
+.member-info-image-group {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-areas: "img name";
+    grid-area : info;
+}
+
+.member-info-button-group {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+
+    grid-template-areas: "info ban"
+                        "promote demote";
+}
+
+.member-info-ban-btn {
+
+}
+.member-info-promote-btn {
+    background-color: #1DDF23;
+    color : white;
+    padding : 5px;
+}
+.member-info-demote-btn {
+
+}
