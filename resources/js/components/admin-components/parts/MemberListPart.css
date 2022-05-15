@@ -22,6 +22,10 @@
     line-height: 3px;
 }
 
+/* .member-name h4 {
+    font-size: 1.5vw;
+} */
+
 .member-dropdown {
     grid-area: dropdown;
 }

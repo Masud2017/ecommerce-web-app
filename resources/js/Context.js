@@ -2,7 +2,7 @@ import {createContext,useReducer} from "react";
 
 export const AppContext = createContext();
 
-const initialState = {darkMode:true,isAuth:false};
+const initialState = {darkMode:true,isAuth:false,isOpenModel:false};
 
 /**
  *
@@ -18,6 +18,8 @@ const globalReducer = (state, action)=> {
             return {isAuth:true};
         case 'logout':
             return {isAuth:false}
+        case 'modal':
+            return {isOpenModel : !state.isOpenModel};
         default:
             return state;
     }

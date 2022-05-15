@@ -6,6 +6,7 @@ import DashBoard from "./DashBoard";
 import powerIcon from "../../asset/svg/power.svg";
 import settingIcon from "../../asset/svg/setting.svg";
 import Members from "./Members";
+import PostBody from "./PostBody";
 
 const AdminRegularBody = ()=> {
     return (
@@ -37,7 +38,8 @@ const AdminRegularBody = ()=> {
             </div>
             <div>
                 {/* <DashBoard/> */}
-                <Members/>
+                {/* <Members/> */}
+                <PostBody/>
             </div>
         </div>
     );

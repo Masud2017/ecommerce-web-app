@@ -1,0 +1,8 @@
+.order-heading  {
+    color : #CE2C2C;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom : 5px solid #CE2c2c;
+    display: inline-block;
+    width:auto;
+}
