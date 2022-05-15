@@ -6,3 +6,30 @@
     display: inline-block;
     width:auto;
 }
+
+.order-list-heading {
+    background-color : #505050;
+    color : white;
+    padding : 5px;
+    margin-top: 5px;
+    margin-top : 20px;
+}
+
+.order-nav {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+
+    margin: 0px;
+    padding : 5px;
+
+}
+
+.order-nav span {
+    font-weight: bold;
+    cursor : pointer;
+}
+
+.order-nav span:first-child {
+    border-bottom: 5px solid white;
+}

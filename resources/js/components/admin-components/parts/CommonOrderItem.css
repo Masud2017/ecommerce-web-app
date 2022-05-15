@@ -1,0 +1,47 @@
+.order-item-part-container {
+    display: grid;
+    grid-template-columns: 90px 1fr 1fr 150px;
+    background-color: #E2DDDD;
+    align-items: center;
+    gap: 15px;
+    padding : 10px;
+    margin-top: 10px;
+}
+
+.order-item-img {
+    height: 80px;
+    width: 80dpx;
+    border-radius: 50%;
+    border : 1px solid grey;
+
+}
+.order-status {
+    background-color: white;
+    color : #505050;
+    font-weight: bold;
+    padding : 10px;
+    border-radius: 20px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-content: center;
+}
+.order-item-name h1{
+    font-size: 50px;
+    font-weight: bold;
+    color : #505050;
+}
+
+.order-item-name p{
+    color : #505050;
+}
+
+.order-item-name {
+    line-height: 4px;
+}
+.order-item-qt {
+    display: flex;
+    justify-content: center;
+    color : #505050;
+    font-weight: bold;
+}

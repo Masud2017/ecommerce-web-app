@@ -7,6 +7,8 @@ import powerIcon from "../../asset/svg/power.svg";
 import settingIcon from "../../asset/svg/setting.svg";
 import Members from "./Members";
 import PostBody from "./PostBody";
+import OrderBody from "./OrderBody";
+import OrderDetails from "../parts/OrderDetails";
 
 const AdminRegularBody = ()=> {
     return (
@@ -39,7 +41,9 @@ const AdminRegularBody = ()=> {
             <div>
                 {/* <DashBoard/> */}
                 {/* <Members/> */}
-                <PostBody/>
+                {/* <PostBody/> */}
+                {/* <OrderBody/> */}
+                <OrderDetails/>
             </div>
         </div>
     );

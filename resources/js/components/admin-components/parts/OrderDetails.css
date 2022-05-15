@@ -1,0 +1,83 @@
+.order-details-container {
+    display: grid;
+    grid-template-columns: 130px 1fr 1fr 0px;
+    background-color: #CE2c2c;
+    align-items: center;
+    gap: 15px;
+    padding : 10px;
+    margin-top: 10px;
+}
+
+.order-details-img {
+    height: 120px;
+    width: 120dpx;
+    border-radius: 50%;
+    background-color: white;
+
+}
+.order-status {
+    background-color: white;
+    color : #505050;
+    font-weight: bold;
+    padding : 10px;
+    border-radius: 20px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-content: center;
+}
+.order-details-name h1{
+    font-size: 50px;
+    font-weight: bold;
+    color : white;
+}
+
+.order-details-name p{
+    color : white;
+    font-weight: bold;
+}
+
+.order-details-name {
+    line-height: 4px;
+}
+/* .order-item-qt {
+    display: flex;
+    justify-content: center;
+    color : #505050;
+    font-weight: bold;
+} */
+
+.send-status-btn {
+    background-color: #FCE321;
+    height : 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+.done-status-btn {
+    background-color: #1DDF23;
+    height : 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.done-status-btn img {
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(32deg) brightness(107%) contrast(101%);
+}
+
+.cancel-status-btn {
+    background-color: white;
+    height : 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.cancel-status-btn img {
+    filter: invert(20%) sepia(59%) saturate(3620%) hue-rotate(347deg) brightness(97%) contrast(88%);
+}
+
+.order-status-btn-grp {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap : 13px;
+}
