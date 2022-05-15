@@ -26,6 +26,7 @@
     display : block;
     font-size: 25px;
     margin-bottom : 5px;
+    color : #CE2c2c;
 }
 
 .admin-nav-bottom-button {
@@ -37,4 +38,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    filter: invert(20%) sepia(59%) saturate(3620%) hue-rotate(347deg) brightness(97%) contrast(88%);
 }

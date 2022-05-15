@@ -20215,6 +20215,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _AdminRegularBody_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AdminRegularBody.css */ "./resources/js/components/admin-components/body/AdminRegularBody.css");
 /* harmony import */ var _DashBoard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DashBoard */ "./resources/js/components/admin-components/body/DashBoard.js");
 /* harmony import */ var _asset_svg_power_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../asset/svg/power.svg */ "./resources/js/components/asset/svg/power.svg");
@@ -20236,58 +20238,92 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var AdminRegularBody = function AdminRegularBody() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
     name: "container",
     className: "admin-regular-body-container",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-      name: "header-navigation",
-      className: "admin-nav",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.BrowserRouter, {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-        style: {
-          "text-align": "center"
-        },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
-          src: "https://yt3.ggpht.com/ytc/AKedOLQPPlIgfH6M5b4ptOkqAXu0oSLFuxy8fLLmcKEK=s800-c-k-c0x00ffffff-no-rj",
-          name: "profile",
-          className: "admin-profile"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("strong", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h4", {
-            children: "Md Masud karim"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h6", {
-          children: "Admin"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-        className: "admin-nav-link",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("a", {
-          children: "DashBoard"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("a", {
-          children: "Media"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("a", {
-          children: "Post"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("a", {
-          children: "Order/Cancellation"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("a", {
-          children: "Messages"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("a", {
-          children: "Members"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("a", {
-          children: "Earnings"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-          className: "admin-bottom-button-container",
+        name: "header-navigation",
+        className: "admin-nav",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          style: {
+            "text-align": "center"
+          },
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
-            src: _asset_svg_setting_svg__WEBPACK_IMPORTED_MODULE_4__["default"],
-            className: "admin-nav-bottom-button"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
-            src: _asset_svg_power_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
-            className: "admin-nav-bottom-button admin-grid-right"
+            src: "https://yt3.ggpht.com/ytc/AKedOLQPPlIgfH6M5b4ptOkqAXu0oSLFuxy8fLLmcKEK=s800-c-k-c0x00ffffff-no-rj",
+            name: "profile",
+            className: "admin-profile"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("strong", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h4", {
+              children: "Md Masud karim"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h6", {
+            children: "Admin"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          className: "admin-nav-link",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+            to: "/dashboard",
+            children: "DashBoard"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+            to: "/media",
+            children: "Media"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+            to: "/post",
+            children: "Post"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+            to: "/order",
+            children: "Order/Cancellation"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+            to: "/messages",
+            children: "Messages"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+            to: "/members",
+            children: "Members"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+            to: "/earnings",
+            children: "Earnings"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+            className: "admin-bottom-button-container",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+              src: _asset_svg_setting_svg__WEBPACK_IMPORTED_MODULE_4__["default"],
+              className: "admin-nav-bottom-button"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+              src: _asset_svg_power_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+              className: "admin-nav-bottom-button admin-grid-right"
+            })]
           })]
         })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Switch, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+            exact: true,
+            path: "/dashboard",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_DashBoard__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+            path: "/media",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_DashBoard__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+            path: "/post",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_PostBody__WEBPACK_IMPORTED_MODULE_6__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+            path: "/order",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_OrderBody__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+            path: "/messages",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_DashBoard__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+            path: "/members",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Members__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+            path: "/earnings",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_DashBoard__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+          })]
+        })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_parts_OrderDetails__WEBPACK_IMPORTED_MODULE_8__["default"], {})
-    })]
+    })
   });
 };
 
@@ -21013,7 +21049,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _asset_svg_send_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../asset/svg/send-svgrepo-com.svg */ "./resources/js/components/asset/svg/send-svgrepo-com.svg");
 /* harmony import */ var _asset_svg_right_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../asset/svg/right-svgrepo-com.svg */ "./resources/js/components/asset/svg/right-svgrepo-com.svg");
 /* harmony import */ var _asset_svg_close_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../asset/svg/close.svg */ "./resources/js/components/asset/svg/close.svg");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _asset_svg_invoice_svgrepo_com_1_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../asset/svg/invoice-svgrepo-com (1).svg */ "./resources/js/components/asset/svg/invoice-svgrepo-com (1).svg");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -21025,41 +21063,68 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var OrderDetails = function OrderDetails() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
       className: "order-details-container",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
         className: "order-details-img",
         src: _asset_image_tshirt_png__WEBPACK_IMPORTED_MODULE_3__["default"]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         className: "order-details-name",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h1", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h1", {
           children: "Nestle Chocolate"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
           children: "Order id : #2F04329"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
           children: "Price Per unit : 15$"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         className: "order-status-btn-grp",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
           className: "send-status-btn",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
             src: _asset_svg_send_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_4__["default"]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
           className: "done-status-btn",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
             src: _asset_svg_right_svgrepo_com_svg__WEBPACK_IMPORTED_MODULE_5__["default"]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
           className: "cancel-status-btn",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
             src: _asset_svg_close_svg__WEBPACK_IMPORTED_MODULE_6__["default"]
           })
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+      className: "order-details-info",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+        children: "Order Date : 27 November 2022"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+        children: "Quantity : 3"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+        children: "Total price : 45$"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+        children: "Order Placed by : Md.Masud karim"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+        children: "User phone : (+880)1721-600967"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+        children: "Addres : 433 kollyanpur south paik para Mirpur-1 Dhaka -1216"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+        children: "Email : msmasud578@gmail.com"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+        children: "Payment procedure : Bkash/COD/Bank/Nagad/Rocket"
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+      className: "order-details-last-section",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        className: "order-details-invoice-btn",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+          src: _asset_svg_invoice_svgrepo_com_1_svg__WEBPACK_IMPORTED_MODULE_7__["default"]
+        })
+      })
+    })]
   });
 };
 
@@ -28496,7 +28561,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".admin-regular-body-container {\n    display: grid;\n    grid-template-columns: 250px auto;\n}\n\n.admin-nav {\n    background-color: rgb(177, 177, 177);\n    height: 100vh;\n    padding : 5px;\n    position: relative;\n\n    position: -webkit-sticky; /* Safari */\n    position: sticky;\n    top:0;\n    z-index: 1;\n}\n\n.admin-profile {\n    height: 80px;\n    width : 80px;\n    border-radius: 50%;\n    border: 4px solid #FF1818;\n}\n\n.admin-nav-link a {\n    display : block;\n    font-size: 25px;\n    margin-bottom : 5px;\n}\n\n.admin-nav-bottom-button {\n    width : 25px;\n    height : 25px;\n}\n\n.admin-bottom-button-container {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".admin-regular-body-container {\n    display: grid;\n    grid-template-columns: 250px auto;\n}\n\n.admin-nav {\n    background-color: rgb(177, 177, 177);\n    height: 100vh;\n    padding : 5px;\n    position: relative;\n\n    position: -webkit-sticky; /* Safari */\n    position: sticky;\n    top:0;\n    z-index: 1;\n}\n\n.admin-profile {\n    height: 80px;\n    width : 80px;\n    border-radius: 50%;\n    border: 4px solid #FF1818;\n}\n\n.admin-nav-link a {\n    display : block;\n    font-size: 25px;\n    margin-bottom : 5px;\n    color : #CE2c2c;\n}\n\n.admin-nav-bottom-button {\n    width : 25px;\n    height : 25px;\n}\n\n.admin-bottom-button-container {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    filter: invert(20%) sepia(59%) saturate(3620%) hue-rotate(347deg) brightness(97%) contrast(88%);\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28688,7 +28753,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".order-details-container {\n    display: grid;\n    grid-template-columns: 130px 1fr 1fr 0px;\n    background-color: #CE2c2c;\n    align-items: center;\n    gap: 15px;\n    padding : 10px;\n    margin-top: 10px;\n}\n\n.order-details-img {\n    height: 120px;\n    width: 120dpx;\n    border-radius: 50%;\n    background-color: white;\n\n}\n.order-status {\n    background-color: white;\n    color : #505050;\n    font-weight: bold;\n    padding : 10px;\n    border-radius: 20px;\n    display: flex;\n    align-self: center;\n    justify-content: center;\n    align-content: center;\n}\n.order-details-name h1{\n    font-size: 50px;\n    font-weight: bold;\n    color : white;\n}\n\n.order-details-name p{\n    color : white;\n    font-weight: bold;\n}\n\n.order-details-name {\n    line-height: 4px;\n}\n/* .order-item-qt {\n    display: flex;\n    justify-content: center;\n    color : #505050;\n    font-weight: bold;\n} */\n\n.send-status-btn {\n    background-color: #FCE321;\n    height : 40px;\n    width: 40px;\n    border-radius: 10px;\n}\n.done-status-btn {\n    background-color: #1DDF23;\n    height : 40px;\n    width: 40px;\n    border-radius: 10px;\n}\n\n.done-status-btn img {\n    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(32deg) brightness(107%) contrast(101%);\n}\n\n.cancel-status-btn {\n    background-color: white;\n    height : 40px;\n    width: 40px;\n    border-radius: 10px;\n}\n\n.cancel-status-btn img {\n    filter: invert(20%) sepia(59%) saturate(3620%) hue-rotate(347deg) brightness(97%) contrast(88%);\n}\n\n.order-status-btn-grp {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-end;\n    gap : 13px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".order-details-container {\n    display: grid;\n    grid-template-columns: 130px 1fr 1fr 0px;\n    background-color: #CE2c2c;\n    align-items: center;\n    gap: 15px;\n    padding : 10px;\n    margin-top: 10px;\n}\n.order-details-img {\n    height: 120px;\n    width: 120dpx;\n    border-radius: 50%;\n    background-color: white;\n\n}\n.order-status {\n    background-color: white;\n    color : #505050;\n    font-weight: bold;\n    padding : 10px;\n    border-radius: 20px;\n    display: flex;\n    align-self: center;\n    justify-content: center;\n    align-content: center;\n}\n.order-details-name h1{\n    font-size: 50px;\n    font-weight: bold;\n    color : white;\n}\n.order-details-name p{\n    color : white;\n    font-weight: bold;\n}\n.order-details-name {\n    line-height: 4px;\n}\n.send-status-btn {\n    background-color: #FCE321;\n    height : 40px;\n    width: 40px;\n    border-radius: 10px;\n}\n.done-status-btn {\n    background-color: #1DDF23;\n    height : 40px;\n    width: 40px;\n    border-radius: 10px;\n}\n.done-status-btn img {\n    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(32deg) brightness(107%) contrast(101%);\n}\n.cancel-status-btn {\n    background-color: white;\n    height : 40px;\n    width: 40px;\n    border-radius: 10px;\n}\n.cancel-status-btn img {\n    filter: invert(20%) sepia(59%) saturate(3620%) hue-rotate(347deg) brightness(97%) contrast(88%);\n}\n.order-status-btn-grp {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-end;\n    gap : 13px;\n}\n\n.order-details-info {\n    background-color: #CE2c2c;\n    color :white;\n    font-weight: bold;\n    margin-top : 10px;\n    padding : 10px;\n    line-height: 7px;\n\n    font-size: 20px;\n    padding-top: 15px;\n}\n\n.order-details-last-section {\n    background-color : #CE2c2c;\n    margin-top: 15px;\n    padding : 10px;\n\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n}\n.order-details-invoice-btn {\n    height: 70px;\n    background-color: #EC4242;\n    padding: 10px;\n    display: inline-block;\n    overflow: hidden;\n}\n.order-details-invoice-btn img{\n    height: 100%;\n    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(32deg) brightness(107%) contrast(101%);\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29485,6 +29550,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/earning.svg?3e6136ef2b0513b895d09066d684c68f");
+
+/***/ }),
+
+/***/ "./resources/js/components/asset/svg/invoice-svgrepo-com (1).svg":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/asset/svg/invoice-svgrepo-com (1).svg ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/invoice-svgrepo-com (1).svg?4f1face16faad11fb317f35f35067f8b");
 
 /***/ }),
 

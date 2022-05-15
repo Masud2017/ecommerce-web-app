@@ -8,6 +8,7 @@ import ProductImg from "../../asset/image/tshirt.png";
 import iconSend from "../../asset/svg/send-svgrepo-com.svg";
 import iconDone from "../../asset/svg/right-svgrepo-com.svg";
 import iconClose from "../../asset/svg/close.svg";
+import iconInvoice from "../../asset/svg/invoice-svgrepo-com (1).svg";
 
 
 const OrderDetails = ()=> {
@@ -28,7 +29,22 @@ const OrderDetails = ()=> {
                 </div>
             </div>
 
-            <div></div>
+            <div className = "order-details-info">
+            <p>Order Date : 27 November 2022</p>
+            <p>Quantity : 3</p>
+            <p>Total price : 45$</p>
+            <br/><br/><br/><br/>
+            <p>Order Placed by : Md.Masud karim</p>
+            <p>User phone : (+880)1721-600967</p>
+            <p>Addres : 433 kollyanpur south paik para Mirpur-1 Dhaka -1216</p>
+            <p>Email : msmasud578@gmail.com</p>
+            <p>Payment procedure : Bkash/COD/Bank/Nagad/Rocket</p>
+            </div>
+            <div className = "order-details-last-section">
+                <div className = "order-details-invoice-btn">
+                    <img src = {iconInvoice} />
+                </div>
+            </div>
         </div>
     );
 }
