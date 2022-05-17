@@ -1,0 +1,15 @@
+.reciever-message-text-body-part-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.reciever-message-text-body-part-text {
+    max-width: 250px;
+    background-color: orangered;
+    padding : 5px;
+    border-radius: 10px;
+    border:none;
+    min-height: 40px;
+    color : white;
+}
