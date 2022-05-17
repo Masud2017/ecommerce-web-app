@@ -42,17 +42,12 @@
     align-items: center;
     justify-content: center;
     line-height: 0.5em;
-
 }
 
 .chat-card-name p {
     line-height: 1em;
     color :#363333;
 }
-
-
-
-
 
 .chat-card-hint {
     grid-area: hint;

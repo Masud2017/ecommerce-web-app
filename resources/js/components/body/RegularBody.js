@@ -30,6 +30,7 @@ import ProceedToCheckoutPage from "./ProceedToCheckoutPage";
 
 
 import AdminRegularBody from '../admin-components/body/AdminRegularBody';
+import MainMenssangerBody from '../admin-components/Messanger/MainMessangerBody';
 
 function RegularBody(props) {
     const contextApp = useContext(AppContext);
@@ -94,7 +95,8 @@ function RegularBody(props) {
             <CardCollectionBody/> */}
             {/* <ProceedToCheckoutPage/> */}
             {/* <LoadingScreen/> */}
-            <AdminRegularBody/>
+            {/* <AdminRegularBody/> */}
+            <MainMenssangerBody/>
         </div>
 
     );

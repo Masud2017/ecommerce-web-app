@@ -1,0 +1,9 @@
+.chat-body-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100vh;
+}
+.chat-text {
+    background-color : red;
+    padding : 10px;
+}

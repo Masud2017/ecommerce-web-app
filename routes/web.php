@@ -18,6 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/messanger',function(){
+    return view('messanger');
+});
 
 // Route::get('/auth/google/callback', function () {
 //     $user = Socialite::driver('google')->stateless()->user();

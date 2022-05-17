@@ -1,10 +1,10 @@
 .admin-regular-body-container {
     display: grid;
-    grid-template-columns: 250px auto;
+    grid-template-columns: 300px auto;
 }
 
 .admin-nav {
-    background-color: rgb(177, 177, 177);
+    background-color: #D9D9D9;
     height: 100vh;
     padding : 5px;
     position: relative;
