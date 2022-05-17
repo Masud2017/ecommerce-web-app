@@ -16,10 +16,12 @@ const MainMessangerBody = ()=> {
             </div>
             <div className="chat-body-p">
                 <div className = "chat-body-text">
-                    <div className = "test12">
+                    <div className = "message-text-body" name = "message-text-body">
                         Hello
                     </div>
-                    <div className = "chat-text">
+
+
+                    <div className = "chat-text" name = "message-text-box">
                         <div className = "msg-icon-container">
                             <div className = "msg-icon-bg">
                                 <img src = {iconEmoji} className = "msg-icon" />
