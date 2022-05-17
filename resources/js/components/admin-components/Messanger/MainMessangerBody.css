@@ -29,9 +29,11 @@
     background-color : rgb(227, 142, 142);
     padding : 10px;
 
-    position: absolute;
+    position: fixed;
     bottom : 0;
-    width: 100%;
+    /* width: 100%; */
+    right : 0;
+    left : 380px;
 
 }
 .message-text-body {

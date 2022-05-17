@@ -6,6 +6,7 @@ import ChatUserPart from "./parts/ChatUserPart";
 
 import iconEmoji from "../../asset/svg/emoji.svg";
 import iconAttachment from "../../asset/svg/attachment.svg";
+import MessageTextBodyPart from "./MessageTextBodyPart";
 
 const MainMessangerBody = ()=> {
     return (
@@ -17,9 +18,28 @@ const MainMessangerBody = ()=> {
             <div className="chat-body-p">
                 <div className = "chat-body-text">
                     <div className = "message-text-body" name = "message-text-body">
-                        Hello
+                        User name
                     </div>
-
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
+                    <MessageTextBodyPart/>
 
                     <div className = "chat-text" name = "message-text-box">
                         <div className = "msg-icon-container">
