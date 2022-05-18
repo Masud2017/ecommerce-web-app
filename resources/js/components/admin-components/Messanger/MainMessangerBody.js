@@ -39,24 +39,58 @@ const MainMessangerBody = ()=> {
         }
     }
 
+    const addEmojiToMsgText = (emoji)=> {
+        const prevData = msgText;
+        setMsgText(prevData + emoji);
+    }
     const onEmojiClick = (event, emojiObject) => {
-        setChosenEmoji(emojiObject);
+        // setChosenEmoji(emojiObject);
+        addEmojiToMsgText(emojiObject.emoji);
     };
 
     return (
         <div className = "messanger-container">
+
             <div className ="chat-user-list">
                 {/* <ChatUserListInterface/> */}
                 <ChatUserPart/>
             </div>
-            <div className="chat-body-p">
+
+
+            <div className = "message-text-body" name = "message-text-body">
+                User name
+            </div>
                 <div className = "chat-body-text">
-                    <div className = "message-text-body" name = "message-text-body">
-                        User name
-                    </div>
+
 
                     <SenderMessageTextBodyPart/>
                     <RecieverMessageTextBodyPart message={msgText}/>
+                    <SenderMessageTextBodyPart/>
+                    <RecieverMessageTextBodyPart message={msgText}/>
+                    <SenderMessageTextBodyPart/>
+                    <RecieverMessageTextBodyPart message={msgText}/>
+                    <SenderMessageTextBodyPart/>
+                    <RecieverMessageTextBodyPart message={msgText}/>
+                    <SenderMessageTextBodyPart/>
+                    <RecieverMessageTextBodyPart message={msgText}/>
+                    <SenderMessageTextBodyPart/>
+                    <RecieverMessageTextBodyPart message={msgText}/>
+                    <SenderMessageTextBodyPart/>
+                    <RecieverMessageTextBodyPart message={msgText}/>
+                    <SenderMessageTextBodyPart/>
+                    <RecieverMessageTextBodyPart message={msgText}/>
+                    <SenderMessageTextBodyPart/>
+                    <RecieverMessageTextBodyPart message={msgText}/>
+                    <SenderMessageTextBodyPart/>
+                    <RecieverMessageTextBodyPart message={msgText}/>
+                    <SenderMessageTextBodyPart/>
+                    <RecieverMessageTextBodyPart message={msgText}/>
+
+
+
+
+                </div>
+
 
 
 
@@ -74,17 +108,8 @@ const MainMessangerBody = ()=> {
                         <div style={ {"width":"100%"}} >
 
 
-
-                        {/* {chosenEmoji ? (
-        <span>You chose: {chosenEmoji.emoji}</span>
-      ) : (
-        <span>No emoji Chosen</span>
-      )} */}
-
-
-                        {/* <span id = "showable">{msgText}</span> */}
                         <form className = "msg-form-control">
-                                <textarea type = "text" className = "main-message-input" name = "msg" placeholder="Type your message here..." autoComplete="off" onChange={handleMsgChange}/>
+                                <textarea type = "text" className = "main-message-input" name = "msg" placeholder="Type your message here..." autoComplete="off" value = {msgText} onChange={handleMsgChange}/>
                                 {/* <input type = "text" className = "main-message-input" name = "msg" placeholder="Type your message here..." autoComplete="off"/> */}
 
                                 <input type = "submit" class = "main-message-submit" onClick={submitMsgForm} value = "SEND"/>
@@ -92,9 +117,8 @@ const MainMessangerBody = ()=> {
                         </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
+
 
 
 

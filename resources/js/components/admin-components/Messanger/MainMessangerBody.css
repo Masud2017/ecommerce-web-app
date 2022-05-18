@@ -1,59 +1,85 @@
+/*
+    Todo :
+    1. At first I have to refactor this code.
+    2. Then I have to convert this code from flexbox to grid.
+*/
+
+.messanger-container {
+    display: grid;
+    grid-template-columns : 380px auto;
+    grid-template-rows: 45px auto 65px;
+    grid-template-areas : "chatuserlist userheading"
+                        "chatuserlist msgbody"
+                        "chatuserlist msgtext";
+    box-sizing: border-box;
+}
+/*
 .messanger-container {
     display: grid;
     grid-template-columns: 380px auto;
-}
+} */
 
-.chat-user-list {
-    box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.8);
+.chat-user-list { /*this is the list of the user that send messages to the owner*/
+    /* box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.8);
     -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.8);
-    -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.8);
-    height : 100vh;
+    -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.8); */
+    grid-area: chatuserlist;
+    /* height: 100vh; */
+
+    box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.18);
+-webkit-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.18);
+-moz-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.18);
 }
 
 .chat-body-p {
-    /* padding : 10px; */
+    padding : 10px; /*This is the chatbody portion where the messages exists*/
+
+
 }
 
-.chat-body-p h3 {
-    display: inline-block;
-    border-bottom : 4px solid red;
-}
-.chat-body-text {
-    display: flex;
+.chat-body-text { /*this portion comes under the chat-body-p*/
+    display: block;
     flex-direction: column;
-    position: relative;
+    /* position: relative; */
     height: 100%;
+    overflow-y: auto;
+
+    grid-area :msgbody;
+    padding : 10px;
+    height: 78vh;
 
 }
-.chat-text {
+
+
+.chat-text { /*this is the portion where user can write messages and that  can be sent to reciever*/
     background-color : rgb(227, 142, 142);
     padding : 10px;
-
-    position: fixed;
-    bottom : 0;
-    /* width: 100%; */
-    right : 0;
-    left : 380px;
-
+    grid-area: msgtext;
+    box-sizing: border-box;
 }
-.message-text-body {
+.message-text-body { /*This portion is the heading of user name*/
     margin-bottom: 10px;
     width: 100%;
     background-color: white;
     padding : 10px;
 
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    grid-area : userheading;
+    align-self: flex-start;
+    margin-bottom : 5px;
+
+
+    box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.18);
+-webkit-box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.18);
+-moz-box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.18);
 }
 
-.msg-icon {
+.msg-icon { /*this is the measurement of the icon that has been used to represent the emojir and file upload button*/
     height: 35px;
     width: 35px;
     filter: invert(20%) sepia(81%) saturate(4789%) hue-rotate(351deg) brightness(105%) contrast(106%);
 }
 
-.msg-icon-bg {
+.msg-icon-bg { /*this is the background of the msg icon*/
     background-color: white;
     padding :4px;
     border-radius: 50%;
@@ -62,15 +88,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor:pointer;
 }
-.msg-icon-container {
+
+.msg-icon-container { /*This portion is used to make the two icon horizontal*/
     display: flex;
     flex-direction: row;
     column-gap: 10px;
 }
 
 
-.main-message-input {
+.main-message-input { /*this is the textare whre user can write stuff*/
     max-height: 50px;
     border-radius: 10px;
     padding: 5px;
@@ -83,27 +111,27 @@
     transition: border .1s;
 }
 
-.main-message-input:focus {
+.main-message-input:focus { /*adding extra atrributes to the input text field*/
     border : 2px solid hsl(400,100%,50%);
 }
 
-.main-message-submit {
+.main-message-submit { /*this ish the */
     padding : 10px;
     height: 50px;
     border-radius: 10px;
     display: inline-block;
 
 }
-.msg-form-control {
+.msg-form-control { /*This is the container of user text input and submit subbot*/
     display: flex;
     column-gap: 5px;
 
 }
-.message-emoji-collection {
+.message-emoji-collection { /*This the emoji drop down menu*/
     display: none;
     z-index :1;
     position: absolute;
     bottom : 65px;
-    background-color: red;
     padding : 10px;
+    left: 0;
 }
