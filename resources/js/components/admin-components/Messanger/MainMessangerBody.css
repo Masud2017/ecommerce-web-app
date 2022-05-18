@@ -38,7 +38,7 @@
 }
 
 .chat-body-text { /*this portion comes under the chat-body-p*/
-    display: block;
+    /* display: block; */
     flex-direction: column;
     /* position: relative; */
     height: 100%;
@@ -133,5 +133,6 @@
     position: absolute;
     bottom : 65px;
     padding : 10px;
-    left: 0;
+    left: 380px;
+
 }
