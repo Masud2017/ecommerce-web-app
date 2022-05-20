@@ -43,17 +43,15 @@ import Footer from "../headerAndFooter/Footer";
 
 import {AppContext} from "../../Context";
 
-function logoutHandler() {
-    const contextApp = useContext(AppContext);
-    alert("Logout");
 
-    sessionStorage.removeItem("token");
-    if (!sessionStorage.getItem("token")) {
-        contextApp.dispatch({type:'logout'});
-    }
-}
 
 function AuthenticatedHeader () {
+    const contextApp = useContext(AppContext);
+
+    function logoutHandler() {
+        sessionStorage.removeItem("token");
+        contextApp.dispatch({type:'logout'});
+    }
 
 
         return (
@@ -76,7 +74,7 @@ function AuthenticatedHeader () {
                             <div class = "profile-option">
                                 <Link to = "account">Manage Account</Link>
                                 <hr style = {{"margin":"0px"}}></hr>
-                                <a href= "#" onClick={()=>logoutHandler}>Logout</a>
+                                <a href= "#" onClick={()=>logoutHandler()}>Logout</a>
 
                             </div>
                         </li>

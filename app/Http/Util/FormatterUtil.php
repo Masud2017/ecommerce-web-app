@@ -2,6 +2,8 @@
 namespace App\Http\Util;
 
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
+
 
 class FormatterUtil {
 
@@ -14,7 +16,7 @@ class FormatterUtil {
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',
-            'expires_in' => auth()->factory()->getTTL() * 60
+            'expires_in' => auth()->factory()->getTTL() * 60,
         ]);
     }
 

@@ -39,6 +39,13 @@ class OAuthController extends Controller
 
         $findUser = User::where('google_id',$user->id)->first();
 
+        if (!$findUser) {
+            $findUser = User::where('email',$user->email)->first();
+            $findUser->google_id = $user->id;
+            $findUser->email_verified_at = Carbon::now()->toDateTimeString();
+            $findUser->save();
+        }
+
         if ($findUser) {
             $token = auth()->login($findUser);
         } else {

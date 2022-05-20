@@ -32,6 +32,27 @@ import ProceedToCheckoutPage from "./ProceedToCheckoutPage";
 import AdminRegularBody from '../admin-components/body/AdminRegularBody';
 import MainMenssangerBody from '../admin-components/Messanger/MainMessangerBody';
 
+
+const getJwtMiddleInfo = (jwtToken)=> {
+    return atob(jwtToken.split(".")[1]);
+}
+
+const isJwtValid = (jwt)=> {
+    const payload = getJwtMiddleInfo(jwt);
+
+    const now = new Date();
+    const fiveMin = 1000 * 60 * 5;
+    const expiration = new Date(payload.exp);
+
+    if (expiration.getTime() - now.getTime() < fiveMin) {
+        return true; // expired
+    } else {
+        return false; // not expired
+    }
+
+    return false; // not expired
+}
+
 function RegularBody(props) {
     const contextApp = useContext(AppContext);
 
@@ -43,7 +64,13 @@ function RegularBody(props) {
             throw new Error ("something went wrong");
         }).then(res=>{
             // alert(res.access_token);
-            sessionStorage.setItem("token",res.access_token);
+            console.log("Debuggng the value of expiry : "+isJwtValid(res.access_token));
+            if(!isJwtValid(res.access_token)) {
+                sessionStorage.setItem("token",res.access_token);
+            } else {
+                sessionStorage.removeItem("token");
+            }
+
 
 
         }).catch(e=>console.log("This is catch "+e));

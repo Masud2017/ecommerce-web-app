@@ -1,9 +1,3 @@
-/*
-    Todo :
-    1. At first I have to refactor this code.
-    2. Then I have to convert this code from flexbox to grid.
-*/
-
 .messanger-container {
     display: grid;
     grid-template-columns : 380px auto;
@@ -13,22 +7,12 @@
                         "chatuserlist msgtext";
     box-sizing: border-box;
 }
-/*
-.messanger-container {
-    display: grid;
-    grid-template-columns: 380px auto;
-} */
 
 .chat-user-list { /*this is the list of the user that send messages to the owner*/
-    /* box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.8);
-    -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.8);
-    -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.8); */
     grid-area: chatuserlist;
-    /* height: 100vh; */
-
     box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.18);
--webkit-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.18);
--moz-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.18);
+    -webkit-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.18);
+    -moz-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.18);
 }
 
 .chat-body-p {
@@ -38,9 +22,7 @@
 }
 
 .chat-body-text { /*this portion comes under the chat-body-p*/
-    /* display: block; */
     flex-direction: column;
-    /* position: relative; */
     height: 100%;
     overflow-y: auto;
 

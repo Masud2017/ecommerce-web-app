@@ -95,9 +95,11 @@ const MainMessangerBody = ()=> {
 
 
                     <div className = "chat-text" name = "message-text-box">
+
                         <div className = "message-emoji-collection" id ="message-emoji-collection">
                             <Picker onEmojiClick={onEmojiClick} />
                         </div>
+
                         <div className = "msg-icon-container">
                             <div className = "msg-icon-bg">
                                 <img src = {iconEmoji} className = "msg-icon" onClick={showMessageEmojiCollectionToogle}/>

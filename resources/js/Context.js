@@ -2,6 +2,14 @@ import {createContext,useReducer} from "react";
 
 export const AppContext = createContext();
 
+
+export const setStorageEvent = (element,callabck)=> {
+    const event = new Event("sessionEvent");
+    element.addEventListener("sessionEvent",callback);
+}
+
+
+
 const initialState = {darkMode:true,isAuth:false,isOpenModel:false};
 
 /**
