@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React,{useContext, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import "../headerAndFooter/Header.css"
 
@@ -49,10 +49,11 @@ function AuthenticatedHeader () {
     const contextApp = useContext(AppContext);
 
     function logoutHandler() {
-        sessionStorage.removeItem("token");
+        localStorage.removeItem("token");
         contextApp.dispatch({type:'logout'});
     }
 
+    // useEffect(alert("hello"));
 
         return (
             <div name = "Header">

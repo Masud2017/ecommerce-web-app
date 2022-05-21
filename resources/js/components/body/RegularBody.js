@@ -66,15 +66,15 @@ function RegularBody(props) {
             // alert(res.access_token);
             console.log("Debuggng the value of expiry : "+isJwtValid(res.access_token));
             if(!isJwtValid(res.access_token)) {
-                sessionStorage.setItem("token",res.access_token);
+                localStorage.setItem("token",res.access_token);
             } else {
-                sessionStorage.removeItem("token");
+                localStorage.removeItem("token");
             }
 
 
 
         }).catch(e=>console.log("This is catch "+e));
-        if (sessionStorage.getItem('token')) {
+        if (localStorage.getItem('token')) {
             contextApp.dispatch({type:'grantAuth'});
         } else {
             contextApp.dispatch({type:'logout'});
@@ -122,8 +122,8 @@ function RegularBody(props) {
             <CardCollectionBody/> */}
             {/* <ProceedToCheckoutPage/> */}
             {/* <LoadingScreen/> */}
-            {/* <AdminRegularBody/> */}
-            <MainMenssangerBody/>
+            <AdminRegularBody/>
+            {/* <MainMenssangerBody/> */}
         </div>
 
     );

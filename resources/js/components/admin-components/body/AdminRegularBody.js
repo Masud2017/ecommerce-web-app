@@ -6,8 +6,10 @@ import {
     Switch,
     Route,
     Link,
-    Redirect
+    Redirect,useHistory
   } from "react-router-dom";
+
+
 
 import "./AdminRegularBody.css";
 import DashBoard from "./DashBoard";
@@ -18,8 +20,21 @@ import Members from "./Members";
 import PostBody from "./PostBody";
 import OrderBody from "./OrderBody";
 import OrderDetails from "../parts/OrderDetails";
+import MainMessangerBody from "../Messanger/MainMessangerBody";
+
+
+const openMessageWindow = ()=> {
+    window.open("/messages","_self");
+}
+
+
 
 const AdminRegularBody = ()=> {
+    const history = useHistory();
+    const nav = ()=> {
+        history.push("/messages");
+    }
+
     return (
         <div name = "container" className = "admin-regular-body-container">
             <Router>
@@ -34,7 +49,7 @@ const AdminRegularBody = ()=> {
                     <Link to = "/media">Media</Link>
                     <Link to = "/post">Post</Link>
                     <Link to = "/order">Order/Cancellation</Link>
-                    <Link to = "/messages">Messages</Link>
+                    <a onClick={openMessageWindow}>Messages</a>
                     <Link to = "/members">Members</Link>
                     <Link to = "/earnings">Earnings</Link>
 
@@ -62,13 +77,16 @@ const AdminRegularBody = ()=> {
                             <OrderBody/>
                         </Route>
                         <Route path = "/messages">
-                            <DashBoard/>
+                            <MainMessangerBody/>
                         </Route>
                         <Route path = "/members">
                             <Members/>
                         </Route>
                         <Route path = "/earnings">
                             <DashBoard/>
+                        </Route>
+                        <Route path = "/productdetails">
+                            <OrderDetails/>
                         </Route>
                     </Switch>
                 </div>

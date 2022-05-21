@@ -2,12 +2,31 @@ import {createContext,useReducer} from "react";
 
 export const AppContext = createContext();
 
-
-export const setStorageEvent = (element,callabck)=> {
-    const event = new Event("sessionEvent");
-    element.addEventListener("sessionEvent",callback);
+const getJwtMiddleInfo = (jwtToken)=> {
+    return atob(jwtToken.split(".")[1]);
 }
 
+const isJwtExpired = (jwt)=> {
+    const payload = getJwtMiddleInfo(jwt);
+
+    const now = new Date();
+    const fiveMin = 1000 * 60 * 5;
+    const expiration = new Date(payload.exp);
+
+    if (expiration.getTime() - now.getTime() < fiveMin) {
+        return true; // expired
+    } else {
+        return false; // not expired
+    }
+
+    return false; // not expired
+}
+if (localStorage.getItem("token")) {
+
+    if (isJwtExpired(localStorage.getItem("token"))) {
+        localStorage.removeItem("token");
+    }
+}
 
 
 const initialState = {darkMode:true,isAuth:false,isOpenModel:false};

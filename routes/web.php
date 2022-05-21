@@ -14,7 +14,7 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
-Route::get('/', function () {
+Route::get('/{path?}', function () {
     return view('welcome');
 });
 

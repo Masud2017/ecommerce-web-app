@@ -9,10 +9,15 @@ import {
     Redirect
   } from "react-router-dom";
 
+
+const openOrderDetailsWindow = ()=> {
+    window.open("/productdetails","_self");
+}
+
 const OrderPart = ()=> {
     return (
         <div>
-            <OrderItemPart/>
+            <div onClick={openOrderDetailsWindow}><OrderItemPart/></div>
             <OrderItemPart/>
             <OrderItemPart/>
             <OrderItemPart/>

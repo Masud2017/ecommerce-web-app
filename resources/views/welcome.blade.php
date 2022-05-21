@@ -41,6 +41,41 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            .spinner:empty {
+                position: absolute;
+                top: 50%;
+                left : 50%;
+                transform: translateX(-50%) translateY(-50%);
+
+                border-radius: 50%;
+                box-shadow: 0px 0px 0px 10px black, 0px 0px 0px 20px red, 0px 0px 0px 30px orange;
+                width : 50px;
+                height : 50px;
+                border: 10px dotted solid purple;
+                border-left: 10px solid orangered;
+                animation: spinner 1.1s infinite linear;
+            }
+
+            @keyframes spinner {
+                0%   {
+                    transform: rotate(90deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+
+                }
+            }
+
+            .loader:empty {
+                width: 350px;
+                height : 350px;
+                position: absolute;
+                top: 50%;
+                left : 50%;
+                transform:  translateX(-50%) translateY(-50%);
+            }
+
         </style>
     </head>
     <body>
@@ -48,7 +83,13 @@
         {{-- <div id = "header"></div>
         {{-- <div id = "regularbody"></div> --}}
         {{-- <div id = "footer"></div> --}}
-        <div id = "root"></div>
+        <div id = "root" class = "spinner" ></div>
+
+
+
+
+
+
 
         {{-- <div id = "root"></div> --}}
 
