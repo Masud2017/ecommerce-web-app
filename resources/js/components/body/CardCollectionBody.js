@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
 import ProductCard from '../parts/ProductCard';
 import "./RegularBody.css";
@@ -111,7 +112,7 @@ function CardCollectionBody() {
                             <ProductCard props = {item}/>
                         </div>))} */}
                         <div className = "product-column">
-                            <ProductCard props = {productCardAttr[0]}/>
+                            <Link to = "/productdetails"><ProductCard props = {productCardAttr[0]}/></Link>
                         </div>
                         <div className = "product-column">
                             <ProductCard props = {productCardAttr[0]}/>

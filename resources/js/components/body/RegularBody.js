@@ -84,7 +84,7 @@ function RegularBody(props) {
 
     return(
         <div>
-             {/* <div className = "cata-and-caro">
+             <div className = "cata-and-caro">
              <div>
                  <ul type = "circle" className = "cata-list">
                      <li>Computer accessories <span className = "cata-product-count">10</span></li>
@@ -111,19 +111,13 @@ function RegularBody(props) {
                     </div>
                 </Carousel>
 
-             </div> */}
+             </div>
 
-            {/* <AccountBody/> */}
-            {/* <ProductDetailsPage/> */}
-            {/* <CardCollectionBody/>
             <CardCollectionBody/>
             <CardCollectionBody/>
             <CardCollectionBody/>
-            <CardCollectionBody/> */}
-            {/* <ProceedToCheckoutPage/> */}
-            {/* <LoadingScreen/> */}
-            <AdminRegularBody/>
-            {/* <MainMenssangerBody/> */}
+            <CardCollectionBody/>
+            <CardCollectionBody/>
         </div>
 
     );

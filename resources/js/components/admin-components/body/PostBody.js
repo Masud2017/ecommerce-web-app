@@ -31,14 +31,12 @@ const PostBody = ()=> {
                                 <input placeholder="enter the name of the member" type  = "text" className ="control"/>
                                 <input placeholder="password" type ="password" className ="control"/>
 
-                                <input placeholder="enter the name of the member" className = "control"/>
+                                <input placeholder="enter the member email" type = "email" className = "control" required="required"/>
 
-                                <input placeholder="enter the name of the member" className = "control"/>
-
-                                <input type = "submit" value = "Create Member" className = "control post-modal-btn"/>
+                                <input type = "submit" value = "Create Member" className = "control post-modal-btn" style = {{"border":"none"}} />
                                 Or,
                                 <input type = "text" placeholder="enter the reciptionist email" className = "control" />
-                                <input type = "submit" value = "Create Send auth link to user" className = "control post-modal-btn"/>
+                                <input type = "submit" value = "Create Send auth link to user" className = "control post-modal-btn" style = {{"border":"none"}}/>
 
 
                             </form>

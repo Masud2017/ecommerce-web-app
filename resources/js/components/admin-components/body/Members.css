@@ -17,6 +17,7 @@
     color : white;
     padding : 7px;
     border-radius: 12px;
+    box-shadow: -2px 1px 10px 1px grey;
 }
 .button-center {
     display: flex;

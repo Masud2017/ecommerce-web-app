@@ -9,6 +9,7 @@ import iconPost from "../../asset/svg/post.svg";
 import iconMedia from "../../asset/svg/media.svg";
 
 import CardCollectionBody from "../../body/CardCollectionBody";
+import { Link } from "react-router-dom";
 
 
 const DashBoard = ()=> {
@@ -18,8 +19,10 @@ const DashBoard = ()=> {
                     <div className = "dash-board-heading">DashBoard</div>
                     <div className = "icon-row">
                         <div className = "icon-container">
+                            <Link to = "/messages">
                             <img src= {iconMsg} className = "row-icon-design" />
                             <p>Messages</p>
+                            </Link>
                         </div>
 
                         <div className = "icon-container">
@@ -28,18 +31,24 @@ const DashBoard = ()=> {
                         </div>
 
                         <div className = "icon-container">
-                            <img src= {iconMember} className = "row-icon-design" />
-                            <p>Members</p>
+                            <Link to = "/members">
+                                <img src= {iconMember} className = "row-icon-design" />
+                                <p>Members</p>
+                            </Link>
                         </div>
 
                         <div className = "icon-container">
-                            <img src= {iconOrder} className = "row-icon-design" />
-                            <p>Orders</p>
+                            <Link to = "/order">
+                                <img src= {iconOrder} className = "row-icon-design" />
+                                <p>Orders</p>
+                            </Link>
                         </div>
 
                         <div className = "icon-container">
+                            <Link to = "post">
                             <img src= {iconPost} className = "row-icon-design" />
                             <p>Posts</p>
+                            </Link>
                         </div>
 
                         <div className = "icon-container">

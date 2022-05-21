@@ -16,8 +16,6 @@ import logo from "../asset/lgoo.svg";
 import cart from "../asset/cart.svg";
 
 import RegularBody from "../body/RegularBody";
-import Login from "../parts/Login";
-import Signup from "../parts/Login";
 
 import {
     BrowserRouter as Router,
@@ -33,6 +31,8 @@ import AccountBody from './AccountBody';
 
 import ChatBox from '../parts/ChatBox';
 
+import Login from '../parts/Login';
+
 
 import "./AuthenticatedHeader.css";
 // Testing the api
@@ -42,6 +42,8 @@ import Footer from "../headerAndFooter/Footer";
 
 
 import {AppContext} from "../../Context";
+import ProductDetailsPage from './ProductDetailsPage';
+import Signup from '../parts/Signup';
 
 
 
@@ -94,6 +96,8 @@ function AuthenticatedHeader () {
                     </Route>
                     <Route path = "/cart"><CartPage/></Route>
                     <Route path = "/account"><AccountBody/></Route>
+                    <Route path = "/productdetails"><ProductDetailsPage/></Route>
+
 
                     <Route path = "/" component={RegularBody}/>
 
@@ -112,5 +116,3 @@ function AuthenticatedHeader () {
 }
 
 export default AuthenticatedHeader;
-
-
