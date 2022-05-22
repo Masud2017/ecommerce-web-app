@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class product extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'price', 'description'];
+    protected $fillable = [
+        'name', 'price', 'description','rating',
+    ];
 
     /**
      * Connects product model with multiple catagories
@@ -31,5 +33,9 @@ class product extends Model
 
     public function order_items() {
         return $this->belongsToMany(order_item::class,'product_order_item');
+    }
+
+    public function images() {
+        return $this->hasMany(ProductImage::class);
     }
 }
