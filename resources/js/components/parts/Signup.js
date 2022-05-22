@@ -18,19 +18,30 @@ function Signup() {
     const [facebookConsentUrl, setFacebookConsentUrl] = useState();
     const [userName,setUserName] = useState("");
     const [password,setPassword] = useState("");
+    const [name,setName] = useState("");
     const contextApp = useContext(AppContext);
     const [loggedIn,setLoggedIn] = useState(false);
+
 
 
     const login =(event)=> {
         event.preventDefault();
 
-        axios.post("http://localhost:8000/api/auth/login", {
+        axios.post("http://localhost:8000/api/auth/register", {
+            "name":name,
             "email":userName,
-            "password":password
+            "password":password,
+            "role":"user"
+
         },{withCredentials:false}).then(res=>{
-            localStorage.setItem("token",res.data.access_token);
-            window.open("/","_self");
+            console.log(res.data.data.original.access_token);
+            if (res.data.data.original.access_token) {
+                localStorage.setItem("token",res.data.data.original.access_token);
+                window.open("/","_self");
+            }
+            // } else {
+            //     alert("Something went wronsg");
+            // }
 
         }).catch(e=>console.log(e));
 
@@ -41,6 +52,9 @@ function Signup() {
     }
     const changePassword = (event)=> {
         setPassword(event.target.value);
+    }
+    const changeName = (event)=> {
+        setName(event.target.value);
     }
 
     useEffect(async ()=> {
@@ -64,6 +78,7 @@ function Signup() {
                 <img src = {logo}  style = {{"width":"90%"}}/>
             </div>
 
+                <input className = "input-controll" type = "text" name = "name" placeholder='Enter your full name' onChange={changeName}></input><br></br>
                 <input className = "input-controll" type = "text" name = "username" placeholder='Enter your username' onChange={changeUserName}></input><br></br>
                 <input className = "input-controll" type = "password" name = "password" placeholder='Enter your password' onChange={changePassword}></input><br></br>
                 <input className = "login-btn" type = "submit" value = "Signup" onClick={login}></input>
