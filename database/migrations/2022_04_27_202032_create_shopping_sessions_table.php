@@ -16,6 +16,7 @@ class CreateShoppingSessionsTable extends Migration
         Schema::create('shopping_sessions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string("total");
         });
     }
 

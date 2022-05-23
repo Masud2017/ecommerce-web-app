@@ -15,4 +15,8 @@ class ProductQuestions extends Model
     public function product_answers() {
         return $this->hasMany(ProductAnswer::class);
     }
+
+    public function product () {
+        return $this->belongsTo(product::class);
+    }
 }

@@ -38,4 +38,8 @@ class product extends Model
     public function images() {
         return $this->hasMany(ProductImage::class);
     }
+
+    public function product_questions() {
+        return $this->hasMany(ProductQuestions::class);
+    }
 }

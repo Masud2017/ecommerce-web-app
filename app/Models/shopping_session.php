@@ -9,11 +9,15 @@ class shopping_session extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'total'
+    ];
+
     public function user() {
         return $this->belongsTo(User::class);
     }
 
     public function cart() {
-        return $this->hasOne(cart_items::class);
+        return $this->hasMany(cart_items::class);
     }
 }
