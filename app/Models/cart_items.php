@@ -9,11 +9,19 @@ class cart_items extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'quantity'
+    ];
+
+    public $timestamps = true;
+
+
+
     public function shoppingSession() {
         return $this->belongsTo(shopping_session::class);
     }
 
-    public function products() {
-        return $this->belongsTo(product::class,'product_cart_item');
+    public function product() {
+        return $this->hasOne(product::class);
     }
 }

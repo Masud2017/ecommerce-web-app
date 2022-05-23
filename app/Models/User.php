@@ -85,4 +85,8 @@ class User extends Authenticatable implements JWTSubject
     public function shoppingSession() {
         return $this->hasOne(shopping_session::class);
     }
+
+    public function orderDetail() {
+        return $this->hasOne(OrderDetails::class);
+    }
 }

@@ -10,7 +10,7 @@ class order_item extends Model
     use HasFactory;
 
     public function products() {
-        return $this->belongsToMany(product::class,'product_order_item');
+        return $this->hasOne(product::class);
     }
 
     // public function orderDetails() {
@@ -18,6 +18,7 @@ class order_item extends Model
     // }
 
     public function orderDetails() {
-        return $this->hasOne(OrderDetails::class);
+        return $this->belongsTo(OrderDetails::class);
     }
+
 }
