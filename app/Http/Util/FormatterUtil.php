@@ -36,6 +36,7 @@ class FormatterUtil {
     *  @return response - a json containing formated productInfo
     * */
     public static function formatedProductResponse($product_list) {
+
         $response = [
             'data'=>$product_list
         ];

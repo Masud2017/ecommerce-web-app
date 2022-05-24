@@ -53,6 +53,7 @@ Route::group([
     Route::get('products',[ProductController::class,'getProductList']);
     Route::delete('deleteproduct/{id}', [ProductController::class,'deleteProduct']);
     Route::get('product/{id}',[ProductController::class,'getProduct']);
+    Route::put('editproduct/{id}/{img_id}', [ProductController::class,'editProduct']);
 
     // route for cart handling
     Route::get('addcart/{id}',[CartController::class,'addProductToCart']);
