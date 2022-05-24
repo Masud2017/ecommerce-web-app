@@ -14,7 +14,7 @@ class CartController extends Controller
     {
         $this->middleware('auth:api');
     }
-    public function addProductToCart(Request $req,$id) {
+    public function addCart(Request $req,$id) {
         // this function will add new product to cart
         $product = Product::find($id);
         $user = JWTAuth::user();
@@ -28,12 +28,23 @@ class CartController extends Controller
 
     }
 
-    public function deleteProductFromCart(Request $req, $id) {
+    public function getAllCartProduct(Request $req) {
+        $user = JWTAuth::user();
+        $product = new Product();
+
 
     }
 
-    public function clearCart(Request $req) {
-        // this one is going to clear the cart from the user database ()
+
+    public function removeCartItem(Request $req, $id) {
+
+    }
+
+    public function updateCartItem(Request $req,$id) {
+
+    }
+
+    public function placeOrder(Request $req) {
 
     }
 
@@ -47,12 +58,6 @@ class CartController extends Controller
         }
     }
 
-    public function getAllCartProduct(Request $req) {
-        $user = JWTAuth::user();
-        $product = new Product();
-
-
-    }
 
     // public function checkoutFromCart(Request $req) {
 

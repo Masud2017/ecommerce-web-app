@@ -56,9 +56,15 @@ Route::group([
     Route::put('editproduct/{id}/{img_id}', [ProductController::class,'editProduct']);
 
     // route for cart handling
-    Route::get('addcart/{id}',[CartController::class,'addProductToCart']);
+    Route::put('addcart',[CartController::class,'addCart']);
+    Route::get('cartitems',[CartController::class,'getAllCartProduct']);
+    Route::get('removeaddcartitem/{id}',[CartController::class,'removeCartItem']);
+    Route::get('updatecartitem/{id}',[CartController::class,'addProductToCart']);
+    Route::get('placeorder',[CartController::class,'addProductToCart']);
 
+    // Route for order handling
+
+    // Google OAuth Handling
     Route::get('/google/redirect', [OAuthController::class,'getGoogleRedirect']);
-
     Route::get('/google/callback', [OAuthController::class,'getGoogleCallback']);
 });
