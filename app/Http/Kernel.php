@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\ItsAdminStuffMiddleWare;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -69,6 +70,7 @@ class Kernel extends HttpKernel
         'role_middleware'=> \App\Http\Middleware\RoleMiddleWare::class,
         'user_existance_checker_middleware'=> \App\Http\Middleware\UserExistenceCheckerMiddleWare::class,
         'ProductCRUDPermissionMiddleWare' => \App\Http\Middleware\ProductCRUDPermissionMiddleWare::class,
+        'ItsAdminStuffMiddleware'=> \App\Http\Middleware\ItsAdminStuffMiddleWare::class,
 
     ];
 }

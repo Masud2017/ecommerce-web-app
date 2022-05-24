@@ -18,6 +18,10 @@ class ProductController extends Controller
     }
 
 
+
+    /**
+     * In case of instering new data into the product database the user should be admin or from similar previledge.,
+     */
     public function addNewProduct(Request $req) {
         $name = $req->input('name');
         $price = $req->input('price');
