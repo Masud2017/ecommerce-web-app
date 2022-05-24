@@ -8,6 +8,10 @@ use Exception;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
+
+/**
+ * This class is all about handling the Shopping_session and cart_item database(model)
+ */
 class CartController extends Controller
 {
     public function __construct()
@@ -29,9 +33,7 @@ class CartController extends Controller
     }
 
     public function getAllCartProduct(Request $req) {
-        $user = JWTAuth::user();
-        $product = new Product();
-
+        $user = JWTAuth::Auth()::user(); // getting the current user that authenticated to the system.
 
     }
 

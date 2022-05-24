@@ -13,7 +13,6 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        // $this->middleware('token_validator');
         $this->middleware('auth:api');
         $this->middleware('ProductCRUDPermissionMiddleWare',['except'=>['getProductList','getProduct']]);
     }
@@ -26,7 +25,7 @@ class ProductController extends Controller
     public function addNewProduct(Request $req) {
         $name = $req->input('name');
         $price = $req->input('price');
-        $stock = $req->input('stock'); // the number of products that the vendor can provide
+        $stock = $req->input('stock');
         $description = $req->input('description');
         $rating = $req->input('rating');
         $images = $req->input('images');
@@ -39,12 +38,10 @@ class ProductController extends Controller
             $product_table->stock = $stock;
             $product_table->description = $description;
             $product_table->rating = $rating;
-            // $product_table->images = json_encode(['images'=>$images]);
 
             $image = new ProductImage();
             $image->url = $images;
 
-            // $product_table->images()->associate($image);
 
             $product_table->save();
             $product_table->images()->save($image);
@@ -61,11 +58,8 @@ class ProductController extends Controller
     }
 
     public function getProductList(Request $req) {
-        $product_list = Product::with('images')->get(); // get all records from the product table;
+        $product_list = Product::with('images')->get();
 
-
-
-        // return response()->json($this->formatedProductResponse($product_list));
         return response()->json(FormatterUtil::formatedProductResponse($product_list));
 
     }
@@ -73,8 +67,6 @@ class ProductController extends Controller
     public function getProduct(Request $req, $id) {
         $product = Product::with('images')->get()->find($id);
 
-        // $product["img"] = $product->images;
-        // return response()->json(['data'=>$product]);
         return response()->json(FormatterUtil::formatedProductResponse($product));
     }
 
@@ -82,7 +74,6 @@ class ProductController extends Controller
         $code = 0;
 
         try {
-            // $product = DB::table('products')->where('id',$id)->first();
             $product = Product::find($id);
             $product->delete();
             $code = 200;
@@ -94,7 +85,6 @@ class ProductController extends Controller
     }
 
     public function editProduct(Request $req, $id,$img_id) {
-
         $name = $req->input('name');
         $desc = $req->input('description');
         $stock = $req->input('stock');
@@ -110,21 +100,12 @@ class ProductController extends Controller
             $product->price = $price;
             $product->rating = $rating;
 
-            // $image_id = $product->images()->id;
-            // $image = ProductImage::find($image_id);
-            // $image->url =$images;
-
-
-
             $image = ProductImage::find($img_id);
             $image->url = $images;
 
 
             $product->push();
             $product->images()->save($image);
-
-            // $product->save();
-
 
         } catch(Exception $e) {
             echo ($e);
