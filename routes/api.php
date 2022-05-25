@@ -59,10 +59,9 @@ Route::group([
     // route for cart handling
     Route::put('addcart/{product_id}',[CartController::class,'addCart']);
     Route::get('cartitems',[CartController::class,'getAllCartProduct']);
-    Route::get('removecartitem/{id}',[CartController::class,'removeCartItem']);
-    Route::get('clearCart',[CartController::class,'clearCart']);
-    Route::get('updatecartitem/{id}',[CartController::class,'updateCartItem']);
-    Route::get('placeorder',[CartController::class,'addProductToCart']);
+    Route::delete('removecartitem/{id}',[CartController::class,'removeCartItem']);
+    Route::delete('clearcart',[CartController::class,'clearCart']);
+    Route::put('updatecartitem/{id}',[CartController::class,'updateCartItem']);
 
     // Route for order handling
 

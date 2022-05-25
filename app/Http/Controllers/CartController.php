@@ -54,26 +54,46 @@ class CartController extends Controller
 
     public function getAllCartProduct(Request $req) {
         $user = JWTAuth::user(); // getting the current user that authenticated to the system.
-        return response()->json(FormatterUtil::formatedProductResponse($user->shopping_session->cart_items[2]->product));
+        return response()->json(FormatterUtil::formatedProductResponse($user->shopping_session->cart_items));
 
     }
 
 
     public function removeCartItem(Request $req, $id) {
+        $user = JWTAuth::user();
+
+        $cart_item_list = $user->shopping_session->cart_items;
+
+        foreach($cart_item_list as $item) {
+            if ($item->id == $id) {
+                $item->delete();
+                return response()->json(FormatterUtil::formatedProductResponse(["status"=>"200"]));
+
+            }
+        }
+
+        return response()->json(FormatterUtil::formatedProductResponse(["status"=>"404"]));
 
     }
 
     public function clearCart(Request $req) {
+        $user = JWTAuth::user();
+        $user->shopping_session->total = 0;
+        $user->shopping_session->save();
+        $user->shopping_session->cart_items->each(function($item,$key) {
+            echo ($key);
+            $item->delete();
+        });
 
     }
 
     public function updateCartItem(Request $req,$id) {
+        $user = JWTAuth::user();
+
 
     }
 
-    public function placeOrder(Request $req) {
 
-    }
 
     public function getCartQuantity(Request $req) {
         $user = JWTAuth::user();
