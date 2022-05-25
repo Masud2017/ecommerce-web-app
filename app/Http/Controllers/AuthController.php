@@ -14,6 +14,7 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 
 use Exception;
 use App\Http\Util\FormatterUtil;
+use App\Models\shopping_session;
 
 class AuthController extends Controller
 {
@@ -57,6 +58,10 @@ class AuthController extends Controller
         $user->roles()->attach([FormatterUtil::get_permission($role_name)]);
 
 
+
+        // New addition -- creating the shopping_session the moment after the registration;
+        $session = new shopping_session();
+        $user->shopping_session()->save($session);
 
         // $token = auth()->attempt(compact('email','password'));
         $token = auth()->login($user);

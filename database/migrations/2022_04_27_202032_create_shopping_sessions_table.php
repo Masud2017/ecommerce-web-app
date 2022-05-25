@@ -14,9 +14,12 @@ class CreateShoppingSessionsTable extends Migration
     public function up()
     {
         Schema::create('shopping_sessions', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
-            $table->string("total");
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->string("total")->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 

@@ -21,6 +21,8 @@ class CreateProductsTable extends Migration
             $table->string('rating')->nullable();
             $table->integer('stock')->nullable();
             $table->timestamps();
+
+
         });
     }
 

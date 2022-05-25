@@ -19,16 +19,18 @@ class Product extends Model
         return $this->belongsToMany(catagory::class,"product_catagory");
     }
 
-    public function productInventor() {
-        return $this->hasOne(ProductInventor::class);
-    }
+    // public function productInventor() {
+    //     return $this->hasOne(ProductInventor::class);
+    // }
 
-    public function discount () {
-        return $this->belongsTo(Discount::class);
-    }
+    // public function discount () {
+    //     return $this->belongsTo(Discount::class);
+    // }
 
     public function cart_item() {
-        return $this->belongsTo(cart_items::class);
+        return $this->hasMany(cart_items::class);
+        // return $this->belongsToMany(cart_items::class);
+
     }
     public function order_item() {
         return $this->belongsTo(order_item::class);

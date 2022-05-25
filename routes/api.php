@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OAuthController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -56,13 +57,21 @@ Route::group([
     Route::put('editproduct/{id}/{img_id}', [ProductController::class,'editProduct']);
 
     // route for cart handling
-    Route::put('addcart',[CartController::class,'addCart']);
+    Route::put('addcart/{product_id}',[CartController::class,'addCart']);
     Route::get('cartitems',[CartController::class,'getAllCartProduct']);
-    Route::get('removeaddcartitem/{id}',[CartController::class,'removeCartItem']);
-    Route::get('updatecartitem/{id}',[CartController::class,'addProductToCart']);
+    Route::get('removecartitem/{id}',[CartController::class,'removeCartItem']);
+    Route::get('clearCart',[CartController::class,'clearCart']);
+    Route::get('updatecartitem/{id}',[CartController::class,'updateCartItem']);
     Route::get('placeorder',[CartController::class,'addProductToCart']);
 
     // Route for order handling
+
+    // user specific handler
+    Route::get('useraddress',[UserController::class,'getUserAddress']);
+    Route::get('adduseraddress',[UserController::class,'addUserAddress']);
+    Route::get('edituseraddress',[UserController::class,'editUserAddress']);
+
+
 
     // Google OAuth Handling
     Route::get('/google/redirect', [OAuthController::class,'getGoogleRedirect']);
