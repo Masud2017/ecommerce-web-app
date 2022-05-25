@@ -32,9 +32,8 @@ class CartController extends Controller
             }
         }
 
+
         $product = Product::with('images')->get()->find($product_id);
-
-
 
         $cartitem = new cart_items();
         $cartitem->quantity  = 34;
@@ -44,10 +43,6 @@ class CartController extends Controller
 
         $user->shopping_session->cart_items()->save($cartitem);
         $user->shopping_session->save();
-
-
-
-
 
         // revesion -- for the concept .. It took me alot of time to understand and implement it.
         // $session = new shopping_session();
