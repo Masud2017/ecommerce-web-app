@@ -62,6 +62,8 @@ Route::group([
     Route::delete('removecartitem/{id}',[CartController::class,'removeCartItem']);
     Route::delete('clearcart',[CartController::class,'clearCart']);
     Route::put('updatecartitem/{id}',[CartController::class,'updateCartItem']);
+    Route::get('cartquantity',[CartController::class,'getCartQuantity']);
+
 
     // Route for order handling
 

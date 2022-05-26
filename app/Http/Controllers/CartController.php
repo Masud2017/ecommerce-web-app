@@ -10,6 +10,7 @@ use Exception;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
+use function GuzzleHttp\Promise\each;
 
 /**
  * This class is all about handling the Shopping_session and cart_item database(model)
@@ -87,22 +88,30 @@ class CartController extends Controller
 
     }
 
-    public function updateCartItem(Request $req,$id) {
+    public function updateCartItem(Request $req,$id_) {
         $user = JWTAuth::user();
 
+        $cart_item_list = $user->shopping_session->cart_items;
+
+        foreach($cart_item_list as $item) {
+            if ($item->id == $id_) {
+                echo ($req->input("quantity"));
+                $item->quantity = $req->input('quantity');
+                $item->save();
+            }
+        }
 
     }
-
-
 
     public function getCartQuantity(Request $req) {
         $user = JWTAuth::user();
 
-        if ($user->cart->quantity == 0) {
-            return response()->json(["status_code"=>"404"]);
-        } else {
-            return response()->json(["cart_quantity"=> $user->cart->quantity]);
-        }
+        // if ($user->cart->quantity == 0) {
+        //     return response()->json(["status_code"=>"404"]);
+        // } else {
+        //     return response()->json(["cart_quantity"=> $user->cart->quantity]);
+        // }
+        return response()->json(FormatterUtil::formatedProductResponse(["cart_item_count"=>$user->shopping_session->cart_items->count()]));
     }
 
 
