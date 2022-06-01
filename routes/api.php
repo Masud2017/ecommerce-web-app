@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OAuthController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -66,6 +67,9 @@ Route::group([
 
 
     // Route for order handling
+    Route::put('addorder',[OrderController::class,'addOrder']);
+    Route::get('orderitems',[OrderController::class,'getOrderList']);
+
 
     // user specific handler
     Route::get('useraddress',[UserController::class,'getUserAddress']);
