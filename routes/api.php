@@ -67,7 +67,7 @@ Route::group([
 
 
     // Route for order handling
-    Route::put('addorder',[OrderController::class,'addOrder']);
+    Route::put('addorder/{id}',[OrderController::class,'addOrder']);
     Route::get('orderitems',[OrderController::class,'getOrderList']);
 
 

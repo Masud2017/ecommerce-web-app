@@ -14,6 +14,7 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 
 use Exception;
 use App\Http\Util\FormatterUtil;
+use App\Models\OrderDetails;
 use App\Models\shopping_session;
 
 class AuthController extends Controller
@@ -63,6 +64,8 @@ class AuthController extends Controller
         $session = new shopping_session();
         $user->shopping_session()->save($session);
         // New addition -- creating the order details at the moment after the registration
+        $order_details = new OrderDetails();
+        $user->orderDetail()->save($order_details);
 
         // $token = auth()->attempt(compact('email','password'));
         $token = auth()->login($user);

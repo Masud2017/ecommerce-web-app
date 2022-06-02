@@ -17,11 +17,11 @@ class OrderController extends Controller
         $this->orderServices = $orderServices; // injecting the dependency;
     }
 
-    public function addOrder(Request $req) {
-        return response()->json(FormatterUtil::formatedProductResponse($this->orderServices->addOrder($req))) ;
+    public function addOrder(Request $req,$data_count) {
+        return $this->orderServices->addOrder($req,$data_count);
     }
 
     public function getOrderList(Request $req) {
-
+        return $this->orderServices->getOrderList($req);
     }
 }

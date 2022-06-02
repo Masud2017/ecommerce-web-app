@@ -4,6 +4,6 @@ namespace App\Http\Services;
 use Illuminate\Http\Request;
 
 interface OrderServices {
-    function addOrder(Request $req);
+    function addOrder(Request $req,$data_count);
     function getOrderList(Request $req);
 }
