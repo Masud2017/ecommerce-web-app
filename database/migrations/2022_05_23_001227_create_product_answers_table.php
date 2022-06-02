@@ -17,6 +17,9 @@ class CreateProductAnswersTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string("answer");
+            $table->integer('product_questions')->unsigned();
+
+            $table->foreign('product_questions')->references('id')->on('product_questions')->onDelete('cascade');
         });
     }
 
