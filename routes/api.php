@@ -69,6 +69,9 @@ Route::group([
     // Route for order handling
     Route::put('addorder/{id}',[OrderController::class,'addOrder']);
     Route::get('orderitems',[OrderController::class,'getOrderList']);
+    Route::get('cancelorder',[OrderController::class,'cancelOrder']);
+    Route::get('doneorder',[OrderController::class,'doneOrder']);
+
 
 
     // user specific handler

@@ -62,6 +62,14 @@ class OrderServicesImpl implements OrderServices {
         return FormatterUtil::formatedProductResponse($orderList);
     }
 
+    function cancelOrder(Request $req) {
+
+    }
+
+    function doneOrder(Request $req) {
+
+    }
+
     // protected function preventDuplicateOrderItem($order_item_list ,$id_collection) {
 
     //     foreach($order_item_list as $item) {

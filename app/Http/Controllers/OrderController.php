@@ -24,4 +24,7 @@ class OrderController extends Controller
     public function getOrderList(Request $req) {
         return $this->orderServices->getOrderList($req);
     }
+
+    public function cancelOrder(Request $req) {}
+    public function doneOrder(Request $req) {}
 }
