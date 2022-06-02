@@ -10,7 +10,7 @@ class OrderDetails extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['total'];
+    protected $fillable = ['total','status'];
 
 
     public function orderItem() { // I will talk aboaut you later.

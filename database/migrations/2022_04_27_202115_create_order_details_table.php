@@ -16,6 +16,7 @@ class CreateOrderDetailsTable extends Migration
         Schema::create('order_details', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->integer('status')->nullable();
             $table->integer('user_id')->unsigned()->nullable();
             $table->string('total')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
