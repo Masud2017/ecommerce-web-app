@@ -5,6 +5,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\OAuthController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\QuestionAnswerController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -78,6 +79,14 @@ Route::group([
     Route::get('useraddress',[UserController::class,'getUserAddress']);
     Route::get('adduseraddress',[UserController::class,'addUserAddress']);
     Route::get('edituseraddress',[UserController::class,'editUserAddress']);
+
+    // Route for handling product question and answers
+    Route::put('addquestions/{product_id}',[QuestionAnswerController::class,'addQuestionToAProduct']);
+    Route::get('questions/{product_id}',[QuestionAnswerController::class,'getQuestionListOfAProduct']);
+    Route::put('addanswer/{question_id}',[QuestionAnswerController::class,'addAnswerToAQuestion']);
+    Route::get('answers/{question_id}',[QuestionAnswerController::class,'getAnswersOfAQuestion']);
+
+
 
 
 

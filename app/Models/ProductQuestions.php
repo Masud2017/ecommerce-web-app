@@ -13,7 +13,7 @@ class ProductQuestions extends Model
     ];
 
     public function product_answers() {
-        return $this->hasMany(ProductAnswer::class);
+        return $this->hasMany(ProductAnswer::class,'product_question_id');
     }
 
     public function product () {

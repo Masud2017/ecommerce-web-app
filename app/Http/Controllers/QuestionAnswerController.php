@@ -14,8 +14,20 @@ class QuestionAnswerController extends Controller
     {
         $this->questionAnswerService = $questionAnswerService;
     }
-    public function getQuesteionListOfAProduct(Request $req,$product_id) {
 
+    public function getQuestionListOfAProduct(Request $req,$product_id) {
+        return $this->questionAnswerService->getQuestionListOfAProduct($req,$product_id);
+    }
 
+    public function addQuestionToAProduct(Request $req, $product_id) {
+        return $this->questionAnswerService->addQuestionToAProduct($req,$product_id);
+    }
+
+    public function getAnswersOfAQuestion(Request $req, $question_id) {
+        return $this->questionAnswerService->getAnswersOfAQuestion($req,$question_id);
+    }
+
+    public function addAnswerToAQuestion(Request $req, $question_id) {
+        return $this->questionAnswerService->addAnswerToAQuestion($req,$question_id);
     }
 }
