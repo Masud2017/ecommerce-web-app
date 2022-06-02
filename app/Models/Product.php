@@ -33,12 +33,12 @@ class Product extends Model
 
     }
     public function order_item() {
-        return $this->belongsTo(order_item::class);
+        return $this->hasMany(order_item::class);
     }
 
-    public function order_items() {
-        return $this->belongsToMany(order_item::class,'product_order_item');
-    }
+    // public function order_items() {
+    //     return $this->belongsToMany(order_item::class,'product_order_item');
+    // }
 
     public function images() {
         return $this->hasMany(ProductImage::class);
