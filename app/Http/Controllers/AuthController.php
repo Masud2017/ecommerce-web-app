@@ -59,9 +59,10 @@ class AuthController extends Controller
 
 
 
-        // New addition -- creating the shopping_session the moment after the registration;
+        // New addition -- creating the shopping_session at the moment after the registration;
         $session = new shopping_session();
         $user->shopping_session()->save($session);
+        // New addition -- creating the order details at the moment after the registration
 
         // $token = auth()->attempt(compact('email','password'));
         $token = auth()->login($user);

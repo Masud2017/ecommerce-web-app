@@ -10,6 +10,8 @@ class OrderDetails extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['total'];
+
 
     public function orderItem() { // I will talk aboaut you later.
         return $this->hasMany(order_item::class);
