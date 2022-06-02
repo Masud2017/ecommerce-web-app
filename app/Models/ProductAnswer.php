@@ -14,4 +14,8 @@ class ProductAnswer extends Model
     public function product_question() {
         return $this->belongsTo(ProductQuestions::class);
     }
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 }

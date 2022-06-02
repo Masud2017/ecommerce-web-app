@@ -14,12 +14,15 @@ class CreateProductAnswersTable extends Migration
     public function up()
     {
         Schema::create('product_answers', function (Blueprint $table) {
+            $table->engine = 'MyIsam';
             $table->id();
             $table->timestamps();
             $table->string("answer");
             $table->integer('product_questions')->unsigned();
+            $table->integer('user_id')->unsigned();
 
             $table->foreign('product_questions')->references('id')->on('product_questions')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

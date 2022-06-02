@@ -14,9 +14,16 @@ class CreateProductQuestionsTable extends Migration
     public function up()
     {
         Schema::create('product_questions', function (Blueprint $table) {
+            $table->engine = 'MyIsam';
             $table->increments('id');
             $table->timestamps();
             $table->string("question");
+            $table->integer('product_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+
 
         });
     }
