@@ -6,6 +6,7 @@ use App\Http\Controllers\OAuthController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\QuestionAnswerController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -86,6 +87,13 @@ Route::group([
     Route::put('addanswer/{question_id}',[QuestionAnswerController::class,'addAnswerToAQuestion']);
     Route::get('answers/{question_id}',[QuestionAnswerController::class,'getAnswersOfAQuestion']);
 
+    // Route for handling product reivew
+    Route::put('addreview/{product_id}',[ReviewController::class,'addReview']);
+    Route::get('productreviews/{product_id}',[ReviewController::class,'getAllReviewsOfAProduct']);
+    Route::get('userreviews',[ReviewController::class,'getAllReviewsOfAnUser']);
+    Route::get('singlereview/{review_id}',[ReviewController::class,'getSingleReview']);
+    Route::delete('deletereview/{review_id}',[ReviewController::class,'deleteReview']);
+    Route::put('editreview/{review_id}',[ReviewController::class,'editReview']);
 
 
 

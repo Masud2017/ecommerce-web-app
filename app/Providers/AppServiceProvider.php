@@ -6,8 +6,8 @@ use App\Http\Services\OrderServices;
 use App\Http\Services\OrderServicesImpl;
 use App\Http\Services\QuestionAnswerService;
 use App\Http\Services\QuestionAnswerServiceImpl;
-use App\Http\Services\TestService;
-use Illuminate\Http\Request;
+use App\Http\Services\ReviewService;
+use App\Http\Services\ReviewServiceImpl;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,6 +24,9 @@ class AppServiceProvider extends ServiceProvider
         });
         $this->app->bind(QuestionAnswerService::class,function($app){
             return new QuestionAnswerServiceImpl();
+        });
+        $this->app->bind(ReviewService::class,function($app){
+            return new ReviewServiceImpl();
         });
     }
 
