@@ -14,6 +14,7 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
+            $table->engine = 'MyIsam';
             $table->increments('id')->unsigned();
             $table->string('name')->nullable();
             $table->float('price')->nullable();
@@ -21,6 +22,9 @@ class CreateProductsTable extends Migration
             $table->string('rating')->nullable();
             $table->integer('stock')->nullable();
             $table->timestamps();
+
+            $table->integer('product_catagories_id')->unsigned();
+            $table->foreign('product_catagories_id')->references('id')->on('product_catagories')->onDelete('cascade');
 
 
         });

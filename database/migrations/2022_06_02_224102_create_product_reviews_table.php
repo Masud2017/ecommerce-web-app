@@ -14,6 +14,7 @@ class CreateProductReviewsTable extends Migration
     public function up()
     {
         Schema::create('product_reviews', function (Blueprint $table) {
+            $table->engine = 'MyIsam';
             $table->id();
             $table->timestamps();
             $table->string ('msg');
