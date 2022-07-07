@@ -18,7 +18,7 @@ const PostBody = ()=> {
         <div>
             <div className = "post-modal-container" id = "modalopen">
                     <div className = "post-modal">
-                        <h1>Modal heading</h1>
+                        <h1>Create Post</h1>
 
 
                         <div className ="post-modal-body">

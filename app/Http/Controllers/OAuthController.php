@@ -12,7 +12,7 @@ use DateTime;
 use DateTimeZone;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
-
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class OAuthController extends Controller
 {
@@ -62,12 +62,14 @@ class OAuthController extends Controller
             $new_user->email_verified_at = Carbon::now()->toDateTimeString();
             $new_user->save();
             // $user->roles()->attach([$this->get_permission("user")]);
-            $user->roles()->attach([FormatterUtil::get_permission("user")]);
+            $new_user->roles()->attach([FormatterUtil::get_permission("user")]);
+
 
             $token = auth()->login($new_user);
         }
+        $role = JWTAuth::user()->roles[0]["role"];
 
-        return FormatterUtil::respondWithToken($token);
+        return FormatterUtil::respondWithToken(["token"=>$token,"role"=>$role]);
     }
 
 }

@@ -55,7 +55,7 @@ class NonAuthenticatedHeader extends React.Component {
                         </div>
                         <div id = "login" className = "nav-item">
                             <Link to = "/cart"><img src = {cart} className = "header-cart" ></img></Link>
-                            <p className = "cart-counter">1</p>
+                            <p className = "cart-counter">0</p>
                             <li  className = "nav-item" ><Link to="/login">Login</Link></li>
                             /
                             <li  className = "nav-item"><Link to = "/signup">Signup</Link></li>

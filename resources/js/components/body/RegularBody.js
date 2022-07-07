@@ -64,9 +64,13 @@ function RegularBody(props) {
             throw new Error ("something went wrong");
         }).then(res=>{
             // alert(res.access_token);
-            console.log("Debuggng the value of expiry : "+isJwtValid(res.access_token));
-            if(!isJwtValid(res.access_token)) {
-                localStorage.setItem("token",res.access_token);
+            console.log(res);
+
+            console.log("Debuggng the value of expiry : "+isJwtValid(res.access_token.token));
+            if(!isJwtValid(res.access_token.token)) {
+                localStorage.setItem("token",res.access_token.token);
+                localStorage.setItem("role",res.access_token.role);
+
             } else {
                 localStorage.removeItem("token");
             }

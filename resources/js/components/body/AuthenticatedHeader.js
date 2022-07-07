@@ -52,6 +52,7 @@ function AuthenticatedHeader () {
 
     function logoutHandler() {
         localStorage.removeItem("token");
+        localStorage.removeItem("role");
         contextApp.dispatch({type:'logout'});
     }
 
@@ -71,7 +72,7 @@ function AuthenticatedHeader () {
                     </div>
                     <div id = "login" className = "nav-item">
                         <Link to = "/cart"><img src = {cart} className = "header-cart" ></img></Link>
-                        <p className = "cart-counter">1</p>
+                        <p className = "cart-counter">0</p>
                         <li className = "nav-item drop-down">
                             <img className = "profile-pic" src=  "https://avatars.githubusercontent.com/u/33942219?v=4" alt = "somthing went wrong"/>
                             <div class = "profile-option">

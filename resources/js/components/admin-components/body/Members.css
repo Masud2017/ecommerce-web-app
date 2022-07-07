@@ -38,7 +38,7 @@
     -moz-box-shadow: 2px 4px 4px -1px rgba(69,69,69,0.79);
     border: none;
     overflow-y: auto;
-    z-index: 1;
+    z-index: -1;
 }
 
 .member-list p {
@@ -206,4 +206,87 @@
     top : 10px;
     color : #CE2C2C;
     cursor: pointer;
+}
+
+
+
+
+.members-modal-container {
+    position : fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top : 0;
+    left : 0;
+    width : 100vw;
+    z-index: 1;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+.members-modal-container.showmodal {
+    opacity : 1.0;
+    pointer-events: auto;
+}
+.members-modal {
+    background-color : white;
+    width : 450px;
+    height: 600px;
+    max-width: 100%;
+    padding : 10px;
+    border-radius: 5px;
+}
+
+.members-modal-body {
+    display: flex;
+    justify-content: center;
+}
+.members-modal-form * {
+    display: block;
+}
+
+.members-modal-form .control {
+    width : 300px;
+    height: 40px;
+    padding : 10px;
+    box-sizing:border-box;
+    border-radius: 25px;
+    border: 1px solid grey;
+    margin-bottom : 5px;
+}
+
+.members-modal-form {
+    text-align: center;
+}
+.members-modal-btn {
+    background-color : #FF1818;
+    color : white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.members-modal-form-image img {
+    height : 90px;
+    width : 90px;
+    margin : auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left :50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.members-modal-form-image {
+    padding : 10px;
+    height : 100px;
+    width: 100px;
+    border:1px dashed grey;
+    border-radius: 50%;
+    position: relative;
+    left : 50%;
+    transform: translateX(-50%);
+}
+.members-modal-file[type= "file"] {
+    display:none;
 }

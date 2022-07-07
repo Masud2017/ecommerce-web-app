@@ -41,7 +41,7 @@ const AdminRegularBody = ()=> {
                 <div name = "header-navigation" className = "admin-nav">
                     <div style = {{"text-align":"center"}}><img src = "https://yt3.ggpht.com/ytc/AKedOLQPPlIgfH6M5b4ptOkqAXu0oSLFuxy8fLLmcKEK=s800-c-k-c0x00ffffff-no-rj" name = "profile" className = "admin-profile"></img>
                         <strong><h4>Md Masud karim</h4></strong>
-                        <h6>Admin</h6>
+                        <h6>{localStorage.getItem("role").toUpperCase()}</h6>
                     </div>
 
                 <div className = "admin-nav-link">
@@ -61,7 +61,7 @@ const AdminRegularBody = ()=> {
                 </div>
 
                 </div>
-                <div>
+                <div style = {{"position":"relative"}}>
 
                     <Switch>
                         <Route exact path = "/dashboard">

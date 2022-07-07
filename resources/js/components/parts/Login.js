@@ -28,7 +28,9 @@ function Login() {
             "email":userName,
             "password":password
         },{withCredentials:false}).then(res=>{
-            localStorage.setItem("token",res.data.access_token);
+            localStorage.setItem("token",res.data.access_token.token);
+            localStorage.setItem("role",res.data.access_token.role);
+
             window.open("/","_self");
 
         }).catch(e=>console.log(e));

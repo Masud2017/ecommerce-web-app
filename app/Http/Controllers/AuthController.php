@@ -39,7 +39,9 @@ class AuthController extends Controller
 
         // return response()->json(['token'=>$token]);
         // return $this->respondWithToken($token);
-        return FormatterUtil::respondWithToken($token);
+        $role = JWTAuth::user()->roles[0]["role"];
+
+        return FormatterUtil::respondWithToken(["token"=>$token,"role"=>$role]);
     }
 
     public function register(Request $req) {
